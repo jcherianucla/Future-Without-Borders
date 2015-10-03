@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ContributeTableViewController: UITableViewController {
+class ContributeTableViewController: UITableViewController, Contribute{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Main Blurred BG"));
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -99,6 +99,7 @@ class ContributeTableViewController: UITableViewController {
         // Configure the cell...
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.imageBG.image = UIImage(named: "Contribute BG \(indexPath.row+1)")
+        cell.id = indexPath.row + 1
         if indexPath.row == 0 {
             cell.label.text = "Host a Family"
         }
@@ -108,9 +109,10 @@ class ContributeTableViewController: UITableViewController {
         else {
             cell.label.text = "Find out more about this Crisis"
         }
+        cell.delegate = self
         return cell
     }
-    
-
-
+    func pressedImage() {
+        performSegueWithIdentifier("ContributeToHostfamilySegue", sender: self)
+    }
 }
