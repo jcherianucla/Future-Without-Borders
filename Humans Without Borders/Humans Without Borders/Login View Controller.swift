@@ -48,6 +48,7 @@ class Login_View_Controller: UIViewController {
             if(FBSDKAccessToken.currentAccessToken() != nil)
             {
                 self.performSegueWithIdentifier("ContributeSegue", sender: nil)
+                user?.setValue("Host", forKey: "user_type")
             }
         })
     }

@@ -45,20 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6BB68A061BBFDD8D00441B85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BB6855B1BBFDD8B00441B85 /* BasicPhone.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
-			remoteInfo = BasicPhone;
-		};
-		6BB68A091BBFDD8D00441B85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BB689E61BBFDD8C00441B85 /* HelloMonkey.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
-			remoteInfo = HelloMonkey;
-		};
 		E22E956B1BBFB131009C91E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E22E954C1BBFB130009C91E3 /* Project object */;
@@ -90,34 +76,6 @@
 		6BB685541BBFDD8B00441B85 /* shThemeDefault.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = shThemeDefault.css; sourceTree = "<group>"; };
 		6BB685551BBFDD8B00441B85 /* twilio-header-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twilio-header-logo.png"; sourceTree = "<group>"; };
 		6BB685561BBFDD8B00441B85 /* twilio-ios-diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twilio-ios-diagram.png"; sourceTree = "<group>"; };
-		6BB685591BBFDD8B00441B85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6BB6855A1BBFDD8B00441B85 /* BasicPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicPhone-Info.plist"; sourceTree = "<group>"; };
-		6BB6855B1BBFDD8B00441B85 /* BasicPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BasicPhone.xcodeproj; sourceTree = "<group>"; };
-		6BB6855E1BBFDD8B00441B85 /* BasicPhone_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPhone_Prefix.pch; sourceTree = "<group>"; };
-		6BB6855F1BBFDD8B00441B85 /* BasicPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPhoneViewController.xib; sourceTree = "<group>"; };
-		6BB685611BBFDD8B00441B85 /* BasicPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPhone.h; sourceTree = "<group>"; };
-		6BB685621BBFDD8B00441B85 /* BasicPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPhone.m; sourceTree = "<group>"; };
-		6BB685631BBFDD8B00441B85 /* BasicPhoneAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPhoneAppDelegate.h; sourceTree = "<group>"; };
-		6BB685641BBFDD8B00441B85 /* BasicPhoneAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPhoneAppDelegate.m; sourceTree = "<group>"; };
-		6BB685651BBFDD8B00441B85 /* BasicPhoneNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPhoneNotifications.h; sourceTree = "<group>"; };
-		6BB685661BBFDD8B00441B85 /* BasicPhoneNotifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPhoneNotifications.m; sourceTree = "<group>"; };
-		6BB685671BBFDD8B00441B85 /* BasicPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPhoneViewController.h; sourceTree = "<group>"; };
-		6BB685681BBFDD8B00441B85 /* BasicPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPhoneViewController.m; sourceTree = "<group>"; };
-		6BB6856A1BBFDD8B00441B85 /* BasicPhone.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BasicPhone.xcconfig; sourceTree = "<group>"; };
-		6BB6856C1BBFDD8B00441B85 /* checkbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_checked@2x.png"; sourceTree = "<group>"; };
-		6BB6856D1BBFDD8B00441B85 /* checkbox_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_unchecked@2x.png"; sourceTree = "<group>"; };
-		6BB6856E1BBFDD8B00441B85 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		6BB6856F1BBFDD8B00441B85 /* dialing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialing@2x.png"; sourceTree = "<group>"; };
-		6BB685701BBFDD8B00441B85 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		6BB685711BBFDD8B00441B85 /* idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idle@2x.png"; sourceTree = "<group>"; };
-		6BB685721BBFDD8B00441B85 /* inprogress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inprogress@2x.png"; sourceTree = "<group>"; };
-		6BB685731BBFDD8B00441B85 /* predialing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "predialing@2x.png"; sourceTree = "<group>"; };
-		6BB685741BBFDD8B00441B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BB685751BBFDD8B00441B85 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		6BB685771BBFDD8B00441B85 /* LICENCE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
-		6BB685781BBFDD8B00441B85 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		6BB685791BBFDD8B00441B85 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		6BB6857A1BBFDD8B00441B85 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6BB6857B1BBFDD8B00441B85 /* changelog.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = changelog.html; sourceTree = "<group>"; };
 		6BB6857C1BBFDD8B00441B85 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
 		6BB6857E1BBFDD8B00441B85 /* TCConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
@@ -1084,16 +1042,9 @@
 		6BB689E01BBFDD8C00441B85 /* HelloMonkeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloMonkeyViewController.h; sourceTree = "<group>"; };
 		6BB689E11BBFDD8C00441B85 /* HelloMonkeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloMonkeyViewController.m; sourceTree = "<group>"; };
 		6BB689E31BBFDD8C00441B85 /* HelloMonkey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HelloMonkey.xcconfig; sourceTree = "<group>"; };
-		6BB689E41BBFDD8C00441B85 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6BB689E51BBFDD8C00441B85 /* HelloMonkey-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloMonkey-Info.plist"; sourceTree = "<group>"; };
-		6BB689E61BBFDD8C00441B85 /* HelloMonkey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HelloMonkey.xcodeproj; sourceTree = "<group>"; };
-		6BB689E91BBFDD8C00441B85 /* HelloMonkey_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloMonkey_Prefix.pch; sourceTree = "<group>"; };
-		6BB689EA1BBFDD8C00441B85 /* HelloMonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloMonkeyViewController.xib; sourceTree = "<group>"; };
 		6BB689EC1BBFDD8C00441B85 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dial.png; sourceTree = "<group>"; };
 		6BB689ED1BBFDD8C00441B85 /* hangup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangup.png; sourceTree = "<group>"; };
 		6BB689EE1BBFDD8C00441B85 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		6BB689EF1BBFDD8C00441B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6BB689F01BBFDD8C00441B85 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6BB689F11BBFDD8C00441B85 /* quickstart.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = quickstart.html; sourceTree = "<group>"; };
 		6BB689F21BBFDD8C00441B85 /* readme.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = readme.html; sourceTree = "<group>"; };
 		6BB689F41BBFDD8C00441B85 /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disconnect.wav; sourceTree = "<group>"; };
@@ -1207,7 +1158,6 @@
 			children = (
 				6BB685471BBFDD8B00441B85 /* Acknowledgements.txt */,
 				6BB685481BBFDD8B00441B85 /* assets */,
-				6BB685571BBFDD8B00441B85 /* BasicPhone */,
 				6BB6857B1BBFDD8B00441B85 /* changelog.html */,
 				6BB6857C1BBFDD8B00441B85 /* faq.html */,
 				6BB6857D1BBFDD8B00441B85 /* Headers */,
@@ -1249,89 +1199,6 @@
 				6BB685541BBFDD8B00441B85 /* shThemeDefault.css */,
 			);
 			path = syntaxhighlighter;
-			sourceTree = "<group>";
-		};
-		6BB685571BBFDD8B00441B85 /* BasicPhone */ = {
-			isa = PBXGroup;
-			children = (
-				6BB685581BBFDD8B00441B85 /* BasicPhone */,
-				6BB6855A1BBFDD8B00441B85 /* BasicPhone-Info.plist */,
-				6BB6855B1BBFDD8B00441B85 /* BasicPhone.xcodeproj */,
-				6BB6855E1BBFDD8B00441B85 /* BasicPhone_Prefix.pch */,
-				6BB6855F1BBFDD8B00441B85 /* BasicPhoneViewController.xib */,
-				6BB685601BBFDD8B00441B85 /* Classes */,
-				6BB685691BBFDD8B00441B85 /* Configurations */,
-				6BB6856B1BBFDD8B00441B85 /* Images */,
-				6BB685741BBFDD8B00441B85 /* main.m */,
-				6BB685751BBFDD8B00441B85 /* MainWindow.xib */,
-				6BB685761BBFDD8B00441B85 /* Reachability */,
-			);
-			path = BasicPhone;
-			sourceTree = "<group>";
-		};
-		6BB685581BBFDD8B00441B85 /* BasicPhone */ = {
-			isa = PBXGroup;
-			children = (
-				6BB685591BBFDD8B00441B85 /* Images.xcassets */,
-			);
-			path = BasicPhone;
-			sourceTree = "<group>";
-		};
-		6BB6855C1BBFDD8B00441B85 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BB68A071BBFDD8D00441B85 /* BasicPhone.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BB685601BBFDD8B00441B85 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				6BB685611BBFDD8B00441B85 /* BasicPhone.h */,
-				6BB685621BBFDD8B00441B85 /* BasicPhone.m */,
-				6BB685631BBFDD8B00441B85 /* BasicPhoneAppDelegate.h */,
-				6BB685641BBFDD8B00441B85 /* BasicPhoneAppDelegate.m */,
-				6BB685651BBFDD8B00441B85 /* BasicPhoneNotifications.h */,
-				6BB685661BBFDD8B00441B85 /* BasicPhoneNotifications.m */,
-				6BB685671BBFDD8B00441B85 /* BasicPhoneViewController.h */,
-				6BB685681BBFDD8B00441B85 /* BasicPhoneViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		6BB685691BBFDD8B00441B85 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				6BB6856A1BBFDD8B00441B85 /* BasicPhone.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
-		6BB6856B1BBFDD8B00441B85 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6BB6856C1BBFDD8B00441B85 /* checkbox_checked@2x.png */,
-				6BB6856D1BBFDD8B00441B85 /* checkbox_unchecked@2x.png */,
-				6BB6856E1BBFDD8B00441B85 /* Default@2x.png */,
-				6BB6856F1BBFDD8B00441B85 /* dialing@2x.png */,
-				6BB685701BBFDD8B00441B85 /* icon.png */,
-				6BB685711BBFDD8B00441B85 /* idle@2x.png */,
-				6BB685721BBFDD8B00441B85 /* inprogress@2x.png */,
-				6BB685731BBFDD8B00441B85 /* predialing@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		6BB685761BBFDD8B00441B85 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				6BB685771BBFDD8B00441B85 /* LICENCE.txt */,
-				6BB685781BBFDD8B00441B85 /* Reachability.h */,
-				6BB685791BBFDD8B00441B85 /* Reachability.m */,
-				6BB6857A1BBFDD8B00441B85 /* README.md */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 		6BB6857D1BBFDD8B00441B85 /* Headers */ = {
@@ -3575,14 +3442,7 @@
 			children = (
 				6BB689DD1BBFDD8C00441B85 /* Classes */,
 				6BB689E21BBFDD8C00441B85 /* Configurations */,
-				6BB689E41BBFDD8C00441B85 /* Default-568h@2x.png */,
-				6BB689E51BBFDD8C00441B85 /* HelloMonkey-Info.plist */,
-				6BB689E61BBFDD8C00441B85 /* HelloMonkey.xcodeproj */,
-				6BB689E91BBFDD8C00441B85 /* HelloMonkey_Prefix.pch */,
-				6BB689EA1BBFDD8C00441B85 /* HelloMonkeyViewController.xib */,
 				6BB689EB1BBFDD8C00441B85 /* Images */,
-				6BB689EF1BBFDD8C00441B85 /* main.m */,
-				6BB689F01BBFDD8C00441B85 /* MainWindow.xib */,
 			);
 			path = Quickstart;
 			sourceTree = "<group>";
@@ -3604,14 +3464,6 @@
 				6BB689E31BBFDD8C00441B85 /* HelloMonkey.xcconfig */,
 			);
 			path = Configurations;
-			sourceTree = "<group>";
-		};
-		6BB689E71BBFDD8C00441B85 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BB68A0A1BBFDD8D00441B85 /* HelloMonkey.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6BB689EB1BBFDD8C00441B85 /* Images */ = {
@@ -3829,16 +3681,6 @@
 			mainGroup = E22E954B1BBFB130009C91E3;
 			productRefGroup = E22E95551BBFB130009C91E3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6BB6855C1BBFDD8B00441B85 /* Products */;
-					ProjectRef = 6BB6855B1BBFDD8B00441B85 /* BasicPhone.xcodeproj */;
-				},
-				{
-					ProductGroup = 6BB689E71BBFDD8C00441B85 /* Products */;
-					ProjectRef = 6BB689E61BBFDD8C00441B85 /* HelloMonkey.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E22E95531BBFB130009C91E3 /* Humans Without Borders */,
@@ -3847,23 +3689,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6BB68A071BBFDD8D00441B85 /* BasicPhone.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = BasicPhone.app;
-			remoteRef = 6BB68A061BBFDD8D00441B85 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BB68A0A1BBFDD8D00441B85 /* HelloMonkey.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HelloMonkey.app;
-			remoteRef = 6BB68A091BBFDD8D00441B85 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E22E95521BBFB130009C91E3 /* Resources */ = {

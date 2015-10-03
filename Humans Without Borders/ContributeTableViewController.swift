@@ -35,8 +35,11 @@ class ContributeTableViewController: UITableViewController {
                 let userFirstName:String? = result["first_name"] as? String
                 let userLastName:String? = result["last_name"] as? String
                 let userEmail:String? = result["email"] as? String
+                let userType: String = "Host"
                 
                 let myUser:PFUser = PFUser.currentUser()!
+                
+                myUser.setObject(userType, forKey: "user_type")
                 
                 if(userFirstName != nil)
                 {
