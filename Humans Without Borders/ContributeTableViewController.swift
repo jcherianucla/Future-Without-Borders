@@ -18,6 +18,7 @@ class ContributeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +27,6 @@ class ContributeTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -43,6 +43,7 @@ class ContributeTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ContributeTableViewCell
         // Configure the cell...
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.imageBG.image = UIImage(named: "Contribute BG \(indexPath.row+1)")
         if indexPath.row == 0 {
             cell.label.text = "Host a Family"

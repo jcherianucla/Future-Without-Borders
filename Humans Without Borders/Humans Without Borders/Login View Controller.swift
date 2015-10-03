@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 class Login_View_Controller: UIViewController {
 
@@ -29,6 +32,20 @@ class Login_View_Controller: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logInFBButton(sender: AnyObject) {
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"], block: { (user: PFUser?, error: NSError?) -> Void in
+            
+            if(error != nil)
+            {
+                print("Error!!!\n")
+                //return
+            }
+            if(FBSDKAccessToken.currentAccessToken() != nil)
+            {
+                self.performSegueWithIdentifier("ContributeSegue", sender: nil)
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation
