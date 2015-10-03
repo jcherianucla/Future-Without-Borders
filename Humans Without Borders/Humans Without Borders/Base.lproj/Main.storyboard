@@ -20,11 +20,33 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contribute" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Contribute" id="gIg-WZ-i91"/>
+                    <connections>
+                        <segue destination="czx-d7-pHG" kind="show" id="BrI-dW-ktL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1246" y="-444"/>
+        </scene>
+        <!--Host Family-->
+        <scene sceneID="zmV-De-CR6">
+            <objects>
+                <viewController id="czx-d7-pHG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m7Z-PD-fgH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ueo-dm-UuV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sG6-mg-iSL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Host Family" id="Tx2-6Z-HTr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="170-ff-Pke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="-444"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="wg7-f3-ORb">
@@ -40,11 +62,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="4nN-z6-DRc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1376" y="360"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="NSH-ot-l2g">
@@ -178,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2Z-CZ-LpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-526" y="76"/>
+            <point key="canvasLocation" x="-554" y="18"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -192,13 +214,51 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="iuD-7o-OSf" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="SAw-VI-MnV" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-66" y="18"/>
+        </scene>
+        <!--Contribute-->
+        <scene sceneID="KXy-FI-qp9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iuD-7o-OSf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contribute" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHu-yZ-ydN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="hMs-CV-Uhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q66-Ef-dNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-444"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="2UJ-IN-MkO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SAw-VI-MnV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rF3-aT-ce9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Wsz-HD-tbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7n-Ed-avF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
         </scene>
     </scenes>
     <resources>
