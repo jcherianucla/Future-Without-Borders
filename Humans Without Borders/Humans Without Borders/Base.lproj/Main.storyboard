@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -34,7 +34,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -59,6 +59,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-cG-LKX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="589"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginWithFacebook" translatesAutoresizingMaskIntoConstraints="NO" id="j7S-Hi-YHB">
+                                <rect key="frame" x="52" y="478.5" width="310.5" height="51.5"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-CG-bm7">
                                 <rect key="frame" x="0.0" y="589" width="414" height="73.5"/>
                                 <subviews>
@@ -77,24 +80,8 @@
                                     <constraint firstItem="N3G-fk-W5F" firstAttribute="height" secondItem="dfs-CG-bm7" secondAttribute="height" id="fKT-QT-PF8"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-LW-akw">
-                                <rect key="frame" x="0.0" y="662.5" width="414" height="73.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-gV-2O9">
-                                        <rect key="frame" x="177" y="22" width="60" height="30"/>
-                                        <state key="normal" title="SIGN UP">
-                                            <color key="titleColor" red="0.28235294117647058" green="0.53333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerY" secondItem="ch3-LW-akw" secondAttribute="centerY" id="8Xb-Ys-cwl"/>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerX" secondItem="ch3-LW-akw" secondAttribute="centerX" id="OcS-0O-IhJ"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Humans Without Borders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-n4-9yQ">
-                                <rect key="frame" x="42" y="114.5" width="331.5" height="106.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humans Without Borders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-n4-9yQ">
+                                <rect key="frame" x="42" y="111.5" width="331.5" height="109.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -105,26 +92,67 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-LW-akw">
+                                <rect key="frame" x="0.0" y="662" width="414" height="73.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-gV-2O9">
+                                        <rect key="frame" x="177" y="22" width="60" height="30"/>
+                                        <state key="normal" title="SIGN UP">
+                                            <color key="titleColor" red="0.28235294117647058" green="0.53333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u2-Zo-cby">
+                                        <rect key="frame" x="0.0" y="-662" width="300" height="60"/>
+                                        <state key="normal" image="LoginWithFacebook"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerY" secondItem="ch3-LW-akw" secondAttribute="centerY" id="8Xb-Ys-cwl"/>
+                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerX" secondItem="ch3-LW-akw" secondAttribute="centerX" id="OcS-0O-IhJ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OR Image" translatesAutoresizingMaskIntoConstraints="NO" id="HRA-UM-odd">
+                                <rect key="frame" x="72.5" y="535" width="269.5" height="51.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bog-BZ-jhj" userLabel="LoginWithFacebook">
+                                <rect key="frame" x="52" y="478.5" width="310.5" height="51.5"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="q2N-Wm-cRW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8O3-n4-9yQ" firstAttribute="width" secondItem="3aW-cG-LKX" secondAttribute="width" multiplier="0.8" id="0JI-U8-jJn"/>
+                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.75" id="2uS-cX-E9z"/>
                             <constraint firstItem="3aW-cG-LKX" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.8" id="6fc-Fi-McA"/>
                             <constraint firstAttribute="trailing" secondItem="3aW-cG-LKX" secondAttribute="trailing" id="8fN-wy-TLh"/>
                             <constraint firstItem="ch3-LW-akw" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="GOn-SZ-QGH"/>
                             <constraint firstItem="dfs-CG-bm7" firstAttribute="top" secondItem="3aW-cG-LKX" secondAttribute="bottom" id="IVv-Jo-lfJ"/>
+                            <constraint firstItem="bog-BZ-jhj" firstAttribute="centerX" secondItem="j7S-Hi-YHB" secondAttribute="centerX" id="NUe-Ud-a5R"/>
+                            <constraint firstItem="HRA-UM-odd" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="OO6-2M-0FY"/>
+                            <constraint firstItem="bog-BZ-jhj" firstAttribute="height" secondItem="j7S-Hi-YHB" secondAttribute="height" id="T0Q-a1-gSq"/>
+                            <constraint firstItem="bog-BZ-jhj" firstAttribute="centerY" secondItem="j7S-Hi-YHB" secondAttribute="centerY" id="Tud-SA-2WM"/>
+                            <constraint firstItem="bog-BZ-jhj" firstAttribute="width" secondItem="j7S-Hi-YHB" secondAttribute="width" id="Wsb-82-kHw"/>
                             <constraint firstAttribute="trailing" secondItem="ch3-LW-akw" secondAttribute="trailing" id="Xdb-ET-rlQ"/>
+                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="Xwa-eB-3hC"/>
+                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.07" id="Yho-Wi-yYT"/>
                             <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="8O3-n4-9yQ" secondAttribute="bottom" multiplier="10:3" id="Yj0-7B-OsS"/>
                             <constraint firstAttribute="trailing" secondItem="dfs-CG-bm7" secondAttribute="trailing" id="Zd1-RZ-EQ3"/>
                             <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="ch3-LW-akw" secondAttribute="bottom" id="Zxa-hi-B2M"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.7" id="abI-KL-dtE"/>
                             <constraint firstItem="ch3-LW-akw" firstAttribute="top" secondItem="dfs-CG-bm7" secondAttribute="bottom" id="b7B-1L-AKo"/>
+                            <constraint firstItem="dfs-CG-bm7" firstAttribute="top" secondItem="j7S-Hi-YHB" secondAttribute="bottom" multiplier="10:9" id="cXF-qS-jRv"/>
                             <constraint firstItem="8O3-n4-9yQ" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="gFt-bD-UG7"/>
                             <constraint firstItem="dfs-CG-bm7" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="igM-6t-IdG"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="top" secondItem="8O3-n4-9yQ" secondAttribute="bottom" id="ilr-bQ-hHf"/>
+                            <constraint firstItem="HRA-UM-odd" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.65" id="j16-Zu-Ukj"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="jH4-Vp-pkc"/>
                             <constraint firstItem="3aW-cG-LKX" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="lej-WI-zLd"/>
                             <constraint firstItem="dfs-CG-bm7" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.1" id="rFb-g9-b2h"/>
+                            <constraint firstItem="HRA-UM-odd" firstAttribute="top" secondItem="j7S-Hi-YHB" secondAttribute="bottom" constant="5" id="uxV-iS-rnA"/>
+                            <constraint firstItem="HRA-UM-odd" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.07" id="xPP-5U-ueI"/>
                             <constraint firstItem="3aW-cG-LKX" firstAttribute="top" secondItem="V2s-L0-Scb" secondAttribute="top" id="y1L-yu-l7T"/>
                         </constraints>
                     </view>
@@ -139,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2Z-CZ-LpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-631" y="-999"/>
+            <point key="canvasLocation" x="-762" y="-59"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -162,7 +190,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LoginWithFacebook" width="300" height="60"/>
         <image name="Main Blurred BG" width="500" height="714"/>
+        <image name="OR Image" width="300" height="33"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
