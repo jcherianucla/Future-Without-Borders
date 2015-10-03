@@ -11,5 +11,6 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import "TwilioClient.h"
 
 #endif /* HumansWithoutBorders_Bridging_Header_h */

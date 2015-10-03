@@ -11,6 +11,7 @@
 		6BB68A0C1BBFDD9800441B85 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB689DA1BBFDD8C00441B85 /* libssl.a */; };
 		6BB68A0D1BBFDD9800441B85 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB689DB1BBFDD8C00441B85 /* libTwilioClient.a */; };
 		6BB68A0F1BBFDDF900441B85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */; };
+		6BB68A211BC039E100441B85 /* Refugee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB68A201BC039E100441B85 /* Refugee.swift */; settings = {ASSET_TAGS = (); }; };
 		6D7DCD221BBFCEA40001E84F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		6D7DCD231BBFCEA40001E84F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		6D7DCD241BBFCEA40001E84F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
@@ -1110,9 +1111,10 @@
 		6BB68A001BBFDD8C00441B85 /* dtmf_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_star.wav; sourceTree = "<group>"; };
 		6BB68A011BBFDD8C00441B85 /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
 		6BB68A021BBFDD8C00441B85 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
-		6BB68A031BBFDD8C00441B85 /* Twilio Client iOS Docs.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Twilio Client iOS Docs.pkg"; sourceTree = "<group>"; };
+		6BB68A031BBFDD8C00441B85 /* Twilio Client iOS Docs.pkg */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.installer-pkg"; path = "Twilio Client iOS Docs.pkg"; sourceTree = "<group>"; };
 		6BB68A041BBFDD8C00441B85 /* TwilioSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TwilioSDK.podspec; sourceTree = "<group>"; };
 		6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6BB68A201BC039E100441B85 /* Refugee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Refugee.swift; path = ../Refugee.swift; sourceTree = "<group>"; };
 		6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -3712,6 +3714,7 @@
 				E22E955B1BBFB131009C91E3 /* SecondViewController.swift */,
 				E22E955D1BBFB131009C91E3 /* Main.storyboard */,
 				E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */,
+				6BB68A201BC039E100441B85 /* Refugee.swift */,
 				E22E95601BBFB131009C91E3 /* Assets.xcassets */,
 				E22E95621BBFB131009C91E3 /* LaunchScreen.storyboard */,
 				E22E95651BBFB131009C91E3 /* Info.plist */,
@@ -3895,6 +3898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */,
+				6BB68A211BC039E100441B85 /* Refugee.swift in Sources */,
 				E22E955C1BBFB131009C91E3 /* SecondViewController.swift in Sources */,
 				E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */,
 				E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */,
