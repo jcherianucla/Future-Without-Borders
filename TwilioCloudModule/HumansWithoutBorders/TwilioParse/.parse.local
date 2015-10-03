@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Humans Without Borders": {
+      "applicationId": "0OxnK5A9fQBKrNLrdsTiq95ZnR7209NOQPQdocSv"
+    },
+    "_default": {
+      "link": "Humans Without Borders"
+    }
+  }
+}
