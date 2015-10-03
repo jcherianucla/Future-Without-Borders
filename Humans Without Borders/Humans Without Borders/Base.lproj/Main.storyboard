@@ -163,6 +163,7 @@
                                 <rect key="frame" x="52" y="478.5" width="310.5" height="51.5"/>
                                 <animations/>
                                 <connections>
+                                    <action selector="logInFBButton:" destination="c0q-B2-LF8" eventType="touchUpInside" id="7Wq-Nm-J3I"/>
                                     <segue destination="49e-Tb-3d3" kind="show" id="q2N-Wm-cRW"/>
                                 </connections>
                             </button>
@@ -238,7 +239,6 @@
         <!--Contribute-->
         <scene sceneID="KXy-FI-qp9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q66-Ef-dNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iuD-7o-OSf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contribute" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
@@ -259,6 +259,7 @@
                         <segue destination="RP4-Vv-Kvl" kind="relationship" relationship="rootViewController" id="efN-uU-Q5e"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q66-Ef-dNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-444"/>
         </scene>
