@@ -39,6 +39,8 @@
 		E22E956F1BBFB131009C91E3 /* Humans_Without_BordersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E956E1BBFB131009C91E3 /* Humans_Without_BordersTests.swift */; };
 		E22E957A1BBFB131009C91E3 /* Humans_Without_BordersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95791BBFB131009C91E3 /* Humans_Without_BordersUITests.swift */; };
 		E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */; settings = {ASSET_TAGS = (); }; };
+		E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA2C1BBFE38D0039213E /* ContributeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1146,6 +1148,8 @@
 		E22E95791BBFB131009C91E3 /* Humans_Without_BordersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humans_Without_BordersUITests.swift; sourceTree = "<group>"; };
 		E22E957B1BBFB131009C91E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login View Controller.swift"; sourceTree = "<group>"; };
+		E23EAA2C1BBFE38D0039213E /* ContributeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContributeTableViewController.swift; path = ../ContributeTableViewController.swift; sourceTree = "<group>"; };
+		E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3701,6 +3705,8 @@
 		E22E95561BBFB130009C91E3 /* Humans Without Borders */ = {
 			isa = PBXGroup;
 			children = (
+				E23EAA2C1BBFE38D0039213E /* ContributeTableViewController.swift */,
+				E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */,
 				E22E95571BBFB131009C91E3 /* AppDelegate.swift */,
 				E22E95591BBFB131009C91E3 /* FirstViewController.swift */,
 				E22E955B1BBFB131009C91E3 /* SecondViewController.swift */,
@@ -3888,9 +3894,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */,
 				E22E955C1BBFB131009C91E3 /* SecondViewController.swift in Sources */,
 				E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */,
 				E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */,
+				E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */,
 				E22E955A1BBFB131009C91E3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
