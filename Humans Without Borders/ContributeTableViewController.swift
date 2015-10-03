@@ -19,7 +19,7 @@ class ContributeTableViewController: UITableViewController, Contribute{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        var requestedPermissions = ["fields": "id , email , first_name, last_name"]
+        let requestedPermissions = ["fields": "id , email , first_name, last_name, timezone"]
         let userDetails = FBSDKGraphRequest(graphPath: "me", parameters: requestedPermissions)
         
         userDetails.startWithCompletionHandler{ (connection, result, error: NSError!) -> Void in
@@ -36,6 +36,7 @@ class ContributeTableViewController: UITableViewController, Contribute{
                 let userLastName:String? = result["last_name"] as? String
                 let userEmail:String? = result["email"] as? String
                 let userType: String? = "Host"
+                let userLocation: String? = result["timezone"] as? String
                 
                 let myUser:PFUser = PFUser.currentUser()!
                 myUser.setObject(userType!, forKey: "user_type")
@@ -52,6 +53,10 @@ class ContributeTableViewController: UITableViewController, Contribute{
                 if(userEmail != nil)
                 {
                     myUser.setObject(userEmail!, forKey: "email")
+                }
+                if(userLocation != nil)
+                {
+                    myUser.setObject(userLocation!, forKey: "timezone")
                 }
                 
                 let userProfile = "https://graph.facebook.com/" + userID + "/picture?type=large"
