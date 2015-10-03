@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("0OxnK5A9fQBKrNLrdsTiq95ZnR7209NOQPQdocSv", clientKey: "MoKnfd95iVAnLHiyNBx25NIrPcKiIL63CTL57GL1")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
     
