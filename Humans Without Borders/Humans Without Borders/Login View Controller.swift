@@ -38,8 +38,13 @@ class Login_View_Controller: UIViewController {
             if(error != nil)
             {
                 print("Error!!!\n")
-                //return
+                return
             }
+            
+            print(user)
+            print("Current user token =\(FBSDKAccessToken.currentAccessToken().tokenString)")
+            print("Current user ID =\(FBSDKAccessToken.currentAccessToken().userID)")
+            
             if(FBSDKAccessToken.currentAccessToken() != nil)
             {
                 self.performSegueWithIdentifier("ContributeSegue", sender: nil)

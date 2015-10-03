@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -13,6 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="189" sectionHeaderHeight="28" sectionFooterHeight="28" id="uCw-qy-nk7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="189" id="lVu-zg-4vj" customClass="ContributeTableViewCell" customModule="Humans_Without_Borders" customModuleProvider="target">
@@ -24,15 +25,18 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contribute BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="elZ-l2-q9u">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-zc-LLb">
                                             <rect key="frame" x="186" y="83.5" width="43" height="23.5"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="elZ-l2-q9u" firstAttribute="width" secondItem="zK3-cC-Zd0" secondAttribute="width" id="9RX-9S-oIb"/>
@@ -43,6 +47,7 @@
                                         <constraint firstItem="ogh-zc-LLb" firstAttribute="centerY" secondItem="elZ-l2-q9u" secondAttribute="centerY" id="sGg-wT-Ves"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="imageBG" destination="elZ-l2-q9u" id="dCK-ye-pcr"/>
@@ -75,6 +80,7 @@
                     <view key="view" contentMode="scaleToFill" id="zhQ-ns-Thu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -185,7 +191,7 @@
                                 <animations/>
                                 <connections>
                                     <action selector="logInFBButton:" destination="c0q-B2-LF8" eventType="touchUpInside" id="7Wq-Nm-J3I"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="q2N-Wm-cRW"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="ContributeSegue" id="q2N-Wm-cRW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -266,6 +272,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHu-yZ-ydN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.28235294117647058" green="0.53333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,6 +282,7 @@
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tcL-Cq-hmg">
                         <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="RP4-Vv-Kvl" kind="relationship" relationship="rootViewController" id="efN-uU-Q5e"/>
@@ -293,6 +301,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rF3-aT-ce9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.26666666666666666" green="0.47058823529411764" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
