@@ -49,7 +49,7 @@ class Login_View_Controller: UIViewController {
             {
                 user = PFUser.currentUser()
                 user?.setObject("Host", forKey: "user_type")
-                self.performSegueWithIdentifier("ContributeSegue", sender: nil)
+                self.performSegueWithIdentifier("SetTextSegue", sender: nil)
             }
         })
     }
