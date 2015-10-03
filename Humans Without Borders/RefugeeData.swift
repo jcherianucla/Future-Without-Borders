@@ -8,7 +8,25 @@
 
 import Foundation
 
+let SPDefaultClientName:String = "jenny";
+let SPBaseCapabilityTokenUrl:String = "http://example.com/generateToken?%@"
+let SPTwiMLAppSid:String = "APxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
 class RefugeeData {
     var device:TCDevice? = nil;
     var connection:TCConnection? = nil;
+    
+    func login() {
+        var url:String = self.getCapabilityTokenUrl();
+    }
+    
+    func getCapabilityTokenUrl() -> String {
+        
+        var querystring:String = String();
+        
+        querystring += String(format:"&sid=%@", SPTwiMLAppSid);
+        querystring += String(format:"&name=%@", SPDefaultClientName);
+        
+        return String(format:SPBaseCapabilityTokenUrl, querystring);
+    }
 }
