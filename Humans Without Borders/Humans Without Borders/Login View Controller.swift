@@ -33,7 +33,7 @@ class Login_View_Controller: UIViewController {
     }
     
     @IBAction func logInFBButton(sender: AnyObject) {
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"], block: { (user: PFUser?, error: NSError?) -> Void in
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"], block: { (var user: PFUser?, error: NSError?) -> Void in
             
             if(error != nil)
             {
@@ -47,8 +47,9 @@ class Login_View_Controller: UIViewController {
             
             if(FBSDKAccessToken.currentAccessToken() != nil)
             {
+                user = PFUser.currentUser()
+                user?.setObject("Host", forKey: "user_type")
                 self.performSegueWithIdentifier("ContributeSegue", sender: nil)
-                user?.setValue("Host", forKey: "user_type")
             }
         })
     }
