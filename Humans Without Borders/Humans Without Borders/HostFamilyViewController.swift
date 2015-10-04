@@ -29,69 +29,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     @IBOutlet weak var numberInFamily: UILabel!
     @IBOutlet weak var refugeeLocation: MKMapView!
     @IBOutlet weak var distanceAway: UILabel!
-    @IBAction func provideAidButton(sender: AnyObject)
-    {
-        print("OBJECT IDDDDDDDDDDDDD: " + objectID!)
-        let query = PFUser.query()
-        query!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!){ (object: PFObject?, error: NSError?) -> Void in
-            if error == nil && object != nil
-            {
-                self.userData = object
-                let firstName = self.userData!["first_name"] as! String
-                let lastName = self.userData!["last_name"] as! String
-                let address = self.userData!["address"] as! String
-                let location = self.userData!["location"] as! String
-                let number = self.userData!["phone_number"] as! String
-                print(object)
-                let refugeeQuery = PFQuery(className: "Refugees")
-                refugeeQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-                    if error == nil {
-                        // The find succeeded.
-                        // Do something with the found objects
-                        if let objects = objects as [PFObject]!
-                        {
-                            for innerObject in objects
-                            {
-                                print(innerObject)
-                                print(String(self.objectID))
-                                if(String(innerObject.objectId) == String(self.objectID!))
-                                {
-                                    self.refugeeData = innerObject
-                                    print("THE INNER OBJECT IS: " + String(innerObject))
-                                    let decider:Bool? = self.refugeeData!["selected"] as? Bool
-                                    if(decider! == false)
-                                    {
-                                        self.refugeeData!["selected"] = true
-                                        self.refugeeData!["host"] = firstName + " " + lastName + ", " + address + ", " + location + ", " + number
-                                        innerObject.saveInBackground()}
-                                    else
-                                    {
-                                        let message = "This family has already found shelter."
-                                        if #available(iOS 8.0, *)
-                                        {
-                                            let helped = UIAlertController(title: "Woah!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                                            helped.addAction(UIAlertAction(title: "Help another Family", style: .Default, handler: { (action) -> Void in
-                                                self.dismissViewControllerAnimated(true, completion: nil)
-                                                }))
-                                            self.presentViewController(helped, animated: true, completion: nil)
-                                        } else
-                                        {
-                                                // Fallback on earlier versions
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        } else
-                        {
-                            // Log details of the failure
-                            print("Error: \(error!) \(error!.userInfo)")
-                        }
-                    }
-                }
-            }
-        
-    }
     
     let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
@@ -156,7 +93,87 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             regionRadius * 2.0, regionRadius * 2.0)
         refugeeLocation.setRegion(coordinateRegion, animated: true)
     }
-    
+    @IBAction func provideAidButton(sender: AnyObject)
+    {
+        print("OBJECT IDDDDDDDDDDDDD: " + objectID!)
+        let query = PFUser.query()
+        query!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!){ (object: PFObject?, error: NSError?) -> Void in
+            if error == nil && object != nil
+            {
+                self.userData = object
+                let firstName = self.userData!["first_name"] as! String
+                let lastName = self.userData!["last_name"] as! String
+                let address = self.userData!["address"] as! String
+                let location = self.userData!["location"] as! String
+                let number = self.userData!["phone_number"] as! String
+                print(object)
+                let refugeeQuery = PFQuery(className: "Refugees")
+                refugeeQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                    if error == nil {
+                        // The find succeeded.
+                        // Do something with the found objects
+                        if let objects = objects as [PFObject]!
+                        {
+                            for innerObject in objects
+                            {
+                                print(innerObject)
+                                print(String(self.objectID))
+                                if(String(innerObject.objectId) == String(self.objectID!))
+                                {
+                                    self.refugeeData = innerObject
+                                    print("THE INNER OBJECT IS: " + String(innerObject))
+                                    let decider:Bool? = self.refugeeData!["selected"] as? Bool
+                                    if(decider! == false)
+                                    {
+                                        self.refugeeData!["selected"] = true
+                                        self.refugeeData!["distance"] = self.distanceAway.text
+                                        self.refugeeData!["host"] = firstName + " " + lastName + ", " + address + ", " + location + ", " + number
+                                        innerObject.saveInBackground()
+                                        
+                                        let message = "You have become a Host for a Family."
+                                        if #available(iOS 8.0, *)
+                                        {
+                                            let helped = UIAlertController(title: "Congratulations", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                                            helped.addAction(UIAlertAction(title: "Help another Family", style: .Default, handler: { (action) -> Void in
+                                                //
+                                            }))
+                                            self.presentViewController(helped, animated: true, completion: nil)
+                                        } else
+                                        {
+                                            // Fallback on earlier versions
+                                        }
+                                        
+                                        
+                                    }
+                                    else
+                                    {
+                                        let message = "This family has already found shelter."
+                                        if #available(iOS 8.0, *)
+                                        {
+                                            let helped = UIAlertController(title: "Woah!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                                            helped.addAction(UIAlertAction(title: "Help another Family", style: .Default, handler: { (action) -> Void in
+                                                //
+                                            }))
+                                            self.presentViewController(helped, animated: true, completion: nil)
+                                        } else
+                                        {
+                                            // Fallback on earlier versions
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else
+                    {
+                        // Log details of the failure
+                        print("Error: \(error!) \(error!.userInfo)")
+                    }
+                }
+            }
+        }
+        
+    }
+
     
 }
 

@@ -15,12 +15,8 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
     
     var refugeeCount = 0
     var rufugeeDataList = [PFObject]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("TEST\n")
-        print("TEST\n")
-        print("TEST\n")
 
         self.TableViewFamilies.backgroundColor = UIColor.clearColor()
         // Do any additional setup after loading the view.
