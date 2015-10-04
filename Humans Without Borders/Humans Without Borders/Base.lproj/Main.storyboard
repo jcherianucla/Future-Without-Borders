@@ -323,8 +323,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="48.858844300000001, 2.2943506" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGB-P2-JNf">
-                                        <rect key="frame" x="52" y="478.5" width="310.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No location found" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGB-P2-JNf">
+                                        <rect key="frame" x="52" y="478.5" width="310.5" height="21"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -423,6 +423,16 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="SAo-Ex-vR6" id="1id-nG-dJT"/>
+                        <outlet property="emailLabel" destination="JsP-Us-RD8" id="Fgp-YU-iux"/>
+                        <outlet property="geolocationLabel" destination="rGB-P2-JNf" id="ZTl-IG-rBH"/>
+                        <outlet property="helloLabel" destination="Pi2-2P-3Fj" id="eyl-LC-T2e"/>
+                        <outlet property="locationLabel" destination="h06-Od-fe7" id="IXC-3W-KQj"/>
+                        <outlet property="maxPeopleLabel" destination="Cdb-di-FLV" id="bs4-9B-BXb"/>
+                        <outlet property="phoneNumLabel" destination="tOF-DU-nNE" id="Tin-wX-GvG"/>
+                        <outlet property="profilePicture" destination="cDm-ys-UlL" id="gJY-i7-Kz6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

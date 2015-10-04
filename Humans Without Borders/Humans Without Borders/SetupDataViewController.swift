@@ -48,7 +48,6 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         query2!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
             (object: PFObject?, error: NSError?) -> Void in
             if error == nil && object != nil {
-                print(object)
                 self.userData = object
                 let firstName:String = self.userData!["first_name"] as! String
                 let secondName:String = self.userData!["last_name"] as! String
@@ -93,6 +92,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                 object["email"] = self.EmailTextField.text!
                 object["max_people"] = self.MaxPeopleTextfield.text!
                 object.saveInBackground()
+                print(object)
                 self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
             }
         }
