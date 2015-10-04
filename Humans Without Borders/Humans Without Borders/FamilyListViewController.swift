@@ -7,17 +7,44 @@
 //
 
 import UIKit
+import Parse
 
 class FamilyListViewController: UIViewController, UITableViewDelegate , UITableViewDataSource, Host {
 
     @IBOutlet var TableViewFamilies: UITableView!
     
+    var refugeeCount = 0
+    var rufugeeDataList = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("TEST\n")
+        print("TEST\n")
+        print("TEST\n")
+
         self.TableViewFamilies.backgroundColor = UIColor.clearColor()
         // Do any additional setup after loading the view.
+        let query = PFQuery(className:"Refugees")
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) scores.")
+                self.refugeeCount = objects!.count
+                // Do something with the found objects
+                if let objects = objects as [PFObject]! {
+                    for object in objects {
+                        self.rufugeeDataList.append(object)
+                    }
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+            print(self.rufugeeDataList)
+            self.TableViewFamilies.reloadData()
+        }
+        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,12 +53,33 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return refugeeCount
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FamilyTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.backgroundColor = UIColor.clearColor()
+        cell.FamilyNameLabel.text = rufugeeDataList[indexPath.row]["fam_name"] as? String
+        if cell.FamilyNameLabel.text != nil {
+            cell.FamilyNameLabel.text = "Family " + cell.FamilyNameLabel.text!
+        }
+        else {
+            cell.FamilyNameLabel.text = "Family Name Unknown"
+        }
+        cell.numberFamilyMembersLabel.text = rufugeeDataList[indexPath.row]["fam_number"] as? String
+        if cell.numberFamilyMembersLabel.text != nil {
+            cell.numberFamilyMembersLabel.text = cell.numberFamilyMembersLabel.text! + " Family Members"
+        }
+        else {
+            cell.numberFamilyMembersLabel.text = "Family Members Unknown"
+        }
+        cell.distanceLabel.text = rufugeeDataList[indexPath.row]["distance"] as? String
+        if cell.distanceLabel.text != nil {
+            cell.distanceLabel.text = "Located " + cell.distanceLabel.text! + " km"
+        }
+        else {
+            cell.distanceLabel.text = "Location Unkown"
+        }
         cell.delegate = self
         return cell
     }
