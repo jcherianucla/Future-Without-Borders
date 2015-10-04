@@ -80,8 +80,18 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         else {
             cell.distanceLabel.text = "Location Unkown"
         }
+        cell.longitude = rufugeeDataList[indexPath.row]["lon"] as? String
+        cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
         cell.delegate = self
         return cell
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueToHostFamily" {
+            //
+            //challenge, sound, volume, snooze
+        }
+
+        
     }
     func PressedButtonToGotoHost() {
         performSegueWithIdentifier("SegueToHostFamily", sender: self)
