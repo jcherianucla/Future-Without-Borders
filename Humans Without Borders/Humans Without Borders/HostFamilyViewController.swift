@@ -127,7 +127,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                                     if(decider! == false)
                                     {
                                         self.refugeeData!["selected"] = true
-                                        self.refugeeData!["distance"] = String(self.distanceInt)
                                         self.refugeeData!["host"] = firstName + " " + lastName + ", " + address + ", " + location + ", " + number
                                         innerObject.saveInBackground()
                                         
