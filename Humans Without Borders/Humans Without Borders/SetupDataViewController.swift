@@ -89,17 +89,48 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                 object["address"] = self.addressTextField.text!
                 object["phone_number"] = self.PhoneTextField.text!
                 object["location"] = self.LocationTextField.text!
-                object["email"] = self.EmailTextField.text!
                 object["max_people"] = self.MaxPeopleTextfield.text!
-                object.saveInBackground()
-                print(object)
-                self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
+                if (self.isValidEmail(self.EmailTextField.text!))
+                {
+                    object["email"] = self.EmailTextField.text!
+                    object.saveInBackground()
+                    print(object)
+                    self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
+                }
+                else
+                {
+                    let message = "Please enter a valid email address!"
+                    if #available(iOS 8.0, *)
+                    {
+                        let emailValidation = UIAlertController(title: "Invalid Email", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                        emailValidation.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
+                                self.addressTextField.text! = ""
+                                self.PhoneTextField.text! = ""
+                                self.LocationTextField.text! = ""
+                                self.EmailTextField.text! = ""
+                                self.MaxPeopleTextfield.text! = ""
+                            
+                        }))
+                        self.presentViewController(emailValidation, animated: true, completion: nil)
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                }
+                
             }
         }
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    func isValidEmail(testStr:String) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
