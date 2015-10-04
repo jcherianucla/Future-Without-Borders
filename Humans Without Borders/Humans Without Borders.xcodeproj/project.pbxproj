@@ -43,6 +43,8 @@
 		E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E23EAA331BC0558A0039213E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23EAA321BC0558A0039213E /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1105,6 +1107,8 @@
 		E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributeTableViewCell.swift; sourceTree = "<group>"; };
 		E23EAA321BC0558A0039213E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupDataViewController.swift; sourceTree = "<group>"; };
+		E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTableViewCell.swift; sourceTree = "<group>"; };
+		E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3568,6 +3572,8 @@
 				E22E95591BBFB131009C91E3 /* FirstViewController.swift */,
 				E22E955B1BBFB131009C91E3 /* SecondViewController.swift */,
 				E22E955D1BBFB131009C91E3 /* Main.storyboard */,
+				E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */,
+				E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */,
 				E23EAA321BC0558A0039213E /* Assets.xcassets */,
 				E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */,
 				6BEC28151BC044E700A0017F /* RefugeeData.swift */,
@@ -3731,7 +3737,9 @@
 				E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */,
 				E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */,
 				E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */,
+				E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */,
 				E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */,
+				E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */,
 				E22E955A1BBFB131009C91E3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

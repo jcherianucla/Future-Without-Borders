@@ -38,7 +38,7 @@ class Login_View_Controller: UIViewController {
         if #available(iOS 8.0, *)
         {
             
-            let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Note", message: message, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
                 self.dismissViewControllerAnimated(true, completion: { () -> Void in
                 })
