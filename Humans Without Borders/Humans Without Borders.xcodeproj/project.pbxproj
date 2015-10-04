@@ -45,6 +45,7 @@
 		E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E2D1C6271BC0F68F0009483A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D1C6261BC0F68F0009483A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1109,6 +1110,7 @@
 		E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupDataViewController.swift; sourceTree = "<group>"; };
 		E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTableViewCell.swift; sourceTree = "<group>"; };
 		E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyListViewController.swift; sourceTree = "<group>"; };
+		E2D1C6261BC0F68F0009483A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1116,6 +1118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D1C6271BC0F68F0009483A /* MapKit.framework in Frameworks */,
 				6D7DCD601BBFFE230001E84F /* libsqlite3.dylib in Frameworks */,
 				6D7DCD5E1BBFFE130001E84F /* libz.1.dylib in Frameworks */,
 				6BB68A0F1BBFDDF900441B85 /* AVFoundation.framework in Frameworks */,
@@ -3528,6 +3531,7 @@
 		E22E954B1BBFB130009C91E3 = {
 			isa = PBXGroup;
 			children = (
+				E2D1C6261BC0F68F0009483A /* MapKit.framework */,
 				6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */,
 				6D7DCD5D1BBFFE120001E84F /* libz.1.dylib */,
 				6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */,

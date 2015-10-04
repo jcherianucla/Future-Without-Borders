@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -94,11 +94,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2f-td-3Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RrN-8E-ab3">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                </imageView>
             </objects>
             <point key="canvasLocation" x="1242" y="-444"/>
         </scene>
@@ -272,7 +267,92 @@
                     <view key="view" contentMode="scaleToFill" id="LvM-4K-VTE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Light Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="2U6-FK-IDV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Host BG" translatesAutoresizingMaskIntoConstraints="NO" id="bdS-s1-gC5">
+                                <rect key="frame" x="0.0" y="64" width="414" height="265"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-ab-U0Z">
+                                <rect key="frame" x="0.0" y="356" width="414" height="331"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19x-xA-7tj">
+                                <rect key="frame" x="20" y="128" width="290" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Istanbul, Turkey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGh-US-vhR">
+                                <rect key="frame" x="20" y="189" width="290" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Family Members: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WA-cT-Ctw">
+                                <rect key="frame" x="20" y="229" width="290" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance away: 250 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QST-ea-0bo">
+                                <rect key="frame" x="20" y="269" width="290" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mis-xF-592">
+                                <rect key="frame" x="103.5" y="592.5" width="207" height="60"/>
+                                <state key="normal" image="Blue Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provide Aid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-dN-DcN">
+                                <rect key="frame" x="103.5" y="592.5" width="207" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypw-PW-No3">
+                                <rect key="frame" x="103.5" y="592.5" width="207" height="60"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aI5-Bs-Cb3" firstAttribute="top" secondItem="sMY-ab-U0Z" secondAttribute="bottom" id="0Yo-p4-R7W"/>
+                            <constraint firstItem="mis-xF-592" firstAttribute="width" secondItem="LvM-4K-VTE" secondAttribute="width" multiplier="0.5" id="23h-9B-6gx"/>
+                            <constraint firstItem="2WA-cT-Ctw" firstAttribute="width" secondItem="gGh-US-vhR" secondAttribute="width" id="3Cn-gP-bTw"/>
+                            <constraint firstItem="2U6-FK-IDV" firstAttribute="width" secondItem="LvM-4K-VTE" secondAttribute="width" id="4B9-6X-wAZ"/>
+                            <constraint firstItem="aI5-Bs-Cb3" firstAttribute="top" secondItem="mis-xF-592" secondAttribute="bottom" multiplier="10:9.5" id="7ZU-rd-9bR"/>
+                            <constraint firstItem="2WA-cT-Ctw" firstAttribute="leading" secondItem="gGh-US-vhR" secondAttribute="leading" id="9at-Oe-fp5"/>
+                            <constraint firstItem="V8h-dN-DcN" firstAttribute="top" secondItem="mis-xF-592" secondAttribute="top" id="DfA-YL-myo"/>
+                            <constraint firstItem="QST-ea-0bo" firstAttribute="leading" secondItem="2WA-cT-Ctw" secondAttribute="leading" id="FNX-R3-K6q"/>
+                            <constraint firstItem="V8h-dN-DcN" firstAttribute="leading" secondItem="mis-xF-592" secondAttribute="leading" id="Hcs-BN-0Vg"/>
+                            <constraint firstItem="gGh-US-vhR" firstAttribute="leading" secondItem="19x-xA-7tj" secondAttribute="leading" id="Ih0-b0-rMr"/>
+                            <constraint firstItem="sMY-ab-U0Z" firstAttribute="centerX" secondItem="LvM-4K-VTE" secondAttribute="centerX" id="LTQ-Lm-boB"/>
+                            <constraint firstItem="QST-ea-0bo" firstAttribute="top" secondItem="2WA-cT-Ctw" secondAttribute="bottom" constant="15" id="LcC-kv-6Dh"/>
+                            <constraint firstItem="19x-xA-7tj" firstAttribute="top" secondItem="bdS-s1-gC5" secondAttribute="top" multiplier="6:3" id="M9G-Xt-MAs"/>
+                            <constraint firstItem="bdS-s1-gC5" firstAttribute="width" secondItem="LvM-4K-VTE" secondAttribute="width" id="MRU-yI-0dM"/>
+                            <constraint firstItem="sMY-ab-U0Z" firstAttribute="width" secondItem="LvM-4K-VTE" secondAttribute="width" id="PsT-Y9-Q5w"/>
+                            <constraint firstItem="Ypw-PW-No3" firstAttribute="leading" secondItem="mis-xF-592" secondAttribute="leading" id="QCA-fe-GAK"/>
+                            <constraint firstItem="bdS-s1-gC5" firstAttribute="top" secondItem="7om-Zw-Eks" secondAttribute="bottom" id="UhL-gp-upW"/>
+                            <constraint firstItem="2U6-FK-IDV" firstAttribute="height" secondItem="LvM-4K-VTE" secondAttribute="height" id="ZIU-tT-ryp"/>
+                            <constraint firstItem="QST-ea-0bo" firstAttribute="width" secondItem="2WA-cT-Ctw" secondAttribute="width" id="bwi-wm-dGm"/>
+                            <constraint firstItem="bdS-s1-gC5" firstAttribute="centerX" secondItem="LvM-4K-VTE" secondAttribute="centerX" id="cr1-rw-zsI"/>
+                            <constraint firstItem="2U6-FK-IDV" firstAttribute="centerX" secondItem="LvM-4K-VTE" secondAttribute="centerX" id="d6o-zd-pUd"/>
+                            <constraint firstItem="2U6-FK-IDV" firstAttribute="centerY" secondItem="LvM-4K-VTE" secondAttribute="centerY" id="eIJ-FW-VQZ"/>
+                            <constraint firstItem="gGh-US-vhR" firstAttribute="top" secondItem="19x-xA-7tj" secondAttribute="bottom" constant="20" id="f80-IK-cRL"/>
+                            <constraint firstItem="Ypw-PW-No3" firstAttribute="trailing" secondItem="mis-xF-592" secondAttribute="trailing" id="hXS-fv-A5c"/>
+                            <constraint firstItem="sMY-ab-U0Z" firstAttribute="height" secondItem="LvM-4K-VTE" secondAttribute="height" multiplier="0.45" id="i2m-hJ-xdi"/>
+                            <constraint firstItem="V8h-dN-DcN" firstAttribute="bottom" secondItem="mis-xF-592" secondAttribute="bottom" id="iPN-VD-rNi"/>
+                            <constraint firstItem="gGh-US-vhR" firstAttribute="width" secondItem="19x-xA-7tj" secondAttribute="width" id="iYu-jj-V2B"/>
+                            <constraint firstItem="19x-xA-7tj" firstAttribute="leading" secondItem="bdS-s1-gC5" secondAttribute="leading" constant="20" id="lWd-2z-JxR"/>
+                            <constraint firstItem="bdS-s1-gC5" firstAttribute="height" secondItem="LvM-4K-VTE" secondAttribute="height" multiplier="0.36" id="mA8-kP-CNe"/>
+                            <constraint firstItem="Ypw-PW-No3" firstAttribute="bottom" secondItem="mis-xF-592" secondAttribute="bottom" id="nuE-Cx-dhP"/>
+                            <constraint firstItem="19x-xA-7tj" firstAttribute="width" secondItem="bdS-s1-gC5" secondAttribute="width" multiplier="0.7" id="rv1-qq-Ehh"/>
+                            <constraint firstItem="Ypw-PW-No3" firstAttribute="top" secondItem="mis-xF-592" secondAttribute="top" id="skt-Qh-Nyl"/>
+                            <constraint firstItem="2WA-cT-Ctw" firstAttribute="top" secondItem="gGh-US-vhR" secondAttribute="bottom" constant="15" id="uLs-gc-zQe"/>
+                            <constraint firstItem="V8h-dN-DcN" firstAttribute="trailing" secondItem="mis-xF-592" secondAttribute="trailing" id="xLa-WJ-lci"/>
+                            <constraint firstItem="mis-xF-592" firstAttribute="centerX" secondItem="LvM-4K-VTE" secondAttribute="centerX" id="xWK-uX-CzF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Host a Family" id="e4O-uW-fhj">
                         <barButtonItem key="backBarButtonItem" title="Back" id="QC5-S0-a5o"/>
@@ -280,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YG2-qE-zdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="-444"/>
+            <point key="canvasLocation" x="2225" y="-444"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="wg7-f3-ORb">
@@ -297,7 +377,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efX-Tb-uUJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-cM-0fh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Dark Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-cM-0fh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <animations/>
                                     </imageView>
@@ -648,7 +728,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="Icr-D3-q3k">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Dark Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="Icr-D3-q3k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
@@ -931,7 +1011,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-Tn-zJA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Dark Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-Tn-zJA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-fY-sbv" userLabel="Profile">
@@ -1107,7 +1187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yp-Mp-ENI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="392"/>
+            <point key="canvasLocation" x="1705" y="350"/>
         </scene>
     </scenes>
     <resources>
@@ -1115,13 +1195,16 @@
         <image name="Contribute BG 1" width="375" height="185"/>
         <image name="Contribute Icon" width="28" height="28"/>
         <image name="Dashboard Icon" width="28" height="28"/>
+        <image name="Host BG" width="375" height="185"/>
         <image name="Host Family BG" width="375" height="185"/>
         <image name="LoginWithFacebook" width="300" height="60"/>
         <image name="Main Blurred BG" width="500" height="714"/>
+        <image name="Main Blurred BG Dark Blurry" width="500" height="714"/>
         <image name="Main Blurred BG Light" width="500" height="714"/>
+        <image name="Main Blurred BG Light Blurry" width="500" height="714"/>
         <image name="OR Image" width="300" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7MY-Sq-Xdj"/>
+        <segue reference="q2N-Wm-cRW"/>
     </inferredMetricsTieBreakers>
 </document>
