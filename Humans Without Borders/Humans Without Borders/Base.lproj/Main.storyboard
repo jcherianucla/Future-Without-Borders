@@ -260,7 +260,7 @@
         <!--Host a Family-->
         <scene sceneID="o5f-Ch-Fgw">
             <objects>
-                <viewController id="aAk-j4-VU3" sceneMemberID="viewController">
+                <viewController id="aAk-j4-VU3" customClass="HostFamilyViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7om-Zw-Eks"/>
                         <viewControllerLayoutGuide type="bottom" id="aI5-Bs-Cb3"/>
@@ -369,6 +369,12 @@
                     <navigationItem key="navigationItem" title="Host a Family" id="e4O-uW-fhj">
                         <barButtonItem key="backBarButtonItem" title="Back" id="QC5-S0-a5o"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="distanceAway" destination="QST-ea-0bo" id="htH-Yo-30S"/>
+                        <outlet property="geoLocation" destination="gGh-US-vhR" id="rgh-ha-mdG"/>
+                        <outlet property="numberInFamily" destination="2WA-cT-Ctw" id="W9v-zA-4Up"/>
+                        <outlet property="refugeeLocation" destination="sMY-ab-U0Z" id="FZa-vw-8sz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YG2-qE-zdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
