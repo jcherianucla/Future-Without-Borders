@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="1242" y="-444"/>
         </scene>
-        <!--Host a Family-->
+        <!--Choose a Family-->
         <scene sceneID="n5m-5d-o6y">
             <objects>
                 <viewController id="cFf-1K-FKS" customClass="FamilyListViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,6 +181,12 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCe-qK-TtN">
+                                                    <rect key="frame" x="0.0" y="0.5" width="414" height="140.5"/>
+                                                    <connections>
+                                                        <action selector="ButtonPressed:" destination="elc-ZF-us7" eventType="touchUpInside" id="bdg-gy-b0u"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,14 +237,38 @@
                             <constraint firstItem="Wp9-Om-An1" firstAttribute="width" secondItem="VVh-Ad-Xwp" secondAttribute="width" id="zEb-PH-h1t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Host a Family" id="Mjh-aA-8vt"/>
+                    <navigationItem key="navigationItem" title="Choose a Family" id="Mjh-aA-8vt">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fMn-7e-r8J"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="TableViewFamilies" destination="Wp9-Om-An1" id="wyY-IH-8wR"/>
+                        <segue destination="aAk-j4-VU3" kind="show" identifier="SegueToHostFamily" id="zSd-T1-dO1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4V-HP-OCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1714" y="-444"/>
+        </scene>
+        <!--Host a Family-->
+        <scene sceneID="o5f-Ch-Fgw">
+            <objects>
+                <viewController id="aAk-j4-VU3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7om-Zw-Eks"/>
+                        <viewControllerLayoutGuide type="bottom" id="aI5-Bs-Cb3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LvM-4K-VTE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Host a Family" id="e4O-uW-fhj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QC5-S0-a5o"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YG2-qE-zdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="-444"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="wg7-f3-ORb">
