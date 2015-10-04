@@ -17,6 +17,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     @IBOutlet weak var refugeeLocation: MKMapView!
     @IBOutlet weak var distanceAway: UILabel!
     
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
