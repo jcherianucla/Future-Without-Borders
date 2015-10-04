@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol Host {
-    func PressedButtonToGotoHost(lat: String, lon: String, famNum: String)
+    func PressedButtonToGotoHost(lat: String, lon: String, famNum: String, selection: Bool, host: String, objectID: String)
 }
 
 class FamilyTableViewCell: UITableViewCell {
@@ -25,6 +25,9 @@ class FamilyTableViewCell: UITableViewCell {
     var longitude: String? = nil
     var latitude: String? = nil
     var famNum: String? = nil
+    var selection: Bool? = nil
+    var host: String? = nil
+    var objectID: String? = nil
     var delegate: Host? = nil
 
     override func awakeFromNib() {
@@ -40,7 +43,7 @@ class FamilyTableViewCell: UITableViewCell {
     @IBAction func ButtonPressed(sender: AnyObject) {
         print("PRESSED BUTTON")
         if (delegate != nil) {
-            delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: famNum!)
+            delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: famNum!, selection: selection!, host: host!, objectID: objectID! )
         }
     }
 }

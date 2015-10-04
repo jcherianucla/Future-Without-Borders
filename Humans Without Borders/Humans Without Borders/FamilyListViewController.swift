@@ -85,6 +85,26 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String
         var randNumb = Int(arc4random_uniform(5)) + 1
         cell.refugeeImageView?.image = UIImage(named: "Refugee Family Icon \(randNumb)")
+        
+        if cell.selection != nil
+        {
+            cell.selection = rufugeeDataList[indexPath.row]["selection"] as? Bool
+        }
+        else
+        {
+            cell.selection = false
+        }
+
+        if cell.host != nil
+        {
+            cell.host = rufugeeDataList[indexPath.row]["host"] as? String
+        }
+        else
+        {
+            cell.host = ""
+        }
+        
+        cell.objectID = String(rufugeeDataList[indexPath.row].objectId)
         cell.delegate = self
         return cell
     }
@@ -94,20 +114,31 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
                 print(templatitude)
                 print(templongitude)
                 print(tempnumberOfFamilyMembers)
+                print(tempSelection)
                 secondVC.latitude = templatitude
                 secondVC.longitude = templongitude
                 secondVC.numberOfFamilyMembers = tempnumberOfFamilyMembers
+                secondVC.selection = tempSelection
+                secondVC.host = tempHost
+                secondVC.objectID = tempobjectID
+
         }
     }
     
     var templatitude = String()
     var templongitude = String()
     var tempnumberOfFamilyMembers = String()
+    var tempSelection = Bool()
+    var tempHost = String()
+    var tempobjectID = String()
 
-    func PressedButtonToGotoHost(lat: String, lon: String, famNum: String) {
+    func PressedButtonToGotoHost(lat: String, lon: String, famNum: String, selection: Bool, host: String, objectID: String) {
         templatitude = lat
         templongitude = lon
         tempnumberOfFamilyMembers = famNum
+        tempSelection = selection
+        tempHost = host
+        tempobjectID = objectID
         performSegueWithIdentifier("SegueToHostFamily", sender: self)
     }
     /*
