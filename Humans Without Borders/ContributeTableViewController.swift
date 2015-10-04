@@ -51,7 +51,7 @@ class ContributeTableViewController: UITableViewController, Contribute{
             cell.label.text = "Host a Family"
         }
         else if indexPath.row == 1 {
-            cell.label.text = "Donate to a Host Family"
+            cell.label.text = "Donate to support the Cause"
         }
         else {
             cell.label.text = "Find out more about this Crisis"
