@@ -86,7 +86,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contribute" id="YYh-Eo-Qp6">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="gHO-Sq-G1R"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gHO-Sq-G1R">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="cFf-1K-FKS" kind="show" identifier="ContributeToHostfamilySegue" id="L3p-NE-dfL"/>
@@ -258,7 +260,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose a Family" id="Mjh-aA-8vt">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="fMn-7e-r8J"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fMn-7e-r8J">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="TableViewFamilies" destination="Wp9-Om-An1" id="wyY-IH-8wR"/>
@@ -379,7 +383,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Host a Family" id="e4O-uW-fhj">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="QC5-S0-a5o"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QC5-S0-a5o">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="distanceAway" destination="QST-ea-0bo" id="htH-Yo-30S"/>
