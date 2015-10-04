@@ -78,13 +78,13 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         }
         cell.longitude = rufugeeDataList[indexPath.row]["long"] as? String
         cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
-        cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String
+        //cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String
         var randNumb = Int(arc4random_uniform(5)) + 1
         cell.refugeeImageView?.image = UIImage(named: "Refugee Family Icon \(randNumb)")
         
         if cell.selection != nil
         {
-            cell.selection = rufugeeDataList[indexPath.row]["selection"] as? Bool
+            cell.selection = rufugeeDataList[indexPath.row]["selected"] as? Bool
         }
         else
         {

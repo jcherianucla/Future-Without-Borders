@@ -36,9 +36,22 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        refugeeLatitude = (latitude! as NSString).doubleValue
-        refugeeLongitude = (longitude! as NSString).doubleValue
+        print(latitude)
+        print(longitude)
+        print((latitude! as NSString).doubleValue)
+        print((longitude! as NSString).doubleValue)
+        var temp1 = (latitude! as NSString).doubleValue
+        if temp1 > 80 || temp1 < -80
+        {
+            temp1 = 70;
+        }
+        var temp2 = (longitude! as NSString).doubleValue
+        if temp2 > 160 || temp2 < -160
+        {
+            temp2 = 150
+        }
+        refugeeLatitude = temp1
+        refugeeLongitude = temp2
         numberOfFamMembers = (numberOfFamilyMembers! as NSString).integerValue
 
 
