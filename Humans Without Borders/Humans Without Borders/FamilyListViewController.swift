@@ -80,8 +80,10 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         else {
             cell.distanceLabel.text = "Location Unkown"
         }
-        cell.longitude = rufugeeDataList[indexPath.row]["lon"] as? String
+        cell.longitude = rufugeeDataList[indexPath.row]["long"] as? String
         cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
+        cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String
+
         cell.delegate = self
         return cell
     }
@@ -104,6 +106,7 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         templatitude = lat
         templongitude = lon
         tempnumberOfFamilyMembers = famNum
+        performSegueWithIdentifier("SegueToHostFamily", sender: self)
     }
     /*
     // MARK: - Navigation

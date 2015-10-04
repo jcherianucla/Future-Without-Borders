@@ -21,6 +21,7 @@ class FamilyTableViewCell: UITableViewCell {
     
     var longitude: String? = nil
     var latitude: String? = nil
+    var famNum: String? = nil
     var delegate: Host? = nil
 
     override func awakeFromNib() {
@@ -36,7 +37,10 @@ class FamilyTableViewCell: UITableViewCell {
     @IBAction func ButtonPressed(sender: AnyObject) {
         print("PRESSED BUTTON")
         if (delegate != nil) {
-            delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: numberFamilyMembersLabel.text!)
+            print(longitude)
+            print(latitude)
+            print(famNum)
+            delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: famNum!)
         }
     }
 }
