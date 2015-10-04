@@ -83,7 +83,8 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         cell.longitude = rufugeeDataList[indexPath.row]["long"] as? String
         cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
         cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String
-
+        var randNumb = Int(arc4random_uniform(5)) + 1
+        cell.refugeeImageView?.image = UIImage(named: "Refugee Family Icon \(randNumb)")
         cell.delegate = self
         return cell
     }
@@ -91,6 +92,9 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         if segue.identifier == "SegueToHostFamily" {
             if segue.identifier == "alarmToSettings" {
                 let secondVC:HostFamilyViewController = segue.destinationViewController as! HostFamilyViewController
+                print(templatitude)
+                print(templongitude)
+                print(tempnumberOfFamilyMembers)
                 secondVC.latitude = templatitude
                 secondVC.longitude = templongitude
                 secondVC.numberOfFamilyMembers = tempnumberOfFamilyMembers

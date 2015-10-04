@@ -19,6 +19,9 @@ class FamilyTableViewCell: UITableViewCell {
     @IBOutlet var numberFamilyMembersLabel: UILabel!
     @IBOutlet var FamilyNameLabel: UILabel!
     
+    
+    @IBOutlet var refugeeImageView: UIImageView!
+    
     var longitude: String? = nil
     var latitude: String? = nil
     var famNum: String? = nil
