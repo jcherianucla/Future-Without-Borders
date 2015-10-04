@@ -66,7 +66,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,8 +87,16 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                 object["email"] = self.EmailTextField.text!
                 object["max_people"] = self.MaxPeopleTextfield.text!
                 object.saveInBackground()
+                self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
             }
         }
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     /*
     // MARK: - Navigation
