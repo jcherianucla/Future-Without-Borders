@@ -1,34 +1,38 @@
 //
-//  SetupDataViewController.swift
+//  EditViewController.swift
 //  Humans Without Borders
 //
-//  Created by Akhil Nadendla on 10/3/15.
+//  Created by Jahan Cherian on 10/3/15.
 //  Copyright © 2015 Humans Without Borders. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class SetupDataViewController: UIViewController, UITextFieldDelegate{
-    
-    @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var welcomeText: UILabel!
+class EditViewController: UIViewController {
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var adressField: UITextField!
+    @IBOutlet weak var numberField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+
     
     var activityInicator = UIActivityIndicatorView()
-
-    @IBOutlet var addressTextField: UITextField!
-    @IBOutlet var PhoneTextField: UITextField!
-    @IBOutlet var MaxPeopleTextfield: UITextField!
-    @IBOutlet var EmailTextField: UITextField!
-    @IBOutlet var LocationTextField: UITextField!
     
-    let myUser = PFUser.currentUser()
-    var userData: PFObject? = nil
-    var imageFile: PFFile? = nil
+    @IBOutlet weak var peopleField: UITextField!
+    @IBOutlet weak var locationField: UITextField!
     
+    var userData:PFObject? = nil
+    var userPic:PFFile? = nil
     
-    func load()
-    {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        adressField.userInteractionEnabled = true
+        numberField.userInteractionEnabled = true
+        peopleField.userInteractionEnabled = true
+        emailField.userInteractionEnabled = true
+        locationField.userInteractionEnabled = true
+        
         activityInicator = UIActivityIndicatorView(frame: self.view.frame)
         activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         activityInicator.center = self.view.center
@@ -37,23 +41,28 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         view.addSubview(activityInicator)
         activityInicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-        let query2 = PFUser.query()
-        query2!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
+        let query = PFUser.query()
+        query!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
             (object: PFObject?, error: NSError?) -> Void in
             if error == nil && object != nil {
                 self.userData = object
                 let firstName:String = self.userData!["first_name"] as! String
                 let secondName:String = self.userData!["last_name"] as! String
-                self.welcomeText.text = "Welcome, " + firstName + " " + secondName
-                self.imageFile = self.userData!["profile_picture"] as! PFFile
-                self.imageFile!.getDataInBackgroundWithBlock { (data , error) -> Void in
+                self.helloLabel.text = "Hello, " + firstName + " " + secondName
+                self.userPic = self.userData!["profile_picture"] as! PFFile
+                self.adressField.text! = self.userData!["address"] as! String
+                self.numberField.text! = self.userData!["phone_number"] as! String
+                self.peopleField.text! = self.userData!["max_people"] as! String
+                self.emailField.text! = self.userData!["email"] as! String
+                self.locationField.text! = self.userData!["location"] as! String
+                self.userPic!.getDataInBackgroundWithBlock { (data , error) -> Void in
                     if let downloadedImage = UIImage(data: data!) {
                         self.activityInicator.stopAnimating()
-                        self.profilePic!.image = downloadedImage
-                        self.profilePic.layer.cornerRadius = (downloadedImage.size.width + downloadedImage.size.height)/12
-                        self.profilePic.layer.borderWidth = 2
-                        self.profilePic.layer.borderColor = UIColor.whiteColor().CGColor
-                        self.profilePic.layer.masksToBounds = true
+                        self.profilePicture!.image = downloadedImage
+                        self.profilePicture.layer.cornerRadius = (downloadedImage.size.width + downloadedImage.size.height)/12
+                        self.profilePicture.layer.borderWidth = 2
+                        self.profilePicture.layer.borderColor = UIColor.whiteColor().CGColor
+                        self.profilePicture.layer.masksToBounds = true
                     }
                 }
                 
@@ -64,45 +73,33 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         }
         // Do any additional setup after loading the view.
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        addressTextField.userInteractionEnabled = true
-        PhoneTextField.userInteractionEnabled = true
-        MaxPeopleTextfield.userInteractionEnabled = true
-        EmailTextField.userInteractionEnabled = true
-        LocationTextField.userInteractionEnabled = true
-        
-        load()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func Submit(sender: AnyObject) {
-        print("SUBMITTING SUBMITTING SETUP")
+    
+     func Save() {
+        print("SUBMITTING SUBMITTING")
         let query3 = PFUser.query() //PFQuery(className:"GameScore")
         query3!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
             (object, error) -> Void in
             if error != nil {
                 print(error)
             } else if let object = object {
-                object["address"] = self.addressTextField.text!
-                object["phone_number"] = self.PhoneTextField.text!
-                object["location"] = self.LocationTextField.text!
-                object["max_people"] = self.MaxPeopleTextfield.text!
-                if (self.isValidEmail(self.EmailTextField.text!))
+                object["address"] = self.adressField.text!
+                object["phone_number"] = self.numberField.text!
+                object["location"] = self.locationField.text!
+                object["max_people"] = self.peopleField.text!
+                if (self.isValidEmail(self.emailField.text!))
                 {
-                    object["email"] = self.EmailTextField.text!
+                    object["email"] = self.emailField.text!
                     object.saveInBackground()
                     print(object)
-                    if(self.addressTextField.text!.characters.count > 0 && self.PhoneTextField.text!.characters.count > 0 && self.LocationTextField.text!.characters.count > 0 && self.MaxPeopleTextfield.text!.characters.count > 0)
+                    if(self.adressField.text!.characters.count > 0 && self.numberField.text!.characters.count > 0 && self.locationField.text!.characters.count > 0 && self.peopleField.text!.characters.count > 0)
                     {
-                        self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
+                        //self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
                     }
                     else
                     {
@@ -127,11 +124,11 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                     {
                         let emailValidation = UIAlertController(title: "Invalid Email", message: message, preferredStyle: UIAlertControllerStyle.Alert)
                         emailValidation.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                                self.addressTextField.text! = ""
-                                self.PhoneTextField.text! = ""
-                                self.LocationTextField.text! = ""
-                                self.EmailTextField.text! = ""
-                                self.MaxPeopleTextfield.text! = ""
+                            self.adressField.text! = ""
+                            self.numberField.text! = ""
+                            self.locationField.text! = ""
+                            self.emailField.text! = ""
+                            self.peopleField.text! = ""
                             
                         }))
                         self.presentViewController(emailValidation, animated: true, completion: nil)
@@ -145,6 +142,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
+        
     }
     func isValidEmail(testStr:String) -> Bool {
         // println("validate calendar: \(testStr)")
@@ -158,14 +156,18 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    override func viewDidDisappear(animated: Bool) {
+        print("SAVE!")
+        Save()
+    }
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
