@@ -90,7 +90,6 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueToHostFamily" {
-            if segue.identifier == "alarmToSettings" {
                 let secondVC:HostFamilyViewController = segue.destinationViewController as! HostFamilyViewController
                 print(templatitude)
                 print(templongitude)
@@ -98,7 +97,6 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
                 secondVC.latitude = templatitude
                 secondVC.longitude = templongitude
                 secondVC.numberOfFamilyMembers = tempnumberOfFamilyMembers
-            }
         }
     }
     
