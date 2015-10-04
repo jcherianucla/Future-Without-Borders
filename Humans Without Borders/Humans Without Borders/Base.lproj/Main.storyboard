@@ -431,7 +431,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-Mu-9tA" userLabel="Profile">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-Mu-9tA" userLabel="Profile">
                                 <rect key="frame" x="52" y="73.5" width="73.5" height="73.5"/>
                                 <animations/>
                                 <constraints>
