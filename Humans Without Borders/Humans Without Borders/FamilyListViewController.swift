@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FamilyListViewController: UIViewController, UITableViewDelegate , UITableViewDataSource {
+class FamilyListViewController: UIViewController, UITableViewDelegate , UITableViewDataSource, Host {
 
     @IBOutlet var TableViewFamilies: UITableView!
     
@@ -32,7 +32,11 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FamilyTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.backgroundColor = UIColor.clearColor()
+        cell.delegate = self
         return cell
+    }
+    func PressedButtonToGotoHost() {
+        performSegueWithIdentifier("SegueToHostFamily", sender: self)
     }
     /*
     // MARK: - Navigation

@@ -8,11 +8,19 @@
 
 import UIKit
 
+
+protocol Host {
+    func PressedButtonToGotoHost()
+}
+
+
 class FamilyTableViewCell: UITableViewCell {
 
     @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var numberFamilyMembersLabel: UILabel!
     @IBOutlet var FamilyNameLabel: UILabel!
+    var delegate: Host? = nil
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +31,10 @@ class FamilyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func ButtonPressed(sender: AnyObject) {
+        print("PRESSED BUTTON")
+        if (delegate != nil) {
+            delegate!.PressedButtonToGotoHost()
+        }
+    }
 }
