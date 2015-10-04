@@ -39,8 +39,8 @@ class Login_View_Controller: UIViewController {
             
             let alert = UIAlertController(title: "Note", message: message, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                })
+//                self.dismissViewControllerAnimated(true, completion: { () -> Void in
+//                })
                 PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"], block: { (var user: PFUser?, error: NSError?) -> Void in
                     
                     if(error != nil)
