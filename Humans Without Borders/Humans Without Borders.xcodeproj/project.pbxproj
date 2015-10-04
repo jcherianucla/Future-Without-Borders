@@ -33,6 +33,9 @@
 		6D7DCD601BBFFE230001E84F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */; };
 		6DFE2B021BC1008900837046 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B011BC1008900837046 /* EditViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6DFE2B041BC1108D00837046 /* HostFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6DFE2B061BC11B3D00837046 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B051BC11B3D00837046 /* Artwork.swift */; settings = {ASSET_TAGS = (); }; };
+		6DFE2B081BC11B4500837046 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B071BC11B4500837046 /* JSON.swift */; settings = {ASSET_TAGS = (); }; };
+		6DFE2B0A1BC11B5F00837046 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B091BC11B5F00837046 /* VCMapView.swift */; settings = {ASSET_TAGS = (); }; };
 		E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95571BBFB131009C91E3 /* AppDelegate.swift */; };
 		E22E955A1BBFB131009C91E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95591BBFB131009C91E3 /* FirstViewController.swift */; };
 		E22E955C1BBFB131009C91E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E955B1BBFB131009C91E3 /* SecondViewController.swift */; };
@@ -1094,6 +1097,9 @@
 		6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		6DFE2B011BC1008900837046 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostFamilyViewController.swift; sourceTree = "<group>"; };
+		6DFE2B051BC11B3D00837046 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		6DFE2B071BC11B4500837046 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		6DFE2B091BC11B5F00837046 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		E22E95541BBFB130009C91E3 /* Humans Without Borders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Humans Without Borders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E95571BBFB131009C91E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22E95591BBFB131009C91E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -3582,6 +3588,9 @@
 				E22E955B1BBFB131009C91E3 /* SecondViewController.swift */,
 				E22E955D1BBFB131009C91E3 /* Main.storyboard */,
 				E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */,
+				6DFE2B051BC11B3D00837046 /* Artwork.swift */,
+				6DFE2B091BC11B5F00837046 /* VCMapView.swift */,
+				6DFE2B071BC11B4500837046 /* JSON.swift */,
 				6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */,
 				E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */,
 				E23EAA321BC0558A0039213E /* Assets.xcassets */,
@@ -3743,15 +3752,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */,
+				6DFE2B081BC11B4500837046 /* JSON.swift in Sources */,
 				6BEC28161BC044E700A0017F /* RefugeeData.swift in Sources */,
 				E22E955C1BBFB131009C91E3 /* SecondViewController.swift in Sources */,
 				E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */,
 				E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */,
 				E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */,
 				E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */,
+				6DFE2B061BC11B3D00837046 /* Artwork.swift in Sources */,
 				E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */,
 				6DFE2B041BC1108D00837046 /* HostFamilyViewController.swift in Sources */,
 				E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */,
+				6DFE2B0A1BC11B5F00837046 /* VCMapView.swift in Sources */,
 				6DFE2B021BC1008900837046 /* EditViewController.swift in Sources */,
 				E22E955A1BBFB131009C91E3 /* FirstViewController.swift in Sources */,
 			);

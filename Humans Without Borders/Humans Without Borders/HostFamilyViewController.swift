@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class HostFamilyViewController: UIViewController {
 
     @IBOutlet weak var geoLocation: UILabel!
     @IBOutlet weak var numberInFamily: UILabel!
@@ -20,46 +20,79 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var latitude = String()
     var longitude = String()
     var numberOfFamilyMembers = String()
-    
-    let locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 8.0, *) {
-            self.locationManager.requestWhenInUseAuthorization()
-        } else {
-            // Fallback on earlier versions
+        
+        // set initial location in Honolulu
+        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        centerMapOnLocation(initialLocation)
+        
+        loadInitialData()
+        refugeeLocation.addAnnotations(artworks)
+        
+        refugeeLocation.delegate = self
+        
+        // show artwork on map
+        //    let artwork = Artwork(title: "King David Kalakaua", locationName: "Waikiki Gateway Park",
+        //      discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: 21.283921,
+        //        longitude: -157.831661))
+        //    mapView.addAnnotation(artwork)
+    }
+    
+    var artworks = [Artwork]()
+    func loadInitialData() {
+        // 1
+        let fileName = NSBundle.mainBundle().pathForResource("PublicArt", ofType: "json");
+        var readError : NSError?
+        var data: NSData = try! NSData(contentsOfFile: fileName!, options: NSDataReadingOptions(rawValue: 0))
+        
+        // 2
+        var error: NSError?
+        let jsonObject: AnyObject!
+        do {
+            jsonObject = try NSJSONSerialization.JSONObjectWithData(data,
+                options: NSJSONReadingOptions(rawValue: 0))
+        } catch var error1 as NSError {
+            error = error1
+            jsonObject = nil
         }
-        self.locationManager.startUpdatingLocation()
         
-    }
-
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        
-        let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(1, 1))
-        self.refugeeLocation.setRegion(region, animated: true)
-        self.locationManager.startUpdatingLocation()
+        // 3
+        if let jsonObject = jsonObject as? [String: AnyObject] where error == nil,
+            // 4
+            let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
+                for artworkJSON in jsonData {
+                    if let artworkJSON = artworkJSON.array,
+                        // 5
+                        artwork = Artwork.fromJSON(artworkJSON) {
+                            artworks.append(artwork)
+                    }
+                }
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        refugeeLocation.setRegion(coordinateRegion, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - location manager to authorize user location for Maps app
+    //  var locationManager = CLLocationManager()
+    //  func checkLocationAuthorizationStatus() {
+    //    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+    //      mapView.showsUserLocation = true
+    //    } else {
+    //      locationManager.requestWhenInUseAuthorization()
+    //    }
+    //  }
+    //  
+    //  override func viewDidAppear(animated: Bool) {
+    //    super.viewDidAppear(animated)
+    //    checkLocationAuthorizationStatus()
+    //  }
+    
 }
+
