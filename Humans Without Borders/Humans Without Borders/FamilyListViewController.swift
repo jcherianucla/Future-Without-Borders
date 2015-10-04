@@ -87,14 +87,23 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueToHostFamily" {
-            //
-            //challenge, sound, volume, snooze
+            if segue.identifier == "alarmToSettings" {
+                let secondVC:HostFamilyViewController = segue.destinationViewController as! HostFamilyViewController
+                secondVC.latitude = templatitude
+                secondVC.longitude = templongitude
+                secondVC.numberOfFamilyMembers = tempnumberOfFamilyMembers
+            }
         }
-
-        
     }
-    func PressedButtonToGotoHost() {
-        performSegueWithIdentifier("SegueToHostFamily", sender: self)
+    
+    var templatitude = String()
+    var templongitude = String()
+    var tempnumberOfFamilyMembers = String()
+
+    func PressedButtonToGotoHost(lat: String, lon: String, famNum: String) {
+        templatitude = lat
+        templongitude = lon
+        tempnumberOfFamilyMembers = famNum
     }
     /*
     // MARK: - Navigation
