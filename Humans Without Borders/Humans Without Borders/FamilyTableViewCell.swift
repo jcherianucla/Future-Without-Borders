@@ -37,9 +37,6 @@ class FamilyTableViewCell: UITableViewCell {
     @IBAction func ButtonPressed(sender: AnyObject) {
         print("PRESSED BUTTON")
         if (delegate != nil) {
-            print(longitude)
-            print(latitude)
-            print(famNum)
             delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: famNum!)
         }
     }
