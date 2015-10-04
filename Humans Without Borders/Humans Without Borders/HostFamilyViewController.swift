@@ -24,6 +24,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var selection: Bool? = nil
     var host: String? = nil
     var objectID: String? = nil
+    var distanceInt = Int()
     
     @IBOutlet weak var geoLocation: UILabel!
     @IBOutlet weak var numberInFamily: UILabel!
@@ -79,7 +80,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             centerMapOnLocation(initialLocation)
             let locationQ = CLLocationCoordinate2DMake(refugeeLatitude!, refugeeLongitude!)
             let meters:CLLocationDistance =  (location.distanceFromLocation(initialLocation))
-            let distanceInt = Int(meters)
+            distanceInt = Int(meters)
             distanceAway.text = "Distance to Refugee: \(distanceInt/1000) KM"
             let annotation = MKPointAnnotation()
             annotation.coordinate = locationQ
@@ -126,7 +127,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                                     if(decider! == false)
                                     {
                                         self.refugeeData!["selected"] = true
-                                        self.refugeeData!["distance"] = self.distanceAway.text
+                                        self.refugeeData!["distance"] = String(self.distanceInt)
                                         self.refugeeData!["host"] = firstName + " " + lastName + ", " + address + ", " + location + ", " + number
                                         innerObject.saveInBackground()
                                         
