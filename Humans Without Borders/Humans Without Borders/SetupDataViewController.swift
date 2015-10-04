@@ -95,7 +95,25 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                     object["email"] = self.EmailTextField.text!
                     object.saveInBackground()
                     print(object)
-                    self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
+                    if(self.addressTextField.text!.characters.count > 0 && self.PhoneTextField.text!.characters.count > 0 && self.LocationTextField.text!.characters.count > 0 && self.MaxPeopleTextfield.text!.characters.count > 0)
+                    {
+                        self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
+                    }
+                    else
+                    {
+                        let message = "Please fill out all fields!"
+                        if #available(iOS 8.0, *)
+                        {
+                            let missingCharacters = UIAlertController(title: "Empty Fields!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                            missingCharacters.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
+                                //
+                            }))
+                            self.presentViewController(missingCharacters, animated: true, completion: nil)
+                        }
+                        else{
+                            //Fallback to earlier versions
+                        }
+                    }
                 }
                 else
                 {
