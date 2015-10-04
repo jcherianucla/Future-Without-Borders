@@ -17,6 +17,9 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     @IBOutlet weak var refugeeLocation: MKMapView!
     @IBOutlet weak var distanceAway: UILabel!
     
+    var latitude = String()
+    var longitude = String()
+    var numberOfFamilyMembers = String()
     
     let locationManager = CLLocationManager()
     
