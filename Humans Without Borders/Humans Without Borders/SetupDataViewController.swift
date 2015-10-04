@@ -28,6 +28,8 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         addressTextField.userInteractionEnabled = true
         PhoneTextField.userInteractionEnabled = true
         MaxPeopleTextfield.userInteractionEnabled = true
@@ -56,6 +58,10 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                     if let downloadedImage = UIImage(data: data!) {
                         self.activityInicator.stopAnimating()
                         self.profilePic!.image = downloadedImage
+                        self.profilePic.layer.cornerRadius = (downloadedImage.size.width + downloadedImage.size.height)/12
+                        self.profilePic.layer.borderWidth = 2
+                        self.profilePic.layer.borderColor = UIColor.whiteColor().CGColor
+                        self.profilePic.layer.masksToBounds = true
                     }
                 }
                 

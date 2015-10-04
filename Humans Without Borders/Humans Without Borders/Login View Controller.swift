@@ -54,14 +54,72 @@ class Login_View_Controller: UIViewController {
                     print("Current user token =\(FBSDKAccessToken.currentAccessToken().tokenString)")
                     print("Current user ID =\(FBSDKAccessToken.currentAccessToken().userID)")
                     
-                    if(FBSDKAccessToken.currentAccessToken() != nil)
-                    {
-                        user = PFUser.currentUser()
-                        user?.setObject("Host", forKey: "user_type")
-                        self.performSegueWithIdentifier("SetTextSegue", sender: nil)
+                    let requestedPermissions = ["fields": "id , email , first_name, last_name, timezone"]
+                    let userDetails = FBSDKGraphRequest(graphPath: "me", parameters: requestedPermissions)
+                    
+                    userDetails.startWithCompletionHandler{ (connection, result, error: NSError!) -> Void in
+                        if(error != nil)
+                        {
+                            print("Error!")
+                            return
+                        }
+                        
+                        if(result != nil)
+                        {
+                            let userID:String = result["id"] as! String
+                            let userFirstName:String? = result["first_name"] as? String
+                            let userLastName:String? = result["last_name"] as? String
+                            let userEmail:String? = result["email"] as? String
+                            let userType: String? = "Host"
+                            let userLocation: String? = result["timezone"] as? String
+                            
+                            let myUser:PFUser = PFUser.currentUser()!
+                            myUser.setObject(userType!, forKey: "user_type")
+                            
+                            
+                            if(userFirstName != nil)
+                            {
+                                myUser.setObject(userFirstName!, forKey: "first_name")
+                            }
+                            if(userLastName != nil)
+                            {
+                                myUser.setObject(userLastName!, forKey: "last_name")
+                            }
+                            if(userEmail != nil)
+                            {
+                                myUser.setObject(userEmail!, forKey: "email")
+                            }
+                            if(userLocation != nil)
+                            {
+                                myUser.setObject(userLocation!, forKey: "timezone")
+                            }
+                            
+                            let userProfile = "https://graph.facebook.com/" + userID + "/picture?type=large"
+                            let profilePictureURL = NSURL(string: userProfile)
+                            let profilePictureData = NSData(contentsOfURL: profilePictureURL!)
+                            
+                            if(profilePictureData != nil)
+                            {
+                                let profileFileObject = PFFile(data: profilePictureData!)
+                                myUser.setObject(profileFileObject, forKey: "profile_picture")
+                            }
+                            
+                            myUser.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                                
+                                if(success)
+                                {
+                                    print("User details updated in Parse Cloud")
+                                    
+                                }
+                                self.performSegueWithIdentifier("SetTextSegue", sender: nil)
+                                
+                            })
+                        }
+                        
                     }
                 })
                 
+
             }))
             
             self.presentViewController(alert, animated: true, completion: nil)
