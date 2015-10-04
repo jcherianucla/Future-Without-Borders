@@ -1,26 +1,26 @@
 //
-//  SetUpViewController.swift
+//  SetupDataViewController.swift
 //  Humans Without Borders
 //
-//  Created by Jahan Cherian on 10/3/15.
+//  Created by Akhil Nadendla on 10/3/15.
 //  Copyright © 2015 Humans Without Borders. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class SetUpViewController: UIViewController {
-
+class SetupDataViewController: UIViewController, UITextFieldDelegate{
+    
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var welcomeText: UILabel!
     
     var activityInicator = UIActivityIndicatorView()
-    
-    @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var homeNumTextField: UITextField!
-    @IBOutlet weak var cellNumTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var maxPeopleTextField: UITextField!
+
+    @IBOutlet var addressTextField: UITextField!
+    @IBOutlet var PhoneTextField: UITextField!
+    @IBOutlet var MaxPeopleTextfield: UITextField!
+    @IBOutlet var EmailTextField: UITextField!
+    @IBOutlet var LocationTextField: UITextField!
     
     let myUser = PFUser.currentUser()
     var userData: PFObject? = nil
@@ -28,6 +28,12 @@ class SetUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addressTextField.userInteractionEnabled = true
+        PhoneTextField.userInteractionEnabled = true
+        MaxPeopleTextfield.userInteractionEnabled = true
+        EmailTextField.userInteractionEnabled = true
+        LocationTextField.userInteractionEnabled = true
+        
         activityInicator = UIActivityIndicatorView(frame: self.view.frame)
         activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         activityInicator.center = self.view.center
@@ -36,8 +42,7 @@ class SetUpViewController: UIViewController {
         view.addSubview(activityInicator)
         activityInicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-        
-        var query2 = PFUser.query()
+        let query2 = PFUser.query()
         query2!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
             (object: PFObject?, error: NSError?) -> Void in
             if error == nil && object != nil {
@@ -57,46 +62,34 @@ class SetUpViewController: UIViewController {
             } else {
                 print(error)
             }
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
         }
-        
-        
         // Do any additional setup after loading the view.
-}
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submit(sender: AnyObject) {
-        let address:String? = addressTextField.text!
-        let phoneNum:String? = homeNumTextField.text!
-        let cellNum:String? = cellNumTextField.text!
-        let email:String? = emailTextField.text!
-        let people:String? = maxPeopleTextField.text!
-        
-        if(address != nil)
-        {
-            myUser?.setObject(address!, forKey: "address")
-        }
-        if(phoneNum != nil)
-        {
-            myUser?.setObject(phoneNum!, forKey: "home_number")
-        }
-        if(cellNum != nil)
-        {
-            myUser?.setObject(cellNum!, forKey: "cell_number")
-        }
-        if(email != nil)
-        {
-            myUser?.setObject(email!, forKey: "email")
-        }
-        if(people != nil)
-        {
-            myUser?.setObject(people!, forKey: "capacity")
+
+    @IBAction func Submit(sender: AnyObject) {
+        print("SUBMITTING SUBMITTING")
+        let query3 = PFUser.query() //PFQuery(className:"GameScore")
+        query3!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
+            (object, error) -> Void in
+            if error != nil {
+                print(error)
+            } else if let object = object {
+                object["address"] = self.addressTextField.text!
+                object["phone_number"] = self.PhoneTextField.text!
+                object["location"] = self.LocationTextField.text!
+                object["email"] = self.EmailTextField.text!
+                object["max_people"] = self.MaxPeopleTextfield.text!
+                object.saveInBackground()
+            }
         }
     }
-
     /*
     // MARK: - Navigation
 

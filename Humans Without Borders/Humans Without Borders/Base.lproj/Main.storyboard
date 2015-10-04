@@ -415,10 +415,10 @@
             </objects>
             <point key="canvasLocation" x="-1210" y="18"/>
         </scene>
-        <!--Set Up View Controller-->
+        <!--Setup Data View Controller-->
         <scene sceneID="fV4-DU-7v6">
             <objects>
-                <viewController id="T43-Zn-m3Z" customClass="SetUpViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T43-Zn-m3Z" customClass="SetupDataViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rN3-wT-dGK"/>
                         <viewControllerLayoutGuide type="bottom" id="L4V-6H-avC"/>
@@ -470,8 +470,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gz-P1-511">
-                                <rect key="frame" x="52" y="344" width="290" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gz-P1-511">
+                                <rect key="frame" x="52" y="344" width="290" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -483,8 +483,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-9I-xks">
-                                <rect key="frame" x="52" y="415" width="290" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-9I-xks">
+                                <rect key="frame" x="52" y="415" width="290" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -525,25 +525,18 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCQ-Ti-qoy">
                                 <rect key="frame" x="103" y="641" width="207" height="60"/>
                                 <animations/>
-                                <state key="normal" image="Blue Button"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Submit" image="Blue Button"/>
                                 <connections>
-                                    <action selector="submit:" destination="T43-Zn-m3Z" eventType="touchUpInside" id="fXT-yE-YMG"/>
+                                    <action selector="Submit:" destination="T43-Zn-m3Z" eventType="touchUpInside" id="a9E-Mj-zn9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYy-Uf-1eO">
-                                <rect key="frame" x="103.5" y="641" width="207" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CA7-6I-7dw" firstAttribute="width" secondItem="8gz-P1-511" secondAttribute="width" id="0ic-9G-JmP"/>
                             <constraint firstItem="L4V-6H-avC" firstAttribute="top" secondItem="gu6-Mu-9tA" secondAttribute="bottom" multiplier="10:2" id="2GD-wB-bTO"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="centerY" secondItem="rCQ-Ti-qoy" secondAttribute="centerY" id="3fM-lJ-DrD"/>
                             <constraint firstItem="ErY-ee-A9F" firstAttribute="width" secondItem="E7r-hy-h20" secondAttribute="width" id="6M3-Df-xG2"/>
                             <constraint firstItem="U0l-JV-qpU" firstAttribute="width" secondItem="zyt-Gp-fZb" secondAttribute="width" multiplier="0.7" id="7Wp-V3-com"/>
                             <constraint firstItem="pT2-WB-1rb" firstAttribute="width" secondItem="Wxf-4h-0wS" secondAttribute="width" id="7k9-Vx-Ese"/>
@@ -566,15 +559,11 @@
                             <constraint firstItem="ErY-ee-A9F" firstAttribute="leading" secondItem="E7r-hy-h20" secondAttribute="leading" id="Qme-dY-VaX"/>
                             <constraint firstItem="CA7-6I-7dw" firstAttribute="leading" secondItem="8gz-P1-511" secondAttribute="leading" id="Qt8-BX-idK"/>
                             <constraint firstItem="28m-MZ-ASY" firstAttribute="width" secondItem="U0l-JV-qpU" secondAttribute="width" id="T7R-xZ-lAe"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="top" secondItem="rCQ-Ti-qoy" secondAttribute="top" id="UpB-MQ-Phh"/>
                             <constraint firstItem="rCQ-Ti-qoy" firstAttribute="top" secondItem="ErY-ee-A9F" secondAttribute="bottom" constant="25" id="VXE-AS-oF0"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="leading" secondItem="rCQ-Ti-qoy" secondAttribute="leading" id="WZ7-o0-8v2"/>
                             <constraint firstItem="Wxf-4h-0wS" firstAttribute="width" secondItem="LtB-9I-xks" secondAttribute="width" id="YHK-B0-Oaw"/>
                             <constraint firstItem="Icr-D3-q3k" firstAttribute="centerY" secondItem="zyt-Gp-fZb" secondAttribute="centerY" id="a46-gi-MjZ"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="trailing" secondItem="rCQ-Ti-qoy" secondAttribute="trailing" id="a7t-Hu-aRJ"/>
                             <constraint firstItem="Wxf-4h-0wS" firstAttribute="leading" secondItem="LtB-9I-xks" secondAttribute="leading" id="cM8-pa-L2Y"/>
                             <constraint firstItem="LtB-9I-xks" firstAttribute="width" secondItem="CA7-6I-7dw" secondAttribute="width" id="cgS-L5-cfS"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="bottom" secondItem="rCQ-Ti-qoy" secondAttribute="bottom" id="diH-om-j95"/>
                             <constraint firstItem="Sni-Kn-4rp" firstAttribute="leading" secondItem="JhM-Ji-E65" secondAttribute="leading" id="dsm-Sj-0YT"/>
                             <constraint firstItem="pT2-WB-1rb" firstAttribute="top" secondItem="Wxf-4h-0wS" secondAttribute="bottom" constant="10" id="ed5-uv-Y5h"/>
                             <constraint firstItem="U0l-JV-qpU" firstAttribute="leading" secondItem="Sni-Kn-4rp" secondAttribute="leading" id="fAf-Lw-Wwr"/>
@@ -589,7 +578,6 @@
                             <constraint firstItem="kvc-Gn-e4q" firstAttribute="top" secondItem="Sni-Kn-4rp" secondAttribute="bottom" constant="8" id="nC2-Ge-mLl"/>
                             <constraint firstItem="gu6-Mu-9tA" firstAttribute="centerX" secondItem="zyt-Gp-fZb" secondAttribute="centerX" multiplier="3:7" id="nVm-8w-ob4"/>
                             <constraint firstItem="kvc-Gn-e4q" firstAttribute="height" secondItem="zyt-Gp-fZb" secondAttribute="height" multiplier="0.002" id="oQO-cU-LTE"/>
-                            <constraint firstItem="MYy-Uf-1eO" firstAttribute="centerX" secondItem="rCQ-Ti-qoy" secondAttribute="centerX" id="odf-mM-2JP"/>
                             <constraint firstItem="LtB-9I-xks" firstAttribute="leading" secondItem="CA7-6I-7dw" secondAttribute="leading" id="pxz-Ee-Xa8"/>
                             <constraint firstItem="JhM-Ji-E65" firstAttribute="width" secondItem="zyt-Gp-fZb" secondAttribute="width" multiplier="0.75" id="uzZ-OY-ORq"/>
                             <constraint firstItem="gu6-Mu-9tA" firstAttribute="height" secondItem="Icr-D3-q3k" secondAttribute="height" multiplier="0.1" id="xFm-yq-1MP"/>
@@ -599,13 +587,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="28m-MZ-ASY" id="RQ9-dL-ZgU"/>
-                        <outlet property="cellNumTextField" destination="Wxf-4h-0wS" id="ERS-Pj-KBb"/>
-                        <outlet property="emailTextField" destination="ozI-YE-sa4" id="xCM-qf-0uT"/>
-                        <outlet property="homeNumTextField" destination="CA7-6I-7dw" id="98U-9x-Aqq"/>
-                        <outlet property="maxPeopleTextField" destination="ErY-ee-A9F" id="XaT-if-Dfj"/>
-                        <outlet property="profilePic" destination="gu6-Mu-9tA" id="Ikn-Cb-X9m"/>
-                        <outlet property="welcomeText" destination="JhM-Ji-E65" id="a8N-5p-Mvz"/>
+                        <outlet property="EmailTextField" destination="ozI-YE-sa4" id="Hzq-KQ-Yvw"/>
+                        <outlet property="LocationTextField" destination="Wxf-4h-0wS" id="pjk-FN-bb4"/>
+                        <outlet property="MaxPeopleTextfield" destination="ErY-ee-A9F" id="tKr-hU-Wb5"/>
+                        <outlet property="PhoneTextField" destination="CA7-6I-7dw" id="hmg-ca-ipi"/>
+                        <outlet property="addressTextField" destination="28m-MZ-ASY" id="Xa3-mO-pfn"/>
+                        <outlet property="profilePic" destination="gu6-Mu-9tA" id="7Th-Se-24b"/>
+                        <outlet property="welcomeText" destination="JhM-Ji-E65" id="dab-oR-ki2"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="SetuserdataToContributeSegue" id="7MY-Sq-Xdj"/>
                     </connections>
                 </viewController>
