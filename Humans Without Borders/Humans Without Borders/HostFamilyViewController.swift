@@ -27,8 +27,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
-    //var myLocation: CLLocation? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +37,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
 
         numberInFamily.text = "Number of Family Members \(numberOfFamMembers!)"
-        geoLocation.text = "Geolocation: Lat: \(refugeeLatitude!), Long: \(refugeeLongitude!)"
+        geoLocation.text = "Geolocation: \(refugeeLatitude!), \(refugeeLongitude!)"
         
         
         locationManager.delegate = self
@@ -50,38 +48,49 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             // Fallback on earlier versions
         }
         locationManager.startUpdatingLocation()
-        //myLocation! = locationManager.location!
-        var currentLocation = CLLocation!()
-        
-        if #available(iOS 8.0, *) {
-            if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
-                CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
-                    
-                    currentLocation = locationManager.location
-                    print(currentLocation.coordinate.latitude)
-            }
-        } else {
-            // Fallback on earlier versions
-        }
-        //let initialLocation = CLLocation(latitude: refugeeLatitude!, longitude: refugeeLongitude!)
-        //centerMapOnLocation(initialLocation)
-//        let location = CLLocationCoordinate2DMake(refugeeLatitude!, refugeeLongitude!)
-//        let meters:CLLocationDistance =  (myLocation?.distanceFromLocation(initialLocation))!
-//        distanceAway.text = "\(meters)"
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = location
-//        annotation.title = "Location of Refugee(s)"
-        //refugeeLocation.addAnnotation(annotation)
         
         
     }
     
-//    
-//    func centerMapOnLocation(location: CLLocation) {
-//        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-//            regionRadius * 2.0, regionRadius * 2.0)
-//        refugeeLocation.setRegion(coordinateRegion, animated: true)
-//    }
+    
+    func checkLocationAuthorizationStatus() {
+        if #available(iOS 8.0, *) {
+            if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                refugeeLocation.showsUserLocation = true
+                locationManager.startUpdatingLocation()
+            } else {
+                locationManager.requestWhenInUseAuthorization()
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            //this is the place where you get the new location
+            print("\(location.coordinate.latitude)")
+            
+            print("\(location.coordinate.longitude)")
+            
+            let initialLocation = CLLocation(latitude: refugeeLatitude!, longitude: refugeeLongitude!)
+            centerMapOnLocation(initialLocation)
+            let locationQ = CLLocationCoordinate2DMake(refugeeLatitude!, refugeeLongitude!)
+            let meters:CLLocationDistance =  (location.distanceFromLocation(initialLocation))
+            let distanceInt = Int(meters)
+            distanceAway.text = "Distance to Refugee: \(distanceInt/1000) KM"
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = locationQ
+            annotation.title = "Location of Refugee(s)"
+            refugeeLocation.addAnnotation(annotation)
+        }
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        refugeeLocation.setRegion(coordinateRegion, animated: true)
+    }
     
     
 }
