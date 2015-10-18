@@ -773,33 +773,33 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-Mu-9tA" userLabel="Profile">
-                                <rect key="frame" x="52" y="73" width="73.5" height="73.5"/>
+                                <rect key="frame" x="52" y="73.5" width="73.5" height="73.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gu6-Mu-9tA" secondAttribute="height" multiplier="1:1" id="ZXL-mq-1dp"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Welcome, David Smallberg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JhM-Ji-E65">
-                                <rect key="frame" x="52" y="167" width="310.5" height="38.5"/>
+                                <rect key="frame" x="52" y="167.5" width="310.5" height="38.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Please enter your contact info..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sni-Kn-4rp">
-                                <rect key="frame" x="52" y="206" width="216" height="20.5"/>
+                                <rect key="frame" x="52" y="206.5" width="216" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-Gn-e4q">
-                                <rect key="frame" x="0.0" y="234" width="414" height="1.5"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="1.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-JV-qpU">
-                                <rect key="frame" x="52" y="235.5" width="290" height="59"/>
+                                <rect key="frame" x="52" y="228.5" width="290" height="66"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -941,7 +941,7 @@
                             <constraint firstItem="JhM-Ji-E65" firstAttribute="leading" secondItem="gu6-Mu-9tA" secondAttribute="leading" id="ip8-xm-2pb"/>
                             <constraint firstItem="ozI-YE-sa4" firstAttribute="width" secondItem="pT2-WB-1rb" secondAttribute="width" id="jr4-fF-C37"/>
                             <constraint firstItem="8gz-P1-511" firstAttribute="leading" secondItem="28m-MZ-ASY" secondAttribute="leading" id="lmS-Aj-Sx1"/>
-                            <constraint firstItem="kvc-Gn-e4q" firstAttribute="top" secondItem="Sni-Kn-4rp" secondAttribute="bottom" constant="8" id="nC2-Ge-mLl"/>
+                            <constraint firstItem="kvc-Gn-e4q" firstAttribute="top" secondItem="Sni-Kn-4rp" secondAttribute="bottom" id="nC2-Ge-mLl"/>
                             <constraint firstItem="gu6-Mu-9tA" firstAttribute="centerX" secondItem="zyt-Gp-fZb" secondAttribute="centerX" multiplier="3:7" id="nVm-8w-ob4"/>
                             <constraint firstItem="kvc-Gn-e4q" firstAttribute="height" secondItem="zyt-Gp-fZb" secondAttribute="height" multiplier="0.002" id="oQO-cU-LTE"/>
                             <constraint firstItem="LtB-9I-xks" firstAttribute="leading" secondItem="CA7-6I-7dw" secondAttribute="leading" id="pxz-Ee-Xa8"/>
