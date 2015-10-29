@@ -15,7 +15,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var welcomeText: UILabel!
     
     var activityInicator = UIActivityIndicatorView()
-
+    
     @IBOutlet var addressTextField: UITextField!
     @IBOutlet var PhoneTextField: UITextField!
     @IBOutlet var MaxPeopleTextfield: UITextField!
@@ -45,7 +45,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                 let firstName:String = self.userData!["first_name"] as! String
                 let secondName:String = self.userData!["last_name"] as! String
                 self.welcomeText.text = "Welcome, " + firstName + " " + secondName
-                self.imageFile = self.userData!["profile_picture"] as! PFFile
+                self.imageFile = self.userData!["profile_picture"] as? PFFile
                 self.imageFile!.getDataInBackgroundWithBlock { (data , error) -> Void in
                     if let downloadedImage = UIImage(data: data!) {
                         self.activityInicator.stopAnimating()
@@ -82,7 +82,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     @IBAction func Submit(sender: AnyObject) {
         print("SUBMITTING SUBMITTING SETUP")
         let query3 = PFUser.query() //PFQuery(className:"GameScore")
@@ -92,7 +92,14 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                 print(error)
             } else if let object = object {
                 object["address"] = self.addressTextField.text!
-                object["phone_number"] = self.PhoneTextField.text!
+                if(self.isValidPhoneNumber(self.PhoneTextField.text!))
+                {
+                    object["phone_number"] = self.PhoneTextField.text!
+                }
+                else
+                {
+                    self.throwAlert("Please enter a valid Phone Number!", msgTitle: "Invalid Phone Number", msgEnd: "Ok", clearFields: false, clearText: self.PhoneTextField)
+                }
                 object["location"] = self.LocationTextField.text!
                 object["max_people"] = self.MaxPeopleTextfield.text!
                 if (self.isValidEmail(self.EmailTextField.text!))
@@ -106,38 +113,12 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                     }
                     else
                     {
-                        let message = "Please fill out all fields!"
-                        if #available(iOS 8.0, *)
-                        {
-                            let missingCharacters = UIAlertController(title: "Empty Fields!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                            missingCharacters.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                                //
-                            }))
-                            self.presentViewController(missingCharacters, animated: true, completion: nil)
-                        }
-                        else{
-                            //Fallback to earlier versions
-                        }
+                        self.throwAlert("Please fill out all fields!", msgTitle: "Missing Fields", msgEnd: "Ok", clearFields: true, clearText: self.PhoneTextField)
                     }
                 }
                 else
                 {
-                    let message = "Please enter a valid email address!"
-                    if #available(iOS 8.0, *)
-                    {
-                        let emailValidation = UIAlertController(title: "Invalid Email", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                        emailValidation.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                                self.addressTextField.text! = ""
-                                self.PhoneTextField.text! = ""
-                                self.LocationTextField.text! = ""
-                                self.EmailTextField.text! = ""
-                                self.MaxPeopleTextfield.text! = ""
-                            
-                        }))
-                        self.presentViewController(emailValidation, animated: true, completion: nil)
-                    } else {
-                        // Fallback on earlier versions
-                    }
+                    self.throwAlert("Please enter a valid Email Address!", msgTitle: "Invalid Email", msgEnd: "Ok", clearFields: false, clearText: self.EmailTextField)
                 }
                 
             }
@@ -146,6 +127,15 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func isValidPhoneNumber(phoneNum: String) -> Bool
+    {
+        let phoneNumbRegEx = "\\+?(\\d{1,3})?\\d{10,15}"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumbRegEx)
+        return phoneTest.evaluateWithObject(phoneNum)
+        
+    }
+    
     func isValidEmail(testStr:String) -> Bool {
         // println("validate calendar: \(testStr)")
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
@@ -160,12 +150,37 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     }
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func throwAlert(msg:String, msgTitle: String, msgEnd: String, clearFields: Bool, clearText: UITextField)
+    {
+        let message = msg
+        if #available(iOS 8.0, *)
+        {
+            let emailValidation = UIAlertController(title: msgTitle, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            emailValidation.addAction(UIAlertAction(title: msgEnd, style: .Default, handler: { (action) -> Void in
+                if (clearFields == true)
+                {
+                    self.addressTextField.text! = ""
+                    self.PhoneTextField.text! = ""
+                    self.LocationTextField.text! = ""
+                    self.EmailTextField.text! = ""
+                    self.MaxPeopleTextfield.text! = ""
+                }
+                else
+                { clearText.text! = "" }
+                
+            }))
+            self.presentViewController(emailValidation, animated: true, completion: nil)
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
 }
