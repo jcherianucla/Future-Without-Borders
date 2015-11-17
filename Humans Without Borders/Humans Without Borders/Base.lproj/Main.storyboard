@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -11,7 +11,7 @@
         <!--Contribute-->
         <scene sceneID="6Co-1M-jR4">
             <objects>
-                <tableViewController id="RP4-Vv-Kvl" customClass="ContributeTableViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RP4-Vv-Kvl" customClass="ContributeTableViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="189" sectionHeaderHeight="28" sectionFooterHeight="28" id="uCw-qy-nk7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="189" id="lVu-zg-4vj" customClass="ContributeTableViewCell" customModule="Humans_Without_Borders" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="189" id="lVu-zg-4vj" customClass="ContributeTableViewCell" customModule="Future_Without_Borders" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="189"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lVu-zg-4vj" id="zK3-cC-Zd0">
@@ -109,7 +109,7 @@
         <!--Choose a Family-->
         <scene sceneID="n5m-5d-o6y">
             <objects>
-                <viewController id="cFf-1K-FKS" customClass="FamilyListViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cFf-1K-FKS" customClass="FamilyListViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yne-zY-pdu"/>
                         <viewControllerLayoutGuide type="bottom" id="D22-KW-hF0"/>
@@ -139,7 +139,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="elc-ZF-us7" customClass="FamilyTableViewCell" customModule="Humans_Without_Borders" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="elc-ZF-us7" customClass="FamilyTableViewCell" customModule="Future_Without_Borders" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elc-ZF-us7" id="R0V-jZ-XUf">
@@ -285,7 +285,7 @@
         <!--Host a Family-->
         <scene sceneID="o5f-Ch-Fgw">
             <objects>
-                <viewController id="aAk-j4-VU3" customClass="HostFamilyViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aAk-j4-VU3" customClass="HostFamilyViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7om-Zw-Eks"/>
                         <viewControllerLayoutGuide type="bottom" id="aI5-Bs-Cb3"/>
@@ -413,7 +413,7 @@
         <!--Dashboard-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -638,7 +638,7 @@
         <!--Login View Controller-->
         <scene sceneID="NSH-ot-l2g">
             <objects>
-                <viewController id="c0q-B2-LF8" customClass="Login_View_Controller" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c0q-B2-LF8" customClass="Login_View_Controller" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uJS-qR-T9f"/>
                         <viewControllerLayoutGuide type="bottom" id="FP0-yE-ENw"/>
@@ -750,7 +750,7 @@ and you will be given immediate help.</string>
         <!--Setup Data View Controller-->
         <scene sceneID="fV4-DU-7v6">
             <objects>
-                <viewController id="T43-Zn-m3Z" customClass="SetupDataViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T43-Zn-m3Z" customClass="SetupDataViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rN3-wT-dGK"/>
                         <viewControllerLayoutGuide type="bottom" id="L4V-6H-avC"/>
@@ -1049,7 +1049,7 @@ and you will be given immediate help.</string>
         <!--Edit View Controller-->
         <scene sceneID="bK6-iD-5L9">
             <objects>
-                <viewController id="mML-Ou-iyE" customClass="EditViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mML-Ou-iyE" customClass="EditViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4cI-wu-pQX"/>
                         <viewControllerLayoutGuide type="bottom" id="Ocq-Kb-t3b"/>
@@ -1222,7 +1222,7 @@ and you will be given immediate help.</string>
         <!--Donate -->
         <scene sceneID="HqO-PU-BrK">
             <objects>
-                <viewController id="6bf-WT-bc8" customClass="DonateViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6bf-WT-bc8" customClass="DonateViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yuU-Uf-cA7"/>
                         <viewControllerLayoutGuide type="bottom" id="eFn-cD-ukt"/>
@@ -1358,7 +1358,7 @@ and you will be given immediate help.</string>
                                         </constraints>
                                         <state key="normal" image="ContributeToFWBBtn"/>
                                         <connections>
-                                            <segue destination="sLc-N7-fF4" kind="show" id="QfH-GG-bYb"/>
+                                            <segue destination="JXV-oF-5jV" kind="show" id="ZW0-oz-v3V"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEO-SJ-oUo">
@@ -1416,12 +1416,12 @@ and you will be given immediate help.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHY-kt-YoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2183" y="-74"/>
+            <point key="canvasLocation" x="2171" y="-50"/>
         </scene>
-        <!--Payment-->
+        <!--Credit Card-->
         <scene sceneID="psa-Lp-w4M">
             <objects>
-                <viewController restorationIdentifier="main" storyboardIdentifier="main" id="sLc-N7-fF4" customClass="PaymentsViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="main" storyboardIdentifier="main" id="sLc-N7-fF4" customClass="PaymentsViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DZ9-Uj-kHU"/>
                         <viewControllerLayoutGuide type="bottom" id="Kdw-Cp-Fxg"/>
@@ -1434,28 +1434,28 @@ and you will be given immediate help.</string>
                                 <rect key="frame" x="0.0" y="55" width="414" height="626"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ValidatedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-eJ-8sy">
-                                        <rect key="frame" x="144" y="156.5" width="125" height="125"/>
+                                        <rect key="frame" x="144.5" y="156" width="125" height="125"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5Gs-eJ-8sy" secondAttribute="height" multiplier="1:1" id="ihI-xu-2Jx"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Confirmed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-b3-RFG">
-                                        <rect key="frame" x="83" y="281.5" width="248" height="47"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Confirmed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-b3-RFG">
+                                        <rect key="frame" x="83" y="281" width="248" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="A0r-rR-hcO">
-                                        <rect key="frame" x="132" y="519.5" width="149" height="74.5"/>
+                                        <rect key="frame" x="132.5" y="520" width="149" height="74.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-Hg-UMA">
-                                        <rect key="frame" x="83" y="519.5" width="248" height="74.5"/>
+                                        <rect key="frame" x="83" y="520" width="248" height="74.5"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6tl-Hg-UMA" secondAttribute="height" multiplier="10:3" id="jfD-ig-FTN"/>
@@ -1491,7 +1491,7 @@ and you will be given immediate help.</string>
                                 <rect key="frame" x="0.0" y="64" width="414" height="184"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoCreditCardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lEg-GF-oFn">
-                                        <rect key="frame" x="133.5" y="19" width="147" height="146.5"/>
+                                        <rect key="frame" x="133.5" y="18.5" width="147" height="147"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lEg-GF-oFn" secondAttribute="height" multiplier="1:1" id="eff-ha-553"/>
@@ -1510,21 +1510,21 @@ and you will be given immediate help.</string>
                                 <rect key="frame" x="0.0" y="245.5" width="414" height="441.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
-                                        <rect key="frame" x="41" y="148.5" width="242.5" height="23.5"/>
+                                        <rect key="frame" x="41.5" y="148.5" width="242.5" height="23.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C V V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-EP-1Is">
-                                        <rect key="frame" x="41" y="246" width="59" height="23.5"/>
+                                        <rect key="frame" x="41.5" y="246" width="59" height="23.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X X X X - X X X X - X X X X - X X X X" textAlignment="center" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="JS8-dY-gWi">
-                                        <rect key="frame" x="41" y="75" width="331" height="53"/>
+                                        <rect key="frame" x="41.5" y="75" width="331" height="54"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.41960784309999999" green="0.56078431370000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1532,7 +1532,7 @@ and you will be given immediate help.</string>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
-                                        <rect key="frame" x="41" y="176.5" width="331" height="53"/>
+                                        <rect key="frame" x="41.5" y="176.5" width="331" height="54"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.41960784313725491" green="0.5607843137254902" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1540,7 +1540,7 @@ and you will be given immediate help.</string>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X X X" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-xI-fhc">
-                                        <rect key="frame" x="41" y="274" width="331" height="53.5"/>
+                                        <rect key="frame" x="41.5" y="274" width="331" height="53.5"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.41960784309999999" green="0.56078431370000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1562,7 +1562,7 @@ and you will be given immediate help.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C a r d  N u m b e r" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vL4-fA-C3f">
-                                        <rect key="frame" x="41" y="47" width="198.5" height="23.5"/>
+                                        <rect key="frame" x="41.5" y="47" width="198.5" height="23.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1643,7 +1643,7 @@ and you will be given immediate help.</string>
                             <constraint firstItem="aFe-F7-pPz" firstAttribute="centerX" secondItem="LeW-nb-yvP" secondAttribute="centerX" id="yMe-Ct-dK0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Payment" id="Zun-p9-ApD"/>
+                    <navigationItem key="navigationItem" title="Credit Card" id="Zun-p9-ApD"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="AspectRatioOfGraphic" destination="eff-ha-553" id="qfC-Dn-FhP"/>
@@ -1662,7 +1662,209 @@ and you will be given immediate help.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCQ-ht-78o" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-74"/>
+            <point key="canvasLocation" x="3119" y="-50"/>
+        </scene>
+        <!--SelectPayment-->
+        <scene sceneID="dcM-Fv-B20">
+            <objects>
+                <viewController id="JXV-oF-5jV" userLabel="SelectPayment" customClass="SelectPaymentViewController" customModule="Future_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ioQ-Sm-Cpo"/>
+                        <viewControllerLayoutGuide type="bottom" id="CVe-dJ-Vry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpZ-pQ-rhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contribute BG 2" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-S0-9DA">
+                                <rect key="frame" x="0.0" y="64" width="414" height="221"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much would you like to contribute?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="86h-Fo-DjB">
+                                <rect key="frame" x="62" y="139" width="290" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-Ss-caC">
+                                <rect key="frame" x="0.0" y="285" width="414" height="441.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Payments_Header" translatesAutoresizingMaskIntoConstraints="NO" id="o3I-3p-CZM">
+                                        <rect key="frame" x="83" y="37.5" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="o3I-3p-CZM" secondAttribute="height" multiplier="250:40" id="0kU-kY-gAg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-v7-LzN">
+                                        <rect key="frame" x="83" y="301" width="248" height="51.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vg3-v7-LzN" secondAttribute="height" multiplier="960:200" id="NkA-a0-OyD"/>
+                                        </constraints>
+                                        <state key="normal" image="Make Payment"/>
+                                        <connections>
+                                            <segue destination="sLc-N7-fF4" kind="show" id="H1Z-O3-0rf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-vJ-zXH">
+                                        <rect key="frame" x="66" y="147" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="ehI-Pu-ddY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-eh-LDh">
+                                        <rect key="frame" x="0.0" y="-285" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-Z1-7Xb">
+                                        <rect key="frame" x="0.0" y="-285" width="25" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-7F-BuK">
+                                        <rect key="frame" x="83" y="103.5" width="248" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvV-2d-iHp">
+                                        <rect key="frame" x="147.5" y="147" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="b6p-xu-EJR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxF-bK-2Ng">
+                                        <rect key="frame" x="238" y="147" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$15">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="aeL-1z-yr4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-eX-Tb1">
+                                        <rect key="frame" x="316" y="147" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$20">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="xYP-WD-6fT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie4-Hd-Plm">
+                                        <rect key="frame" x="66" y="225" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$50">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="oKG-lB-jFF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCv-pY-Xnm">
+                                        <rect key="frame" x="141" y="225" width="55" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="$100">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="m0R-IJ-xVA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-QU-wBz">
+                                        <rect key="frame" x="231.5" y="225" width="55" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Other">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PaymentAmountPressed:" destination="JXV-oF-5jV" eventType="touchUpInside" id="vlJ-q6-uIM"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FU9-TA-dyy">
+                                        <rect key="frame" x="309" y="232.5" width="55" height="21"/>
+                                        <color key="textColor" red="0.42352941176470588" green="0.69803921568627447" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1450980392" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FU9-TA-dyy" firstAttribute="centerY" secondItem="E6n-QU-wBz" secondAttribute="centerY" id="32z-Q6-vXD"/>
+                                    <constraint firstItem="gCv-pY-Xnm" firstAttribute="centerX" secondItem="MvV-2d-iHp" secondAttribute="centerX" id="5Yl-Zb-DI1"/>
+                                    <constraint firstItem="ie4-Hd-Plm" firstAttribute="width" secondItem="B7Y-vJ-zXH" secondAttribute="width" id="5Zq-OM-I49"/>
+                                    <constraint firstItem="kcL-7F-BuK" firstAttribute="width" secondItem="Zth-Ss-caC" secondAttribute="width" multiplier="0.6" id="6GK-2P-3Gd"/>
+                                    <constraint firstItem="o3I-3p-CZM" firstAttribute="width" secondItem="Zth-Ss-caC" secondAttribute="width" multiplier="0.6" id="6vD-m7-N28"/>
+                                    <constraint firstItem="MvV-2d-iHp" firstAttribute="centerY" secondItem="B7Y-vJ-zXH" secondAttribute="centerY" id="7Xh-DB-qNa"/>
+                                    <constraint firstItem="KxF-bK-2Ng" firstAttribute="centerY" secondItem="MvV-2d-iHp" secondAttribute="centerY" id="8tb-y5-WVx"/>
+                                    <constraint firstItem="KxF-bK-2Ng" firstAttribute="width" secondItem="MvV-2d-iHp" secondAttribute="width" id="9N2-Ck-A4A"/>
+                                    <constraint firstItem="RoE-eX-Tb1" firstAttribute="centerY" secondItem="KxF-bK-2Ng" secondAttribute="centerY" id="AnS-EW-emQ"/>
+                                    <constraint firstItem="kcL-7F-BuK" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" id="DLv-ee-aVE"/>
+                                    <constraint firstItem="E6n-QU-wBz" firstAttribute="centerY" secondItem="gCv-pY-Xnm" secondAttribute="centerY" id="DNo-cI-fOZ"/>
+                                    <constraint firstItem="B7Y-vJ-zXH" firstAttribute="width" secondItem="Zth-Ss-caC" secondAttribute="width" multiplier="0.1" id="E4j-Gl-aQA"/>
+                                    <constraint firstItem="RoE-eX-Tb1" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" multiplier="6.5:4" id="F8I-69-el7"/>
+                                    <constraint firstAttribute="bottom" secondItem="kcL-7F-BuK" secondAttribute="bottom" multiplier="10:2.75" id="LZP-IH-tHg"/>
+                                    <constraint firstItem="RoE-eX-Tb1" firstAttribute="width" secondItem="KxF-bK-2Ng" secondAttribute="width" id="UTw-y5-Fba"/>
+                                    <constraint firstItem="FU9-TA-dyy" firstAttribute="width" secondItem="E6n-QU-wBz" secondAttribute="width" id="VGJ-yO-9YR"/>
+                                    <constraint firstAttribute="bottom" secondItem="o3I-3p-CZM" secondAttribute="bottom" multiplier="10:1.75" id="Wx5-Ox-UKs"/>
+                                    <constraint firstItem="vg3-v7-LzN" firstAttribute="width" secondItem="Zth-Ss-caC" secondAttribute="width" multiplier="0.6" id="XBG-9s-zIv"/>
+                                    <constraint firstItem="B7Y-vJ-zXH" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" multiplier="1.25:3" id="XeM-QI-uTc"/>
+                                    <constraint firstItem="MvV-2d-iHp" firstAttribute="width" secondItem="B7Y-vJ-zXH" secondAttribute="width" id="XsM-o4-5g4"/>
+                                    <constraint firstItem="ie4-Hd-Plm" firstAttribute="centerX" secondItem="B7Y-vJ-zXH" secondAttribute="centerX" id="aHn-uS-IaN"/>
+                                    <constraint firstItem="E6n-QU-wBz" firstAttribute="width" secondItem="gCv-pY-Xnm" secondAttribute="width" id="cFL-RN-0LO"/>
+                                    <constraint firstItem="E6n-QU-wBz" firstAttribute="centerX" secondItem="KxF-bK-2Ng" secondAttribute="centerX" id="eza-5N-j2N"/>
+                                    <constraint firstItem="MvV-2d-iHp" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" multiplier="3.25:4" id="gRx-bi-44w"/>
+                                    <constraint firstItem="vg3-v7-LzN" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" id="he6-AR-c5h"/>
+                                    <constraint firstItem="ie4-Hd-Plm" firstAttribute="centerY" secondItem="Zth-Ss-caC" secondAttribute="centerY" multiplier="11:10" id="mcd-qc-5T8"/>
+                                    <constraint firstAttribute="bottom" secondItem="vg3-v7-LzN" secondAttribute="bottom" multiplier="10:8" id="qzL-3p-cJJ"/>
+                                    <constraint firstItem="KxF-bK-2Ng" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" multiplier="5:4" id="reK-In-7Me"/>
+                                    <constraint firstItem="gCv-pY-Xnm" firstAttribute="centerY" secondItem="ie4-Hd-Plm" secondAttribute="centerY" id="rug-a4-fCp"/>
+                                    <constraint firstItem="o3I-3p-CZM" firstAttribute="centerX" secondItem="Zth-Ss-caC" secondAttribute="centerX" id="wTd-0h-wXB"/>
+                                    <constraint firstItem="FU9-TA-dyy" firstAttribute="centerX" secondItem="RoE-eX-Tb1" secondAttribute="centerX" id="x3c-UD-qmu"/>
+                                    <constraint firstItem="B7Y-vJ-zXH" firstAttribute="centerY" secondItem="Zth-Ss-caC" secondAttribute="centerY" multiplier="7.5:10" id="yHa-WX-wgh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SFP-S0-9DA" firstAttribute="top" secondItem="ioQ-Sm-Cpo" secondAttribute="bottom" id="35l-sm-VtD"/>
+                            <constraint firstItem="Zth-Ss-caC" firstAttribute="centerX" secondItem="hpZ-pQ-rhi" secondAttribute="centerX" id="5BA-xG-0lJ"/>
+                            <constraint firstItem="86h-Fo-DjB" firstAttribute="centerY" secondItem="SFP-S0-9DA" secondAttribute="centerY" id="8z6-NL-rqZ"/>
+                            <constraint firstItem="86h-Fo-DjB" firstAttribute="centerX" secondItem="SFP-S0-9DA" secondAttribute="centerX" id="GYE-tQ-972"/>
+                            <constraint firstItem="Zth-Ss-caC" firstAttribute="width" secondItem="hpZ-pQ-rhi" secondAttribute="width" id="JQH-vI-CJT"/>
+                            <constraint firstItem="86h-Fo-DjB" firstAttribute="width" secondItem="SFP-S0-9DA" secondAttribute="width" multiplier="0.7" id="b9H-0T-IKG"/>
+                            <constraint firstItem="SFP-S0-9DA" firstAttribute="centerX" secondItem="hpZ-pQ-rhi" secondAttribute="centerX" id="fHQ-Lu-Xeb"/>
+                            <constraint firstItem="SFP-S0-9DA" firstAttribute="width" secondItem="hpZ-pQ-rhi" secondAttribute="width" id="pmT-AQ-2hv"/>
+                            <constraint firstItem="SFP-S0-9DA" firstAttribute="height" secondItem="hpZ-pQ-rhi" secondAttribute="height" multiplier="0.3" id="vFG-b3-DMI"/>
+                            <constraint firstItem="Zth-Ss-caC" firstAttribute="top" secondItem="SFP-S0-9DA" secondAttribute="bottom" id="vL6-5C-eVq"/>
+                            <constraint firstItem="Zth-Ss-caC" firstAttribute="height" secondItem="hpZ-pQ-rhi" secondAttribute="height" multiplier="0.6" id="wak-ym-sSJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donate " id="7wN-Ft-xhC"/>
+                    <connections>
+                        <outlet property="FiftyBtn" destination="ie4-Hd-Plm" id="5TZ-kD-CCP"/>
+                        <outlet property="OtherBtn" destination="E6n-QU-wBz" id="iCU-a0-f9n"/>
+                        <outlet property="OtherTextField" destination="FU9-TA-dyy" id="BVm-4g-pfn"/>
+                        <outlet property="fifteenBtn" destination="KxF-bK-2Ng" id="wed-To-1wz"/>
+                        <outlet property="fiveBtn" destination="B7Y-vJ-zXH" id="ZJj-s5-Stv"/>
+                        <outlet property="hundredBtn" destination="gCv-pY-Xnm" id="7Yi-aP-Id4"/>
+                        <outlet property="tenBtn" destination="MvV-2d-iHp" id="aWi-xf-R8o"/>
+                        <outlet property="twentyBtn" destination="RoE-eX-Tb1" id="aJx-hY-ZTJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aG4-Zj-OEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650" y="-50"/>
         </scene>
     </scenes>
     <resources>
@@ -1682,6 +1884,7 @@ and you will be given immediate help.</string>
         <image name="Main Blurred BG Dark Blurry" width="500" height="714"/>
         <image name="Main Blurred BG Light" width="500" height="714"/>
         <image name="Main Blurred BG Light Blurry" width="500" height="714"/>
+        <image name="Make Payment" width="320" height="64"/>
         <image name="NewCardBG" width="250" height="67"/>
         <image name="NoCreditCardIcon" width="167" height="167"/>
         <image name="Payments_Header" width="333" height="53"/>
