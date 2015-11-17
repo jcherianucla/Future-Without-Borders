@@ -12,6 +12,7 @@
 		6BB68A0D1BBFDD9800441B85 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB689DB1BBFDD8C00441B85 /* libTwilioClient.a */; };
 		6BB68A0F1BBFDDF900441B85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */; };
 		6BEC28161BC044E700A0017F /* RefugeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC28151BC044E700A0017F /* RefugeeData.swift */; };
+		6D4887851BFB55C700CE8491 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4887841BFB55C700CE8491 /* Stripe.framework */; };
 		6D7DCD221BBFCEA40001E84F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */; };
 		6D7DCD231BBFCEA40001E84F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */; };
 		6D7DCD241BBFCEA40001E84F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */; };
@@ -1073,6 +1074,7 @@
 		6BB68A041BBFDD8C00441B85 /* TwilioSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TwilioSDK.podspec; sourceTree = "<group>"; };
 		6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6BEC28151BC044E700A0017F /* RefugeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefugeeData.swift; path = ../RefugeeData.swift; sourceTree = "<group>"; };
+		6D4887841BFB55C700CE8491 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Stripe.framework; sourceTree = "<group>"; };
 		6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -1147,6 +1149,7 @@
 				6D7DCD2C1BBFCF0B0001E84F /* ParseFacebookUtils.framework in Frameworks */,
 				6D7DCD241BBFCEA40001E84F /* FBSDKShareKit.framework in Frameworks */,
 				6D7DCD2A1BBFCF0B0001E84F /* Bolts.framework in Frameworks */,
+				6D4887851BFB55C700CE8491 /* Stripe.framework in Frameworks */,
 				6D7DCD2B1BBFCF0B0001E84F /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3537,6 +3540,7 @@
 		E22E954B1BBFB130009C91E3 = {
 			isa = PBXGroup;
 			children = (
+				6D4887841BFB55C700CE8491 /* Stripe.framework */,
 				E2D1C6261BC0F68F0009483A /* MapKit.framework */,
 				6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */,
 				6D7DCD5D1BBFFE120001E84F /* libz.1.dylib */,

@@ -86,6 +86,7 @@ class PaymentsViewController: UIViewController, UITextFieldDelegate{
     //or displays error
     @IBAction func SubmitButtonPressed(sender: AnyObject) {
         print("reached")
+  //      var stripeCard = STPCard()
         //make sure luhn validation works
         if (performLuhnValidation()) {
             //check if cvv is right amount characters for american express and other cards
@@ -366,6 +367,61 @@ class PaymentsViewController: UIViewController, UITextFieldDelegate{
         }
         return false
     }
+    
+//    func handleError(error: NSError) {
+//        UIAlertView(title: "Please Try Again",
+//            message: error.localizedDescription,
+//            delegate: nil,
+//            cancelButtonTitle: "OK").show()
+//        
+//    }
+//    func postStripeToken(token: STPToken) {
+//        
+//        let URL = "http://localhost/donate/payment.php"
+//        let params = ["stripeToken": token.tokenId,
+//            "amount": self.amountTextField.text.toInt()!,
+//            "currency": "usd",
+//            "description": self.emailTextField.text]
+//        
+//        let manager = AFHTTPRequestOperationManager()
+//        manager.POST(URL, parameters: params, success: { (operation, responseObject) -> Void in
+//            
+//            if let response = responseObject as? [String: String] {
+//                UIAlertView(title: response["status"],
+//                    message: response["message"],
+//                    delegate: nil,
+//                    cancelButtonTitle: "OK").show()
+//            }
+//            
+//            }) { (operation, error) -> Void in
+//                self.handleError(error!)
+//        }
+//    }
+//    func donate(myCard: STPCard)
+//    {
+//        if self.ExpirationDateTextField.text?.isEmpty == false
+//        {
+//            let expirationDate = self.ExpirationDateTextField.text?.componentsSeparatedByString("/")
+//            let expMonth = UInt(Int(expirationDate![0])!)
+//            let expYear = UInt(Int(expirationDate![1])!)
+//            // Send the card info to Strip to get the token
+//            myCard.number = self.CardNumberTextField.text
+//            myCard.cvc = self.CVVTextfield.text
+//            myCard.expMonth = expMonth
+//            myCard.expYear = expYear
+//            
+//            STPAPIClient.sharedClient().createTokenWithCard(myCard, completion: { (token, error) -> Void in
+//                
+//                if error != nil {
+//                    self.handleError(error!)
+//                    return
+//                } 
+//                
+//                self.postStripeToken(token!)
+//            })
+//        }
+//    }
+    
 }
 
 
