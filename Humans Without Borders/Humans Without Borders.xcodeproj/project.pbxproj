@@ -3681,7 +3681,7 @@
 				TargetAttributes = {
 					E22E95531BBFB130009C91E3 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 2MALMEWT6X;
+						DevelopmentTeam = AUAX97LZ72;
 					};
 					E22E95691BBFB131009C91E3 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -3922,7 +3922,7 @@
 					"$(PROJECT_DIR)/TwilioClient-1.2.5.b76-eb6f40d/Libraries",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sdhacks.ios.Humans-Without-Borders";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";
@@ -3956,7 +3956,7 @@
 					"$(PROJECT_DIR)/TwilioClient-1.2.5.b76-eb6f40d/Libraries",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sdhacks.ios.Humans-Without-Borders";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";
