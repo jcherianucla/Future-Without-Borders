@@ -1231,7 +1231,7 @@ and you will be given immediate help.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contribute BG 2" translatesAutoresizingMaskIntoConstraints="NO" id="hax-me-Ab7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DonateBG1" translatesAutoresizingMaskIntoConstraints="NO" id="hax-me-Ab7">
                                 <rect key="frame" x="0.0" y="64" width="414" height="221"/>
                                 <animations/>
                             </imageView>
@@ -1412,7 +1412,9 @@ and you will be given immediate help.</string>
                             <constraint firstItem="hax-me-Ab7" firstAttribute="top" secondItem="yuU-Uf-cA7" secondAttribute="bottom" id="uBN-lI-93w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Donate " id="sEI-fZ-E7A"/>
+                    <navigationItem key="navigationItem" title="Donate " id="sEI-fZ-E7A">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fKd-3c-LeO"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHY-kt-YoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1447,7 +1449,7 @@ and you will be given immediate help.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="A0r-rR-hcO">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="A0r-rR-hcO">
                                         <rect key="frame" x="132.5" y="520" width="149" height="74.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
@@ -1509,7 +1511,7 @@ and you will be given immediate help.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-F7-pPz" userLabel="Form">
                                 <rect key="frame" x="0.0" y="245.5" width="414" height="441.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
                                         <rect key="frame" x="41.5" y="148.5" width="242.5" height="23.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -1531,7 +1533,7 @@ and you will be given immediate help.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
                                         <rect key="frame" x="41.5" y="176.5" width="331" height="54"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.41960784313725491" green="0.5607843137254902" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
@@ -1676,7 +1678,7 @@ and you will be given immediate help.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contribute BG 2" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-S0-9DA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Donate BG" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-S0-9DA">
                                 <rect key="frame" x="0.0" y="64" width="414" height="221"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much would you like to contribute?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="86h-Fo-DjB">
@@ -1850,7 +1852,9 @@ and you will be given immediate help.</string>
                             <constraint firstItem="Zth-Ss-caC" firstAttribute="height" secondItem="hpZ-pQ-rhi" secondAttribute="height" multiplier="0.6" id="wak-ym-sSJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Donate " id="7wN-Ft-xhC"/>
+                    <navigationItem key="navigationItem" title="Donate " id="7wN-Ft-xhC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="mJI-Xk-yO9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="FiftyBtn" destination="ie4-Hd-Plm" id="5TZ-kD-CCP"/>
                         <outlet property="OtherBtn" destination="E6n-QU-wBz" id="iCU-a0-f9n"/>
@@ -1871,10 +1875,11 @@ and you will be given immediate help.</string>
         <image name="AidOtherGroupsBtn" width="320" height="64"/>
         <image name="Blue Button" width="266" height="60"/>
         <image name="Contribute BG 1" width="375" height="185"/>
-        <image name="Contribute BG 2" width="375" height="185"/>
         <image name="Contribute Icon" width="28" height="28"/>
         <image name="ContributeToFWBBtn" width="320" height="64"/>
         <image name="Dashboard Icon" width="28" height="28"/>
+        <image name="Donate BG" width="375" height="185"/>
+        <image name="DonateBG1" width="375" height="185"/>
         <image name="Host BG" width="375" height="185"/>
         <image name="Host Family BG" width="375" height="185"/>
         <image name="Login_Icon" width="300" height="300"/>
