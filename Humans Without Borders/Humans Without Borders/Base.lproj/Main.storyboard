@@ -1021,7 +1021,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.28235294117647058" green="0.53333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.1019607843" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -1050,7 +1050,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.26666666666666666" green="0.47058823529411764" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.047058823529411764" green="0.10196078431372549" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -1240,7 +1240,7 @@
         <!--Donate -->
         <scene sceneID="HqO-PU-BrK">
             <objects>
-                <viewController id="6bf-WT-bc8" sceneMemberID="viewController">
+                <viewController id="6bf-WT-bc8" customClass="DonateViewController" customModule="Humans_Without_Borders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yuU-Uf-cA7"/>
                         <viewControllerLayoutGuide type="bottom" id="eFn-cD-ukt"/>
@@ -1371,6 +1371,9 @@
                                             <constraint firstAttribute="width" secondItem="xEO-SJ-oUo" secondAttribute="height" multiplier="960:200" id="Jxv-9K-0XB"/>
                                         </constraints>
                                         <state key="normal" image="AidOtherGroupsBtn"/>
+                                        <connections>
+                                            <action selector="GoToAidOtherGroups:" destination="6bf-WT-bc8" eventType="touchUpInside" id="Wbi-pz-bHB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14509803921568626" green="0.22745098039215686" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
