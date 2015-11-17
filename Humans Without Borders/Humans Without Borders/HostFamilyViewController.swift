@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import Parse
 
+
 class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var userData: PFObject? = nil
@@ -97,7 +98,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 self.refugeeLocation.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
             }
         }
-
+        
     }
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
@@ -137,7 +138,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             
         }
     }
-
+    
     
     @IBAction func provideAidButton(sender: AnyObject) {
         print("OBJECT IDDDDDDDDDDDDD: " + objectID!)
