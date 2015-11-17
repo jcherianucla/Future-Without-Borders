@@ -39,7 +39,7 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        refugeeLocation.delegate = self
         print(latitude)
         print(longitude)
         print((latitude! as NSString).doubleValue)
@@ -83,20 +83,27 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
-        let request = MKDirectionsRequest()
-        request.source = MKMapItem.mapItemForCurrentLocation()
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: refugeeLatitude!, longitude: refugeeLongitude!), addressDictionary: nil))
-        request.requestsAlternateRoutes = true
-        request.transportType = .Automobile
-        
-        let directions = MKDirections(request: request)
-        
-        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
-            guard let unwrappedResponse = response else { return }
-            for route in unwrappedResponse.routes {
-                self.refugeeLocation.addOverlay(route.polyline)
-                self.refugeeLocation.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+        if(distanceInt/1000  < 250)
+        {
+            let request = MKDirectionsRequest()
+            request.source = MKMapItem.mapItemForCurrentLocation()
+            request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: refugeeLatitude!, longitude: refugeeLongitude!), addressDictionary: nil))
+            request.requestsAlternateRoutes = true
+            request.transportType = .Automobile
+            
+            let directions = MKDirections(request: request)
+            
+            directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                for route in unwrappedResponse.routes {
+                    self.refugeeLocation.addOverlay(route.polyline)
+                    self.refugeeLocation.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
             }
+        }
+        else
+        {
+            self.throwAlert("Large Distance!", msgTitle: "You are located too far away for directions", msgEnd: "OK")
         }
         
     }
@@ -175,35 +182,11 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                                         self.refugeeData!["host"] = firstName + " " + lastName + ", " + address + ", " + location + ", " + number
                                         innerObject.saveInBackground()
                                         
-                                        let message = "You have become a Host for a Family."
-                                        if #available(iOS 8.0, *)
-                                        {
-                                            let helped = UIAlertController(title: "Congratulations", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                                            helped.addAction(UIAlertAction(title: "Help another Family", style: .Default, handler: { (action) -> Void in
-                                                //
-                                            }))
-                                            self.presentViewController(helped, animated: true, completion: nil)
-                                        } else
-                                        {
-                                            // Fallback on earlier versions
-                                        }
-                                        
-                                        
+                                        self.throwAlert("Congratulations", msgTitle: "You have become a Host for a Family.", msgEnd: "Help another Family")
                                     }
                                     else
                                     {
-                                        let message = "This family has already found shelter."
-                                        if #available(iOS 8.0, *)
-                                        {
-                                            let helped = UIAlertController(title: "Woah!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                                            helped.addAction(UIAlertAction(title: "Help another Family", style: .Default, handler: { (action) -> Void in
-                                                //
-                                            }))
-                                            self.presentViewController(helped, animated: true, completion: nil)
-                                        } else
-                                        {
-                                            // Fallback on earlier versions
-                                        }
+                                        self.throwAlert("Note!", msgTitle: "This family has already found shelter.", msgEnd: "Help another Family")
                                     }
                                 }
                             }
@@ -217,5 +200,21 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             }
         }
     }
+    
+    func throwAlert(msg:String, msgTitle: String, msgEnd: String)
+    {
+        let message = msg
+        if #available(iOS 8.0, *)
+        {
+            let alerter = UIAlertController(title: msgTitle, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alerter.addAction(UIAlertAction(title: msgEnd, style: .Default, handler: { (action) -> Void in
+                //
+            }))
+            self.presentViewController(alerter, animated: true, completion: nil)
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
 }
 
