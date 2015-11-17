@@ -90,6 +90,12 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="gHO-Sq-G1R">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="e2G-sE-sDu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="Logout:" destination="RP4-Vv-Kvl" id="0Vs-cl-A61"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="cFf-1K-FKS" kind="show" identifier="ContributeToHostfamilySegue" id="L3p-NE-dfL"/>
@@ -642,120 +648,96 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-cG-LKX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="589"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginWithFacebook" translatesAutoresizingMaskIntoConstraints="NO" id="j7S-Hi-YHB">
-                                <rect key="frame" x="52" y="478.5" width="310.5" height="51.5"/>
-                                <animations/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-CG-bm7">
-                                <rect key="frame" x="0.0" y="589" width="414" height="73.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3G-fk-W5F">
-                                        <rect key="frame" x="0.5" y="0.5" width="414" height="73.5"/>
-                                        <animations/>
-                                        <state key="normal" title="LOGIN">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.34509803921568627" green="0.61960784313725492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="N3G-fk-W5F" firstAttribute="centerX" secondItem="dfs-CG-bm7" secondAttribute="centerX" id="8F4-T5-wzk"/>
-                                    <constraint firstItem="N3G-fk-W5F" firstAttribute="centerY" secondItem="dfs-CG-bm7" secondAttribute="centerY" id="LSQ-UK-fx8"/>
-                                    <constraint firstItem="N3G-fk-W5F" firstAttribute="width" secondItem="dfs-CG-bm7" secondAttribute="width" id="MAu-qF-Wjy"/>
-                                    <constraint firstItem="N3G-fk-W5F" firstAttribute="height" secondItem="dfs-CG-bm7" secondAttribute="height" id="fKT-QT-PF8"/>
-                                </constraints>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxV-Hb-4li">
+                                <rect key="frame" x="-0.5" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Future Without Borders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-n4-9yQ">
-                                <rect key="frame" x="-8" y="111.5" width="412" height="109.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Without Borders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-n4-9yQ">
+                                <rect key="frame" x="41.5" y="166.5" width="331" height="109.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host a refugee family today!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PRj-JR-n2U">
-                                <rect key="frame" x="62.5" y="221" width="290" height="28"/>
+                                <rect key="frame" x="62.5" y="276" width="290" height="27.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-LW-akw">
-                                <rect key="frame" x="0.0" y="662" width="414" height="73.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-gV-2O9">
-                                        <rect key="frame" x="0.0" y="0.5" width="414" height="73.5"/>
-                                        <animations/>
-                                        <state key="normal" title="SIGN UP">
-                                            <color key="titleColor" red="0.28235294117647058" green="0.53333333333333333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RCD-nN-bMf">
+                                <rect key="frame" x="155.5" y="54.5" width="103.5" height="103.5"/>
                                 <constraints>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerY" secondItem="ch3-LW-akw" secondAttribute="centerY" id="8Xb-Ys-cwl"/>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="width" secondItem="ch3-LW-akw" secondAttribute="width" id="9QO-B1-QWZ"/>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="height" secondItem="ch3-LW-akw" secondAttribute="height" id="Kem-EM-11t"/>
-                                    <constraint firstItem="pwY-gV-2O9" firstAttribute="centerX" secondItem="ch3-LW-akw" secondAttribute="centerX" id="OcS-0O-IhJ"/>
+                                    <constraint firstAttribute="width" secondItem="RCD-nN-bMf" secondAttribute="height" multiplier="1:1" id="8sq-SN-aes"/>
                                 </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OR Image" translatesAutoresizingMaskIntoConstraints="NO" id="HRA-UM-odd">
-                                <rect key="frame" x="72.5" y="535" width="269.5" height="51.5"/>
-                                <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bog-BZ-jhj" userLabel="LoginWithFacebook">
-                                <rect key="frame" x="52" y="478.5" width="310.5" height="51.5"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98A-AR-T0m">
+                                <rect key="frame" x="62" y="632" width="290" height="49"/>
+                                <string key="text">If you are a Syrian Refugee do not sign up 
+for this service. Call/text 1-800-AIDFORSYRIA 
+and you will be given immediate help.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5x-2j-jzc">
+                                <rect key="frame" x="62" y="420.5" width="290" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q5x-2j-jzc" secondAttribute="height" multiplier="1125:225" id="zgV-gd-G7J"/>
+                                </constraints>
+                                <state key="normal" image="Login_With_Facebook_Btn"/>
                                 <connections>
-                                    <action selector="logInFBButton:" destination="c0q-B2-LF8" eventType="touchUpInside" id="7Wq-Nm-J3I"/>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="ContributeSegue" id="q2N-Wm-cRW"/>
+                                    <action selector="logInFBButton:" destination="c0q-B2-LF8" eventType="touchUpInside" id="9TA-FU-y49"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRE-TZ-KiM">
+                                <rect key="frame" x="62" y="503.5" width="290" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HRE-TZ-KiM" secondAttribute="height" multiplier="1125:225" id="c5V-Ly-i9z"/>
+                                </constraints>
+                                <state key="normal" image="Login_With_Email_Btn"/>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8O3-n4-9yQ" firstAttribute="width" secondItem="3aW-cG-LKX" secondAttribute="width" multiplier="0.8" id="0JI-U8-jJn"/>
-                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.75" id="2uS-cX-E9z"/>
-                            <constraint firstItem="3aW-cG-LKX" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.8" id="6fc-Fi-McA"/>
+                            <constraint firstItem="98A-AR-T0m" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="6Tz-0F-b9e"/>
+                            <constraint firstItem="3aW-cG-LKX" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" id="6fc-Fi-McA"/>
+                            <constraint firstItem="HRE-TZ-KiM" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="6id-gE-lN4"/>
                             <constraint firstAttribute="trailing" secondItem="3aW-cG-LKX" secondAttribute="trailing" id="8fN-wy-TLh"/>
-                            <constraint firstItem="ch3-LW-akw" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="GOn-SZ-QGH"/>
-                            <constraint firstItem="dfs-CG-bm7" firstAttribute="top" secondItem="3aW-cG-LKX" secondAttribute="bottom" id="IVv-Jo-lfJ"/>
-                            <constraint firstItem="bog-BZ-jhj" firstAttribute="centerX" secondItem="j7S-Hi-YHB" secondAttribute="centerX" id="NUe-Ud-a5R"/>
-                            <constraint firstItem="HRA-UM-odd" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="OO6-2M-0FY"/>
-                            <constraint firstItem="bog-BZ-jhj" firstAttribute="height" secondItem="j7S-Hi-YHB" secondAttribute="height" id="T0Q-a1-gSq"/>
-                            <constraint firstItem="bog-BZ-jhj" firstAttribute="centerY" secondItem="j7S-Hi-YHB" secondAttribute="centerY" id="Tud-SA-2WM"/>
-                            <constraint firstItem="bog-BZ-jhj" firstAttribute="width" secondItem="j7S-Hi-YHB" secondAttribute="width" id="Wsb-82-kHw"/>
-                            <constraint firstAttribute="trailing" secondItem="ch3-LW-akw" secondAttribute="trailing" id="Xdb-ET-rlQ"/>
-                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="Xwa-eB-3hC"/>
-                            <constraint firstItem="j7S-Hi-YHB" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.07" id="Yho-Wi-yYT"/>
-                            <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="8O3-n4-9yQ" secondAttribute="bottom" multiplier="10:3" id="Yj0-7B-OsS"/>
-                            <constraint firstAttribute="trailing" secondItem="dfs-CG-bm7" secondAttribute="trailing" id="Zd1-RZ-EQ3"/>
-                            <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="ch3-LW-akw" secondAttribute="bottom" id="Zxa-hi-B2M"/>
+                            <constraint firstItem="Q5x-2j-jzc" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.7" id="AMb-Iy-GjH"/>
+                            <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="Q5x-2j-jzc" secondAttribute="bottom" multiplier="10:6.5" id="Ceg-mh-thP"/>
+                            <constraint firstItem="RCD-nN-bMf" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.25" id="F6Q-hj-sNu"/>
+                            <constraint firstItem="8O3-n4-9yQ" firstAttribute="top" secondItem="RCD-nN-bMf" secondAttribute="bottom" multiplier="10:9.5" id="Hik-M4-Yt9"/>
+                            <constraint firstItem="bxV-Hb-4li" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="QeP-So-Plv"/>
+                            <constraint firstItem="RCD-nN-bMf" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="TK5-12-IMb"/>
+                            <constraint firstItem="HRE-TZ-KiM" firstAttribute="top" secondItem="Q5x-2j-jzc" secondAttribute="bottom" multiplier="10:9.5" id="TRU-Iy-NfN"/>
+                            <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="98A-AR-T0m" secondAttribute="bottom" multiplier="10:9.25" id="Ty8-a2-IT1"/>
+                            <constraint firstItem="98A-AR-T0m" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.7" id="XuU-kn-7tD"/>
+                            <constraint firstItem="FP0-yE-ENw" firstAttribute="top" secondItem="8O3-n4-9yQ" secondAttribute="bottom" multiplier="10:3.75" id="Yj0-7B-OsS"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.7" id="abI-KL-dtE"/>
-                            <constraint firstItem="ch3-LW-akw" firstAttribute="top" secondItem="dfs-CG-bm7" secondAttribute="bottom" id="b7B-1L-AKo"/>
-                            <constraint firstItem="dfs-CG-bm7" firstAttribute="top" secondItem="j7S-Hi-YHB" secondAttribute="bottom" multiplier="10:9" id="cXF-qS-jRv"/>
+                            <constraint firstItem="bxV-Hb-4li" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" id="ckR-cD-Xtv"/>
+                            <constraint firstItem="bxV-Hb-4li" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" id="ePG-NY-NPD"/>
+                            <constraint firstItem="bxV-Hb-4li" firstAttribute="centerY" secondItem="V2s-L0-Scb" secondAttribute="centerY" id="f7F-ed-EUE"/>
                             <constraint firstItem="8O3-n4-9yQ" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="gFt-bD-UG7"/>
-                            <constraint firstItem="dfs-CG-bm7" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="igM-6t-IdG"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="top" secondItem="8O3-n4-9yQ" secondAttribute="bottom" id="ilr-bQ-hHf"/>
-                            <constraint firstItem="HRA-UM-odd" firstAttribute="width" secondItem="V2s-L0-Scb" secondAttribute="width" multiplier="0.65" id="j16-Zu-Ukj"/>
+                            <constraint firstItem="Q5x-2j-jzc" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="jFl-3U-vKe"/>
                             <constraint firstItem="PRj-JR-n2U" firstAttribute="centerX" secondItem="V2s-L0-Scb" secondAttribute="centerX" id="jH4-Vp-pkc"/>
                             <constraint firstItem="3aW-cG-LKX" firstAttribute="leading" secondItem="V2s-L0-Scb" secondAttribute="leading" id="lej-WI-zLd"/>
-                            <constraint firstItem="dfs-CG-bm7" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.1" id="rFb-g9-b2h"/>
-                            <constraint firstItem="HRA-UM-odd" firstAttribute="top" secondItem="j7S-Hi-YHB" secondAttribute="bottom" constant="5" id="uxV-iS-rnA"/>
-                            <constraint firstItem="HRA-UM-odd" firstAttribute="height" secondItem="V2s-L0-Scb" secondAttribute="height" multiplier="0.07" id="xPP-5U-ueI"/>
+                            <constraint firstItem="HRE-TZ-KiM" firstAttribute="width" secondItem="Q5x-2j-jzc" secondAttribute="width" id="vDO-NG-kOC"/>
                             <constraint firstItem="3aW-cG-LKX" firstAttribute="top" secondItem="V2s-L0-Scb" secondAttribute="top" id="y1L-yu-l7T"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="LoginBtn" destination="N3G-fk-W5F" id="rAa-yY-vfb"/>
-                        <outlet property="SignupBtn" destination="pwY-gV-2O9" id="GIh-Ae-9g2"/>
+                        <outlet property="LoginBtn" destination="Q5x-2j-jzc" id="wdB-6m-jFg"/>
+                        <outlet property="SignupBtn" destination="HRE-TZ-KiM" id="Ja2-IH-q0w"/>
                         <outlet property="TitleMain" destination="8O3-n4-9yQ" id="8Zb-rs-RAZ"/>
                         <outlet property="TitleSecondary" destination="PRj-JR-n2U" id="Ftk-Fs-30p"/>
                         <segue destination="T43-Zn-m3Z" kind="show" identifier="SetTextSegue" id="F4G-fC-CCQ"/>
@@ -1658,19 +1640,17 @@
         <image name="Dashboard Icon" width="28" height="28"/>
         <image name="Host BG" width="375" height="185"/>
         <image name="Host Family BG" width="375" height="185"/>
-        <image name="LoginWithFacebook" width="300" height="60"/>
+        <image name="Login_Icon" width="300" height="300"/>
+        <image name="Login_With_Email_Btn" width="375" height="75"/>
+        <image name="Login_With_Facebook_Btn" width="375" height="75"/>
         <image name="Main Blurred BG" width="500" height="714"/>
         <image name="Main Blurred BG Dark Blurry" width="500" height="714"/>
         <image name="Main Blurred BG Light" width="500" height="714"/>
         <image name="Main Blurred BG Light Blurry" width="500" height="714"/>
         <image name="NewCardBG" width="250" height="67"/>
         <image name="NoCreditCardIcon" width="167" height="167"/>
-        <image name="OR Image" width="300" height="33"/>
         <image name="Payments_Header" width="333" height="53"/>
         <image name="Refugee Family Icon 1" width="100" height="100"/>
         <image name="ValidatedIcon" width="167" height="167"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="q2N-Wm-cRW"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,10 @@ class ContributeTableViewController: UITableViewController, Contribute{
         
                 
     }
+    @IBAction func Logout(sender: AnyObject) {
+        UIApplication.sharedApplication().keyWindow!.rootViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+        })
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

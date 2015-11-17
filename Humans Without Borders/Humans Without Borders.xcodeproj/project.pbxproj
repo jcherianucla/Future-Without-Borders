@@ -1096,7 +1096,7 @@
 		6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		6DFE2B011BC1008900837046 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostFamilyViewController.swift; sourceTree = "<group>"; };
-		E22E95541BBFB130009C91E3 /* Humans Without Borders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Humans Without Borders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22E95541BBFB130009C91E3 /* Future Without Borders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future Without Borders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E95571BBFB131009C91E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22E95591BBFB131009C91E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E22E955B1BBFB131009C91E3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -3567,7 +3567,7 @@
 		E22E95551BBFB130009C91E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E22E95541BBFB130009C91E3 /* Humans Without Borders.app */,
+				E22E95541BBFB130009C91E3 /* Future Without Borders.app */,
 				E22E956A1BBFB131009C91E3 /* Humans Without BordersTests.xctest */,
 				E22E95751BBFB131009C91E3 /* Humans Without BordersUITests.xctest */,
 			);
@@ -3634,7 +3634,7 @@
 			);
 			name = "Humans Without Borders";
 			productName = "Humans Without Borders";
-			productReference = E22E95541BBFB130009C91E3 /* Humans Without Borders.app */;
+			productReference = E22E95541BBFB130009C91E3 /* Future Without Borders.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E22E95691BBFB131009C91E3 /* Humans Without BordersTests */ = {
@@ -3927,7 +3927,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Future Without Borders";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";
 			};
@@ -3961,7 +3961,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Future Without Borders";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";
 			};
