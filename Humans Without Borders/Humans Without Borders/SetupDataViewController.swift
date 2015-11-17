@@ -91,6 +91,10 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
             if error != nil {
                 print(error)
             } else if let object = object {
+                if(self.isFieldEmpty(self.PhoneTextField.text!) || self.isFieldEmpty(self.addressTextField.text!) || self.isFieldEmpty(self.MaxPeopleTextfield.text!) || self.isFieldEmpty(self.EmailTextField.text!) || self.isFieldEmpty(self.LocationTextField.text!))
+                {
+                    self.throwAlert("Please fill out all fields!", msgTitle: "Missing Fields", msgEnd: "Ok", clearFields: true, clearText: self.PhoneTextField)
+                }
                 object["address"] = self.addressTextField.text!
                 if(self.isValidPhoneNumber(self.PhoneTextField.text!))
                 {
@@ -111,10 +115,7 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
                     {
                         self.performSegueWithIdentifier("SetuserdataToContributeSegue", sender: self)
                     }
-                    else
-                    {
-                        self.throwAlert("Please fill out all fields!", msgTitle: "Missing Fields", msgEnd: "Ok", clearFields: true, clearText: self.PhoneTextField)
-                    }
+
                 }
                 else
                 {
@@ -126,6 +127,10 @@ class SetupDataViewController: UIViewController, UITextFieldDelegate{
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func isFieldEmpty(entry: String) -> Bool{
+        return entry.isEmpty;
     }
     
     func isValidPhoneNumber(phoneNum: String) -> Bool

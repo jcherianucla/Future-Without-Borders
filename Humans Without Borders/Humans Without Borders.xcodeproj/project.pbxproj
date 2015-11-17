@@ -11,14 +11,14 @@
 		6BB68A0C1BBFDD9800441B85 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB689DA1BBFDD8C00441B85 /* libssl.a */; };
 		6BB68A0D1BBFDD9800441B85 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB689DB1BBFDD8C00441B85 /* libTwilioClient.a */; };
 		6BB68A0F1BBFDDF900441B85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB68A0E1BBFDDF900441B85 /* AVFoundation.framework */; };
-		6BEC28161BC044E700A0017F /* RefugeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC28151BC044E700A0017F /* RefugeeData.swift */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD221BBFCEA40001E84F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD231BBFCEA40001E84F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD241BBFCEA40001E84F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD2A1BBFCF0B0001E84F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD261BBFCF0B0001E84F /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD2B1BBFCF0B0001E84F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD271BBFCF0B0001E84F /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD2C1BBFCF0B0001E84F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD281BBFCF0B0001E84F /* ParseFacebookUtils.framework */; settings = {ASSET_TAGS = (); }; };
-		6D7DCD2D1BBFCF0B0001E84F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD291BBFCF0B0001E84F /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		6BEC28161BC044E700A0017F /* RefugeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC28151BC044E700A0017F /* RefugeeData.swift */; };
+		6D7DCD221BBFCEA40001E84F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD1F1BBFCEA40001E84F /* FBSDKCoreKit.framework */; };
+		6D7DCD231BBFCEA40001E84F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD201BBFCEA40001E84F /* FBSDKLoginKit.framework */; };
+		6D7DCD241BBFCEA40001E84F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD211BBFCEA40001E84F /* FBSDKShareKit.framework */; };
+		6D7DCD2A1BBFCF0B0001E84F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD261BBFCF0B0001E84F /* Bolts.framework */; };
+		6D7DCD2B1BBFCF0B0001E84F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD271BBFCF0B0001E84F /* Parse.framework */; };
+		6D7DCD2C1BBFCF0B0001E84F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD281BBFCF0B0001E84F /* ParseFacebookUtils.framework */; };
+		6D7DCD2D1BBFCF0B0001E84F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD291BBFCF0B0001E84F /* ParseFacebookUtilsV4.framework */; };
 		6D7DCD381BBFCF440001E84F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD2F1BBFCF440001E84F /* Accounts.framework */; };
 		6D7DCD391BBFCF440001E84F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD301BBFCF440001E84F /* AudioToolbox.framework */; };
 		6D7DCD3A1BBFCF440001E84F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD311BBFCF440001E84F /* CFNetwork.framework */; };
@@ -31,8 +31,8 @@
 		6D7DCD421BBFCF4F0001E84F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD411BBFCF4F0001E84F /* QuartzCore.framework */; };
 		6D7DCD5E1BBFFE130001E84F /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD5D1BBFFE120001E84F /* libz.1.dylib */; };
 		6D7DCD601BBFFE230001E84F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7DCD5F1BBFFE230001E84F /* libsqlite3.dylib */; };
-		6DFE2B021BC1008900837046 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B011BC1008900837046 /* EditViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6DFE2B041BC1108D00837046 /* HostFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6DFE2B021BC1008900837046 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B011BC1008900837046 /* EditViewController.swift */; };
+		6DFE2B041BC1108D00837046 /* HostFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE2B031BC1108D00837046 /* HostFamilyViewController.swift */; };
 		E22E95581BBFB131009C91E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95571BBFB131009C91E3 /* AppDelegate.swift */; };
 		E22E955A1BBFB131009C91E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95591BBFB131009C91E3 /* FirstViewController.swift */; };
 		E22E955C1BBFB131009C91E3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E955B1BBFB131009C91E3 /* SecondViewController.swift */; };
@@ -40,13 +40,13 @@
 		E22E95641BBFB131009C91E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E95621BBFB131009C91E3 /* LaunchScreen.storyboard */; };
 		E22E956F1BBFB131009C91E3 /* Humans_Without_BordersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E956E1BBFB131009C91E3 /* Humans_Without_BordersTests.swift */; };
 		E22E957A1BBFB131009C91E3 /* Humans_Without_BordersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95791BBFB131009C91E3 /* Humans_Without_BordersUITests.swift */; };
-		E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */; settings = {ASSET_TAGS = (); }; };
-		E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA2C1BBFE38D0039213E /* ContributeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		E23EAA331BC0558A0039213E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23EAA321BC0558A0039213E /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E22E95881BBFBA8A009C91E3 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E95871BBFBA8A009C91E3 /* Login View Controller.swift */; };
+		E23EAA2D1BBFE38D0039213E /* ContributeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA2C1BBFE38D0039213E /* ContributeTableViewController.swift */; };
+		E23EAA311BBFE71F0039213E /* ContributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA301BBFE71F0039213E /* ContributeTableViewCell.swift */; };
+		E23EAA331BC0558A0039213E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23EAA321BC0558A0039213E /* Assets.xcassets */; };
+		E23EAA371BC0ABD90039213E /* SetupDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA361BC0ABD90039213E /* SetupDataViewController.swift */; };
+		E23EAA391BC0CF020039213E /* FamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA381BC0CF020039213E /* FamilyTableViewCell.swift */; };
+		E23EAA3B1BC0D07E0039213E /* FamilyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EAA3A1BC0D07E0039213E /* FamilyListViewController.swift */; };
 		E2D1C6271BC0F68F0009483A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D1C6261BC0F68F0009483A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -3678,7 +3678,7 @@
 				TargetAttributes = {
 					E22E95531BBFB130009C91E3 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 2MALMEWT6X;
+						DevelopmentTeam = AUAX97LZ72;
 					};
 					E22E95691BBFB131009C91E3 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -3918,7 +3918,7 @@
 					"$(PROJECT_DIR)/TwilioClient-1.2.5.b76-eb6f40d/Libraries",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sdhacks.ios.Humans-Without-Borders";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";
@@ -3952,7 +3952,7 @@
 					"$(PROJECT_DIR)/TwilioClient-1.2.5.b76-eb6f40d/Libraries",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sdhacks.ios.Humans-Without-Borders";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jahancherian.ios.Humans-Without-Borders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HumansWithoutBorders-Bridging-Header.h";

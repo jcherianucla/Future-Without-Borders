@@ -31,8 +31,11 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
     @IBOutlet weak var refugeeLocation: MKMapView!
     @IBOutlet weak var distanceAway: UILabel!
     
+    
+    
     let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,62 +56,90 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
         refugeeLatitude = temp1
         refugeeLongitude = temp2
         numberOfFamMembers = (numberOfFamilyMembers! as NSString).integerValue
-
-
+        
+        
         numberInFamily.text = "Number of Family Members \(numberOfFamMembers!)"
         geoLocation.text = "Geolocation: \(refugeeLatitude!), \(refugeeLongitude!)"
         
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 8.0, *) {
+        let initialLocation = CLLocation(latitude: refugeeLatitude!, longitude: refugeeLongitude!)
+        centerMapOnLocation(initialLocation)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = initialLocation.coordinate
+        annotation.title = "Location of Refugee(s)"
+        refugeeLocation.addAnnotation(annotation)
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            
             locationManager.requestWhenInUseAuthorization()
-        } else {
-            // Fallback on earlier versions
+            locationManager.startUpdatingLocation()
         }
-        locationManager.startUpdatingLocation()
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: refugeeLatitude!, longitude: refugeeLongitude!), addressDictionary: nil))
+        request.requestsAlternateRoutes = true
+        request.transportType = .Automobile
         
+        let directions = MKDirections(request: request)
         
+        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+            guard let unwrappedResponse = response else { return }
+            for route in unwrappedResponse.routes {
+                self.refugeeLocation.addOverlay(route.polyline)
+                self.refugeeLocation.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+
     }
     
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        // draw the track
+        let polyLine = overlay
+        let polyLineRenderer = MKPolylineRenderer(overlay: polyLine)
+        polyLineRenderer.strokeColor = UIColor.blueColor()
+        polyLineRenderer.lineWidth = 2.0
+        
+        return polyLineRenderer
+    }
     
-    func checkLocationAuthorizationStatus() {
-        if #available(iOS 8.0, *) {
-            if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-                refugeeLocation.showsUserLocation = true
-                locationManager.startUpdatingLocation()
-            } else {
-                locationManager.requestWhenInUseAuthorization()
-            }
+    func checkLocationAuthorizationStatus()
+    {
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            refugeeLocation.showsUserLocation = true
+            locationManager.startUpdatingLocation()
         } else {
-            // Fallback on earlier versions
+            locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func centerMapOnLocation(location: CLLocation)
+    {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        refugeeLocation.setRegion(coordinateRegion, animated: true)
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             //this is the place where you get the new location
-            
             let initialLocation = CLLocation(latitude: refugeeLatitude!, longitude: refugeeLongitude!)
-            centerMapOnLocation(initialLocation)
-            let locationQ = CLLocationCoordinate2DMake(refugeeLatitude!, refugeeLongitude!)
             let meters:CLLocationDistance =  (location.distanceFromLocation(initialLocation))
             distanceInt = Int(meters)
             distanceAway.text = "Distance to Refugee: \(distanceInt/1000) KM"
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = locationQ
-            annotation.title = "Location of Refugee(s)"
-            refugeeLocation.addAnnotation(annotation)
+            
         }
     }
+
     
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-            regionRadius * 2.0, regionRadius * 2.0)
-        refugeeLocation.setRegion(coordinateRegion, animated: true)
-    }
-    @IBAction func provideAidButton(sender: AnyObject)
-    {
+    @IBAction func provideAidButton(sender: AnyObject) {
         print("OBJECT IDDDDDDDDDDDDD: " + objectID!)
         let query = PFUser.query()
         query!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!){ (object: PFObject?, error: NSError?) -> Void in
@@ -184,9 +215,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 }
             }
         }
-        
     }
-
-    
 }
 
