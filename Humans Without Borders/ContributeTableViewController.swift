@@ -60,7 +60,6 @@ class ContributeTableViewController: UITableViewController, Contribute{
         return cell
     }
     func pressedImage(index:Int) {
-        //UIApplication.sharedApplication().openURL(NSURL(string:"https://onetoday.google.com/page/refugeerelief")!)
         if (index == 1 ){
             performSegueWithIdentifier("ContributeToHostfamilySegue", sender: self)
         }
