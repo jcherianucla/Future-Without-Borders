@@ -59,7 +59,13 @@ class ContributeTableViewController: UITableViewController, Contribute{
         cell.delegate = self
         return cell
     }
-    func pressedImage() {
-        performSegueWithIdentifier("ContributeToHostfamilySegue", sender: self)
+    func pressedImage(index:Int) {
+        //UIApplication.sharedApplication().openURL(NSURL(string:"https://onetoday.google.com/page/refugeerelief")!)
+        if (index == 1 ){
+            performSegueWithIdentifier("ContributeToHostfamilySegue", sender: self)
+        }
+        else if (index == 2 ){
+            performSegueWithIdentifier("ContributeToDonateSegue", sender: self)
+        }
     }
 }

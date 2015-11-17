@@ -9,7 +9,7 @@
 import UIKit
 
 protocol Contribute {
-    func pressedImage()
+    func pressedImage(index: Int)
 }
 
 class ContributeTableViewCell: UITableViewCell {
@@ -34,11 +34,13 @@ class ContributeTableViewCell: UITableViewCell {
     @IBAction func cellPressed(sender: AnyObject) {
         if id == 1 {
             if (delegate != nil) {
-                delegate!.pressedImage()
+                delegate!.pressedImage(1)
             }
         }
         if id == 2 {
-            UIApplication.sharedApplication().openURL(NSURL(string:"https://onetoday.google.com/page/refugeerelief")!)
+            if (delegate != nil) {
+                delegate!.pressedImage(2)
+            }
         }
         if id == 3 {
             UIApplication.sharedApplication().openURL(NSURL(string:"https://www.youtube.com/watch?v=RvOnXh3NN9w")!)
