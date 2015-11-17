@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("0OxnK5A9fQBKrNLrdsTiq95ZnR7209NOQPQdocSv", clientKey: "MoKnfd95iVAnLHiyNBx25NIrPcKiIL63CTL57GL1")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        Stripe.setDefaultPublishableKey("pk_test_jAbuklJUiI4A9sI1SssvhfVl")
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         return true

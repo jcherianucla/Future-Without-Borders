@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -1233,9 +1233,11 @@ and you will be given immediate help.</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contribute BG 2" translatesAutoresizingMaskIntoConstraints="NO" id="hax-me-Ab7">
                                 <rect key="frame" x="0.0" y="64" width="414" height="221"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every Little Bit Counts." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-oo-Bul">
                                 <rect key="frame" x="41" y="157" width="331" height="35"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1245,6 +1247,7 @@ and you will be given immediate help.</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Payments_Header" translatesAutoresizingMaskIntoConstraints="NO" id="hVD-Zh-MfS">
                                         <rect key="frame" x="83" y="37.5" width="248" height="40"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hVD-Zh-MfS" secondAttribute="height" multiplier="250:40" id="uz5-UQ-xCv"/>
                                         </constraints>
@@ -1254,29 +1257,34 @@ and you will be given immediate help.</string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We use donations for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cvm-Bx-uyz">
                                                 <rect key="frame" x="31" y="18" width="145" height="18"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maintaing our Platform" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBc-lF-iEL">
                                                 <rect key="frame" x="31" y="53" width="145" height="16.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hosting Families" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PW-d0-Sb4">
                                                 <rect key="frame" x="31" y="84" width="145" height="16.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Providing Relief" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q82-lf-vE7">
                                                 <rect key="frame" x="31" y="115" width="145" height="16.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Q82-lf-vE7" firstAttribute="centerX" secondItem="9PW-d0-Sb4" secondAttribute="centerX" id="195-J6-Oq9"/>
@@ -1298,29 +1306,34 @@ and you will be given immediate help.</string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Donations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-rW-gsx">
                                                 <rect key="frame" x="31" y="22" width="145" height="18"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$235,432.23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7m-aJ-ntb">
                                                 <rect key="frame" x="31" y="42" width="145" height="16.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-X2-VL2">
                                                 <rect key="frame" x="31" y="83" width="145" height="18"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15.26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-Xn-Bpk">
                                                 <rect key="frame" x="31" y="101" width="145" height="16.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.49803921568627452" green="0.5490196078431373" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="uJ4-X2-VL2" firstAttribute="centerY" secondItem="2Oh-7E-PCA" secondAttribute="centerY" multiplier="6:5" id="3sW-n3-iIl"/>
@@ -1339,6 +1352,7 @@ and you will be given immediate help.</string>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kB-85-VJe">
                                         <rect key="frame" x="83.5" y="268.5" width="248" height="51.5"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0kB-85-VJe" secondAttribute="height" multiplier="960:200" id="X5a-Xs-K0S"/>
                                         </constraints>
@@ -1349,6 +1363,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEO-SJ-oUo">
                                         <rect key="frame" x="84" y="332.5" width="248" height="51.5"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xEO-SJ-oUo" secondAttribute="height" multiplier="960:200" id="Jxv-9K-0XB"/>
                                         </constraints>
@@ -1358,6 +1373,7 @@ and you will be given immediate help.</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.14509803921568626" green="0.22745098039215686" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="LLB-Fc-koc" firstAttribute="height" secondItem="u8T-ne-R5g" secondAttribute="height" multiplier="0.35" id="3QL-AP-8J2"/>
@@ -1380,6 +1396,7 @@ and you will be given immediate help.</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hax-me-Ab7" firstAttribute="height" secondItem="WGc-7a-6Gk" secondAttribute="height" multiplier="0.3" id="ARh-v4-deX"/>
@@ -1418,24 +1435,28 @@ and you will be given immediate help.</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ValidatedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-eJ-8sy">
                                         <rect key="frame" x="144" y="156.5" width="125" height="125"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5Gs-eJ-8sy" secondAttribute="height" multiplier="1:1" id="ihI-xu-2Jx"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Confirmed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-b3-RFG">
                                         <rect key="frame" x="83" y="281.5" width="248" height="47"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="A0r-rR-hcO">
                                         <rect key="frame" x="132" y="519.5" width="149" height="74.5"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-Hg-UMA">
                                         <rect key="frame" x="83" y="519.5" width="248" height="74.5"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6tl-Hg-UMA" secondAttribute="height" multiplier="10:3" id="jfD-ig-FTN"/>
                                         </constraints>
@@ -1448,6 +1469,7 @@ and you will be given immediate help.</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="A0r-rR-hcO" firstAttribute="centerY" secondItem="6tl-Hg-UMA" secondAttribute="centerY" id="3Ss-hg-yt7"/>
@@ -1470,11 +1492,13 @@ and you will be given immediate help.</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoCreditCardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lEg-GF-oFn">
                                         <rect key="frame" x="133.5" y="19" width="147" height="146.5"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lEg-GF-oFn" secondAttribute="height" multiplier="1:1" id="eff-ha-553"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="lEg-GF-oFn" firstAttribute="height" secondItem="q7c-8T-B9Q" secondAttribute="height" multiplier="0.8" id="GVL-3B-p49"/>
@@ -1487,18 +1511,21 @@ and you will be given immediate help.</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
                                         <rect key="frame" x="41" y="148.5" width="242.5" height="23.5"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C V V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-EP-1Is">
                                         <rect key="frame" x="41" y="246" width="59" height="23.5"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X X X X - X X X X - X X X X - X X X X" textAlignment="center" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="JS8-dY-gWi">
                                         <rect key="frame" x="41" y="75" width="331" height="53"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.41960784309999999" green="0.56078431370000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
@@ -1506,6 +1533,7 @@ and you will be given immediate help.</string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
                                         <rect key="frame" x="41" y="176.5" width="331" height="53"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.41960784313725491" green="0.5607843137254902" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
@@ -1513,6 +1541,7 @@ and you will be given immediate help.</string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X X X" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-xI-fhc">
                                         <rect key="frame" x="41" y="274" width="331" height="53.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.41960784309999999" green="0.56078431370000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
@@ -1520,6 +1549,7 @@ and you will be given immediate help.</string>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywA-XO-UiO">
                                         <rect key="frame" x="83" y="357.5" width="248" height="62"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ywA-XO-UiO" secondAttribute="height" multiplier="10:2.5" id="Yk0-tY-6aM"/>
@@ -1533,23 +1563,27 @@ and you will be given immediate help.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C a r d  N u m b e r" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vL4-fA-C3f">
                                         <rect key="frame" x="41" y="47" width="198.5" height="23.5"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S U B M I T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="idA-3R-AGd">
                                         <rect key="frame" x="83" y="357.5" width="248" height="62"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-sH-UAc">
                                         <rect key="frame" x="83" y="357.5" width="248" height="62"/>
+                                        <animations/>
                                         <connections>
                                             <action selector="SubmitButtonPressed:" destination="sLc-N7-fF4" eventType="touchUpInside" id="CcO-RR-CCv"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="vL4-fA-C3f" secondAttribute="bottom" multiplier="100:16" id="0hm-ZP-WSp"/>
@@ -1588,6 +1622,7 @@ and you will be given immediate help.</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.1450980392" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2qc-cJ-x8i" firstAttribute="width" secondItem="LeW-nb-yvP" secondAttribute="width" id="4rw-PN-BOv"/>
