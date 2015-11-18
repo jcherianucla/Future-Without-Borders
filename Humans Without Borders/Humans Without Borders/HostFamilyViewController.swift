@@ -83,8 +83,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
-        if(distanceInt/1000  < 250)
-        {
             let request = MKDirectionsRequest()
             request.source = MKMapItem.mapItemForCurrentLocation()
             request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: refugeeLatitude!, longitude: refugeeLongitude!), addressDictionary: nil))
@@ -100,11 +98,6 @@ class HostFamilyViewController: UIViewController, MKMapViewDelegate, CLLocationM
                     self.refugeeLocation.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
                 }
             }
-        }
-        else
-        {
-            self.throwAlert("Large Distance!", msgTitle: "You are located too far away for directions", msgEnd: "OK")
-        }
         
     }
     

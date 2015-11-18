@@ -41,13 +41,13 @@ class FamilyTableViewCell: UITableViewCell {
     }
 
     @IBAction func ButtonPressed(sender: AnyObject) {
-        print("PRESSED BUTTON")
-        print("Host:" + host!)
+//        print("PRESSED BUTTON")
+//        print("Host:" + host!)
 //        print("FamNum" + famNum!)
-        print("lat" + latitude!)
-        print("long" + longitude!)
-        print("selectiokn" + String(selection!))
-        print ("OBJID:" + String(objectID))
+//        print("lat" + latitude!)
+//        print("long" + longitude!)
+//        print("selectiokn" + String(selection!))
+//        print ("OBJID:" + String(objectID))
         print("PRESSED BUTTON")
         if (delegate != nil ) {
             var temp = numberFamilyMembersLabel.text
