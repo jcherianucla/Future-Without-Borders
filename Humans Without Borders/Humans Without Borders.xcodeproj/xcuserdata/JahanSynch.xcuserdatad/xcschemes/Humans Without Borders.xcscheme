@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E22E95531BBFB130009C91E3"
-               BuildableName = "Humans Without Borders.app"
+               BuildableName = "Future Without Borders.app"
                BlueprintName = "Humans Without Borders"
                ReferencedContainer = "container:Humans Without Borders.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E22E95531BBFB130009C91E3"
-            BuildableName = "Humans Without Borders.app"
+            BuildableName = "Future Without Borders.app"
             BlueprintName = "Humans Without Borders"
             ReferencedContainer = "container:Humans Without Borders.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E22E95531BBFB130009C91E3"
-            BuildableName = "Humans Without Borders.app"
+            BuildableName = "Future Without Borders.app"
             BlueprintName = "Humans Without Borders"
             ReferencedContainer = "container:Humans Without Borders.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E22E95531BBFB130009C91E3"
-            BuildableName = "Humans Without Borders.app"
+            BuildableName = "Future Without Borders.app"
             BlueprintName = "Humans Without Borders"
             ReferencedContainer = "container:Humans Without Borders.xcodeproj">
          </BuildableReference>

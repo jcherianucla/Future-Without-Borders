@@ -74,7 +74,7 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
             cell.distanceLabel.text = "Located " + cell.distanceLabel.text! + " km"
         }
         else {
-            cell.distanceLabel.text = "Location Unkown"
+            cell.distanceLabel.text = ""
         }
         cell.longitude = rufugeeDataList[indexPath.row]["long"] as? String
         cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
