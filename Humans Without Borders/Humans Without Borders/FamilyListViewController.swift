@@ -70,12 +70,12 @@ class FamilyListViewController: UIViewController, UITableViewDelegate , UITableV
             cell.numberFamilyMembersLabel.text = "Family Members Unknown"
         }
         cell.distanceLabel.text = rufugeeDataList[indexPath.row]["distance"] as? String
-        if cell.distanceLabel.text != nil {
-            cell.distanceLabel.text = "Located " + cell.distanceLabel.text! + " km"
-        }
-        else {
-            cell.distanceLabel.text = ""
-        }
+//        if cell.distanceLabel.text != nil {
+//            cell.distanceLabel.text = "Located " + cell.distanceLabel.text! + " km"
+//        }
+//        else {
+//            cell.distanceLabel.text = ""
+//        }
         cell.longitude = rufugeeDataList[indexPath.row]["long"] as? String
         cell.latitude = rufugeeDataList[indexPath.row]["lat"] as? String
         //cell.famNum = rufugeeDataList[indexPath.row]["fam_number"] as? String

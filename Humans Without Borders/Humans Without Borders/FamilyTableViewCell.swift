@@ -50,7 +50,7 @@ class FamilyTableViewCell: UITableViewCell {
 //        print ("OBJID:" + String(objectID))
         print("PRESSED BUTTON")
         if (delegate != nil ) {
-            var temp = numberFamilyMembersLabel.text
+            let temp = numberFamilyMembersLabel.text
             delegate!.PressedButtonToGotoHost(latitude!, lon: longitude!, famNum: temp!, selection: selection!, host: host!, objectID: objectID! )
         }
         
