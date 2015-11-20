@@ -53,13 +53,13 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            activityInicator = UIActivityIndicatorView(frame: self.view.frame)
-            activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
-            activityInicator.center = self.view.center
-            activityInicator.hidesWhenStopped = true
-            activityInicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            view.addSubview(activityInicator)
-            activityInicator.startAnimating()
+//            activityInicator = UIActivityIndicatorView(frame: self.view.frame)
+//            activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+//            activityInicator.center = self.view.center
+//            activityInicator.hidesWhenStopped = true
+//            activityInicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//            view.addSubview(activityInicator)
+//            activityInicator.startAnimating()
             
             let dashboardQuery = PFUser.query()
             dashboardQuery!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
@@ -78,7 +78,7 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
                     self.imageFile = self.userData!["profile_picture"] as! PFFile
                     self.imageFile!.getDataInBackgroundWithBlock { (data , error) -> Void in
                         if let downloadedImage = UIImage(data: data!) {
-                            self.activityInicator.stopAnimating()
+                            //self.activityInicator.stopAnimating()
                             self.profilePicture!.image = downloadedImage
                             self.profilePicture.layer.cornerRadius = (downloadedImage.size.width + downloadedImage.size.height)/12
                             self.profilePicture.layer.borderWidth = 2

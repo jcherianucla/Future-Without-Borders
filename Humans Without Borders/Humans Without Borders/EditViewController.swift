@@ -33,14 +33,14 @@ class EditViewController: UIViewController {
         emailField.userInteractionEnabled = true
         locationField.userInteractionEnabled = true
         
-        activityInicator = UIActivityIndicatorView(frame: self.view.frame)
-        activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
-        activityInicator.center = self.view.center
-        activityInicator.hidesWhenStopped = true
-        activityInicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        view.addSubview(activityInicator)
-        activityInicator.startAnimating()
-        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        //activityInicator = UIActivityIndicatorView(frame: self.view.frame)
+//        activityInicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+//        activityInicator.center = self.view.center
+//        activityInicator.hidesWhenStopped = true
+//        activityInicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//        view.addSubview(activityInicator)
+//        activityInicator.startAnimating()
+//        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         let query = PFUser.query()
         query!.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId!) {
             (object: PFObject?, error: NSError?) -> Void in
@@ -57,7 +57,7 @@ class EditViewController: UIViewController {
                 self.locationField.text! = self.userData!["location"] as! String
                 self.userPic!.getDataInBackgroundWithBlock { (data , error) -> Void in
                     if let downloadedImage = UIImage(data: data!) {
-                        self.activityInicator.stopAnimating()
+                     //   self.activityInicator.stopAnimating()
                         self.profilePicture!.image = downloadedImage
                         self.profilePicture.layer.cornerRadius = (downloadedImage.size.width + downloadedImage.size.height)/12
                         self.profilePicture.layer.borderWidth = 2
@@ -69,7 +69,7 @@ class EditViewController: UIViewController {
             } else {
                 print(error)
             }
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+         //   UIApplication.sharedApplication().endIgnoringInteractionEvents()
         }
         // Do any additional setup after loading the view.
     }

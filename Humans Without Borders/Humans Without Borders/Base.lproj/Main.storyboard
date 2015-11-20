@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c0q-B2-LF8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -424,10 +424,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efX-Tb-uUJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Dark Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-cM-0fh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-cM-0fh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <animations/>
                                     </imageView>
+                                    <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJM-Qu-z0T">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Munich, Germany" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="h06-Od-fe7">
                                         <rect key="frame" x="52" y="190" width="310.5" height="20.5"/>
                                         <animations/>
@@ -475,50 +480,43 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="809-890-7867" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-DU-nNE">
-                                        <rect key="frame" x="52" y="402" width="310.5" height="20.5"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geolocation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ieD-fk-4c6">
-                                        <rect key="frame" x="52" y="427.5" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="428" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No location found" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rGB-P2-JNf">
-                                        <rect key="frame" x="52" y="448" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="448.5" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-0N-Q8O">
-                                        <rect key="frame" x="52" y="473" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="473.5" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="smallberg@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-Us-RD8">
-                                        <rect key="frame" x="52" y="494" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="494.5" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum no. People:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="GiT-Ml-V7T">
-                                        <rect key="frame" x="52" y="519" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="519.5" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cdb-di-FLV">
-                                        <rect key="frame" x="52" y="539" width="310.5" height="20.5"/>
+                                        <rect key="frame" x="52" y="539.5" width="310.5" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -538,6 +536,13 @@
                                             <constraint firstAttribute="width" secondItem="cDm-ys-UlL" secondAttribute="height" multiplier="1:1" id="bIn-3L-qrQ"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="809-890-7867" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-DU-nNE">
+                                        <rect key="frame" x="52" y="402.5" width="310.5" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -551,9 +556,11 @@
                                     <constraint firstItem="ieD-fk-4c6" firstAttribute="leading" secondItem="tOF-DU-nNE" secondAttribute="leading" id="8bY-G8-YmB"/>
                                     <constraint firstItem="BtE-cM-0fh" firstAttribute="centerX" secondItem="efX-Tb-uUJ" secondAttribute="centerX" id="ATt-1F-W6H"/>
                                     <constraint firstItem="vuf-ps-hxa" firstAttribute="top" secondItem="Ya4-s5-HlI" secondAttribute="bottom" constant="5" id="Aky-Gf-1dx"/>
+                                    <constraint firstItem="gJM-Qu-z0T" firstAttribute="centerY" secondItem="BtE-cM-0fh" secondAttribute="centerY" id="GzE-0F-hjO"/>
                                     <constraint firstItem="Ynr-0N-Q8O" firstAttribute="top" secondItem="rGB-P2-JNf" secondAttribute="bottom" constant="5" id="HAK-AR-ApX"/>
                                     <constraint firstItem="kip-Cz-LPj" firstAttribute="width" secondItem="SAo-Ex-vR6" secondAttribute="width" id="HGP-Q0-NFP"/>
                                     <constraint firstItem="vuf-ps-hxa" firstAttribute="width" secondItem="h06-Od-fe7" secondAttribute="width" id="HR4-ep-VK9"/>
+                                    <constraint firstItem="gJM-Qu-z0T" firstAttribute="centerX" secondItem="BtE-cM-0fh" secondAttribute="centerX" id="Hss-PE-Efo"/>
                                     <constraint firstItem="ieD-fk-4c6" firstAttribute="width" secondItem="tOF-DU-nNE" secondAttribute="width" id="I04-lO-rd0"/>
                                     <constraint firstItem="GiT-Ml-V7T" firstAttribute="width" secondItem="JsP-Us-RD8" secondAttribute="width" id="IWp-Wi-O6O"/>
                                     <constraint firstItem="tOF-DU-nNE" firstAttribute="width" secondItem="kip-Cz-LPj" secondAttribute="width" id="MLy-D5-dAh"/>
@@ -562,6 +569,7 @@
                                     <constraint firstItem="Pi2-2P-3Fj" firstAttribute="width" secondItem="efX-Tb-uUJ" secondAttribute="width" multiplier="0.75" id="Qvp-qi-6jp"/>
                                     <constraint firstItem="Ya4-s5-HlI" firstAttribute="top" secondItem="h06-Od-fe7" secondAttribute="bottom" constant="5" id="TNe-XN-npQ"/>
                                     <constraint firstItem="Ya4-s5-HlI" firstAttribute="width" secondItem="efX-Tb-uUJ" secondAttribute="width" id="UGU-ZW-h3e"/>
+                                    <constraint firstItem="gJM-Qu-z0T" firstAttribute="height" secondItem="BtE-cM-0fh" secondAttribute="height" id="WIb-t4-MK2"/>
                                     <constraint firstItem="cDm-ys-UlL" firstAttribute="height" secondItem="BtE-cM-0fh" secondAttribute="height" multiplier="0.1" id="XmW-MG-6sl"/>
                                     <constraint firstItem="dCB-mM-ZmG" firstAttribute="width" secondItem="vuf-ps-hxa" secondAttribute="width" id="Xua-XK-760"/>
                                     <constraint firstAttribute="bottom" secondItem="vuf-ps-hxa" secondAttribute="bottom" multiplier="10:4.5" id="cTs-Id-W8F"/>
@@ -573,6 +581,7 @@
                                     <constraint firstItem="SAo-Ex-vR6" firstAttribute="leading" secondItem="dCB-mM-ZmG" secondAttribute="leading" id="hiV-bL-sTq"/>
                                     <constraint firstItem="Cdb-di-FLV" firstAttribute="top" secondItem="GiT-Ml-V7T" secondAttribute="bottom" id="i6M-Sz-inx"/>
                                     <constraint firstItem="vuf-ps-hxa" firstAttribute="leading" secondItem="h06-Od-fe7" secondAttribute="leading" id="iGD-6i-hHH"/>
+                                    <constraint firstItem="gJM-Qu-z0T" firstAttribute="width" secondItem="BtE-cM-0fh" secondAttribute="width" id="iQ6-sc-Cpj"/>
                                     <constraint firstItem="Ynr-0N-Q8O" firstAttribute="width" secondItem="rGB-P2-JNf" secondAttribute="width" id="iz8-iA-3Yo"/>
                                     <constraint firstItem="JsP-Us-RD8" firstAttribute="leading" secondItem="Ynr-0N-Q8O" secondAttribute="leading" id="jqB-Kd-t9T"/>
                                     <constraint firstItem="tOF-DU-nNE" firstAttribute="leading" secondItem="kip-Cz-LPj" secondAttribute="leading" id="kIf-GB-Np9"/>
@@ -652,6 +661,7 @@
                             </imageView>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxV-Hb-4li">
                                 <rect key="frame" x="-0.5" y="0.0" width="414" height="736"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Without Borders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-n4-9yQ">
@@ -670,12 +680,14 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RCD-nN-bMf">
                                 <rect key="frame" x="155.5" y="54.5" width="103.5" height="103.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RCD-nN-bMf" secondAttribute="height" multiplier="1:1" id="8sq-SN-aes"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98A-AR-T0m">
                                 <rect key="frame" x="62" y="632" width="290" height="49"/>
+                                <animations/>
                                 <string key="text">If you are a Syrian Refugee do not sign up 
 for this service. Call/text 1-800-AIDFORSYRIA 
 and you will be given immediate help.</string>
@@ -685,6 +697,7 @@ and you will be given immediate help.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5x-2j-jzc">
                                 <rect key="frame" x="62" y="420.5" width="290" height="58"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q5x-2j-jzc" secondAttribute="height" multiplier="1125:225" id="zgV-gd-G7J"/>
                                 </constraints>
@@ -695,6 +708,7 @@ and you will be given immediate help.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRE-TZ-KiM">
                                 <rect key="frame" x="62" y="503.5" width="290" height="58"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HRE-TZ-KiM" secondAttribute="height" multiplier="1125:225" id="c5V-Ly-i9z"/>
                                 </constraints>
@@ -764,6 +778,7 @@ and you will be given immediate help.</string>
                             </imageView>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-pF-Kfk" userLabel="Black Shadow">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-Mu-9tA" userLabel="Profile">
@@ -789,60 +804,71 @@ and you will be given immediate help.</string>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-bv-2YE" userLabel="Line">
                                 <rect key="frame" x="0.0" y="220" width="414" height="2"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1M-c1-byf">
                                 <rect key="frame" x="34.5" y="246.5" width="207" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efX-Hk-Qvo" userLabel="Address Text Field">
                                 <rect key="frame" x="34.5" y="274.5" width="290" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVg-1d-YKx">
                                 <rect key="frame" x="34.5" y="312.5" width="207" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-pj-DXc" userLabel="Phone Text Field">
                                 <rect key="frame" x="34.5" y="341.5" width="290" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzt-7Y-3QA">
                                 <rect key="frame" x="34.5" y="381" width="207" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tL6-CY-j1G" userLabel="CityTextfield">
                                 <rect key="frame" x="34.5" y="412.5" width="290" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmT-DK-x10">
                                 <rect key="frame" x="34.5" y="454" width="207" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rl-kO-NcQ" userLabel="Address Text Field">
                                 <rect key="frame" x="34.5" y="487.5" width="290" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum No. People" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fh4-vt-D3B">
                                 <rect key="frame" x="34.5" y="531" width="207" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdm-Nn-7KB" userLabel="Maximumpeople">
                                 <rect key="frame" x="33.5" y="566" width="290" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -1051,10 +1077,15 @@ and you will be given immediate help.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG Dark Blurry" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-Tn-zJA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Blurred BG" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-Tn-zJA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-qC-Qgo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, David Smallberg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="THH-ab-m2j">
                                 <rect key="frame" x="51" y="187" width="248.5" height="38.5"/>
                                 <animations/>
@@ -1157,8 +1188,10 @@ and you will be given immediate help.</string>
                             <constraint firstItem="GSc-z2-aEJ" firstAttribute="leading" secondItem="V6z-Ys-mUd" secondAttribute="leading" id="76E-HK-6Xs"/>
                             <constraint firstItem="1hG-fY-sbv" firstAttribute="centerX" secondItem="JVc-Nc-ZaT" secondAttribute="centerX" multiplier="3:7" id="7Lp-WK-8e3"/>
                             <constraint firstItem="B3w-Tn-zJA" firstAttribute="width" secondItem="JVc-Nc-ZaT" secondAttribute="width" id="8VX-dF-qsO"/>
+                            <constraint firstItem="C4a-qC-Qgo" firstAttribute="centerX" secondItem="B3w-Tn-zJA" secondAttribute="centerX" id="9DM-Xn-Hos"/>
                             <constraint firstItem="1hG-fY-sbv" firstAttribute="height" secondItem="B3w-Tn-zJA" secondAttribute="height" multiplier="0.1" id="G8k-fY-3c8"/>
                             <constraint firstItem="PVa-qC-NVE" firstAttribute="leading" secondItem="RFy-hX-bnW" secondAttribute="leading" id="HGX-89-WRE"/>
+                            <constraint firstItem="C4a-qC-Qgo" firstAttribute="centerY" secondItem="B3w-Tn-zJA" secondAttribute="centerY" id="HpH-z4-2g0"/>
                             <constraint firstItem="B3w-Tn-zJA" firstAttribute="centerY" secondItem="JVc-Nc-ZaT" secondAttribute="centerY" id="Huq-z9-44a"/>
                             <constraint firstItem="kyH-rm-sAf" firstAttribute="top" secondItem="THH-ab-m2j" secondAttribute="bottom" id="JTw-1D-SRR"/>
                             <constraint firstItem="SE7-c1-q2d" firstAttribute="top" secondItem="bwT-OL-yZp" secondAttribute="bottom" constant="10" id="KmJ-fN-AHF"/>
@@ -1183,6 +1216,7 @@ and you will be given immediate help.</string>
                             <constraint firstItem="GSc-z2-aEJ" firstAttribute="width" secondItem="V6z-Ys-mUd" secondAttribute="width" id="e4L-Dk-yJU"/>
                             <constraint firstItem="TIA-Vf-2p6" firstAttribute="width" secondItem="GSc-z2-aEJ" secondAttribute="width" id="e5b-VV-mv2"/>
                             <constraint firstItem="iAV-pi-Nlx" firstAttribute="width" secondItem="JVc-Nc-ZaT" secondAttribute="width" id="e8Y-G4-hZM"/>
+                            <constraint firstItem="C4a-qC-Qgo" firstAttribute="width" secondItem="B3w-Tn-zJA" secondAttribute="width" id="eYc-cf-Irk"/>
                             <constraint firstItem="wnY-JV-d0c" firstAttribute="width" secondItem="JVc-Nc-ZaT" secondAttribute="width" multiplier="0.7" id="gGZ-l0-YqO"/>
                             <constraint firstItem="PVa-qC-NVE" firstAttribute="top" secondItem="RFy-hX-bnW" secondAttribute="bottom" constant="10" id="gTb-8L-Z9a"/>
                             <constraint firstItem="SE7-c1-q2d" firstAttribute="width" secondItem="bwT-OL-yZp" secondAttribute="width" id="hIx-Ys-ukp"/>
@@ -1194,6 +1228,7 @@ and you will be given immediate help.</string>
                             <constraint firstItem="B3w-Tn-zJA" firstAttribute="height" secondItem="JVc-Nc-ZaT" secondAttribute="height" id="rvo-5S-OBC"/>
                             <constraint firstItem="B3w-Tn-zJA" firstAttribute="centerX" secondItem="JVc-Nc-ZaT" secondAttribute="centerX" id="sBJ-aT-No3"/>
                             <constraint firstItem="bwT-OL-yZp" firstAttribute="width" secondItem="wnY-JV-d0c" secondAttribute="width" id="sks-OR-Vj1"/>
+                            <constraint firstItem="C4a-qC-Qgo" firstAttribute="height" secondItem="B3w-Tn-zJA" secondAttribute="height" id="sxK-5B-PuD"/>
                             <constraint firstItem="aWt-yA-XEP" firstAttribute="leading" secondItem="SE7-c1-q2d" secondAttribute="leading" id="usV-sR-QKl"/>
                             <constraint firstItem="PVa-qC-NVE" firstAttribute="width" secondItem="RFy-hX-bnW" secondAttribute="width" id="xn6-NU-Slc"/>
                         </constraints>
@@ -1504,7 +1539,7 @@ and you will be given immediate help.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-F7-pPz" userLabel="Form">
                                 <rect key="frame" x="0.0" y="245.5" width="414" height="441.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E x p i r a t i o n  D a t e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rP-lH9">
                                         <rect key="frame" x="41.5" y="148.5" width="242.5" height="23.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -1526,7 +1561,7 @@ and you will be given immediate help.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="― / ―" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-Oc-qrK">
                                         <rect key="frame" x="41.5" y="176.5" width="331" height="54"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.41960784313725491" green="0.5607843137254902" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
@@ -1673,9 +1708,11 @@ and you will be given immediate help.</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Donate BG" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-S0-9DA">
                                 <rect key="frame" x="0.0" y="64" width="414" height="221"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much would you like to contribute?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="86h-Fo-DjB">
                                 <rect key="frame" x="62" y="139" width="290" height="70"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1685,12 +1722,14 @@ and you will be given immediate help.</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Payments_Header" translatesAutoresizingMaskIntoConstraints="NO" id="o3I-3p-CZM">
                                         <rect key="frame" x="83" y="37.5" width="248" height="40"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="o3I-3p-CZM" secondAttribute="height" multiplier="250:40" id="0kU-kY-gAg"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-v7-LzN">
                                         <rect key="frame" x="83" y="301" width="248" height="51.5"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vg3-v7-LzN" secondAttribute="height" multiplier="960:200" id="NkA-a0-OyD"/>
                                         </constraints>
@@ -1701,6 +1740,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-vJ-zXH">
                                         <rect key="frame" x="66" y="147" width="41" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$5">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1711,23 +1751,27 @@ and you will be given immediate help.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-eh-LDh">
                                         <rect key="frame" x="0.0" y="-285" width="42" height="20.5"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-Z1-7Xb">
                                         <rect key="frame" x="0.0" y="-285" width="25" height="22"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-7F-BuK">
                                         <rect key="frame" x="83" y="103.5" width="248" height="18"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvV-2d-iHp">
                                         <rect key="frame" x="147.5" y="147" width="41" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$10">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1738,6 +1782,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxF-bK-2Ng">
                                         <rect key="frame" x="238" y="147" width="41" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$15">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1748,6 +1793,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-eX-Tb1">
                                         <rect key="frame" x="316" y="147" width="41" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$20">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1758,6 +1804,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie4-Hd-Plm">
                                         <rect key="frame" x="66" y="225" width="41" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$50">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1768,6 +1815,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCv-pY-Xnm">
                                         <rect key="frame" x="141" y="225" width="55" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="$100">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1778,6 +1826,7 @@ and you will be given immediate help.</string>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-QU-wBz">
                                         <rect key="frame" x="231.5" y="225" width="55" height="36"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Other">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1788,11 +1837,13 @@ and you will be given immediate help.</string>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FU9-TA-dyy">
                                         <rect key="frame" x="309" y="232.5" width="55" height="21"/>
+                                        <animations/>
                                         <color key="textColor" red="0.42352941176470588" green="0.69803921568627447" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="FU9-TA-dyy" firstAttribute="centerY" secondItem="E6n-QU-wBz" secondAttribute="centerY" id="32z-Q6-vXD"/>
@@ -1830,6 +1881,7 @@ and you will be given immediate help.</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SFP-S0-9DA" firstAttribute="top" secondItem="ioQ-Sm-Cpo" secondAttribute="bottom" id="35l-sm-VtD"/>
@@ -1879,7 +1931,6 @@ and you will be given immediate help.</string>
         <image name="Login_With_Email_Btn" width="375" height="75"/>
         <image name="Login_With_Facebook_Btn" width="375" height="75"/>
         <image name="Main Blurred BG" width="500" height="714"/>
-        <image name="Main Blurred BG Dark Blurry" width="500" height="714"/>
         <image name="Main Blurred BG Light" width="500" height="714"/>
         <image name="Main Blurred BG Light Blurry" width="500" height="714"/>
         <image name="Make Payment" width="320" height="64"/>
